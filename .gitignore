@@ -1,0 +1,7 @@
+# vim swap files:
+*~
+*.swp
+*.swo
+# not necessary:
+node_modules/
+bower_components/
