@@ -5,3 +5,5 @@
 # not necessary:
 node_modules/
 bower_components/
+venders/
+
