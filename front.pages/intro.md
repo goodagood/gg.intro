@@ -3,11 +3,11 @@
 
 # A file system as interface to internet
 
-I am a stupid, and you are warnned that I am a stupid.  If you want to know
-what's `goodogood.me`, it's a stupid web file system.
+I am a stupid engineer, I am doing stupid engineerings.
 
-What I am trying to do is to set up a *file system* as `interface` between myself
-and the internet.
+What I am doing is to setup a *file system*, then, use it as `interface`
+between myself and the internet. [goodogood.me](goodogood.me) is the stupid
+file system, it's online and gives all file a *value* attribute.
 
 A file system can be more reliable than depanding on more and more fancy web
 interfaces.  When you keep files, you get your data.  Then, there is no
@@ -46,6 +46,7 @@ get negative value, such as dropping trashes in public areas.  We hate people
 leave dog shit in streets, we can negative valaue it.  The system will fight
 for you for a chance to let them pay for the negative values, and clean the
 world.
+
 
 
 # 

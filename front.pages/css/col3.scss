@@ -88,6 +88,14 @@ $color-complement-4: #1A1E17;
 
 body{
     background-color: $color-complement-0;
+    color: #fff;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
 }
 
 // mobile 1st, 1 column
@@ -114,6 +122,7 @@ body{
         //border: 1px solid;
         background-color: #eee;
 
+        @include border-radius(1rem);
 
         // nested
         .inblock {
@@ -207,6 +216,7 @@ body{
     background-size: 80% 80%;
 }
 */
+
 
 /* tools */
 // for clear

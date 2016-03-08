@@ -35,44 +35,54 @@ $color-complement-4: #6B8567;
   padding: 26.48667, 14.89875; }
 
 body {
-  background-color: #5C5E5B; }
+  background-color: #5C5E5B;
+  color: #fff; }
 
 .wrapper {
   position: relative;
   width: 98vw;
   margin: 0 auto;
   padding: 0; }
-  .wrapper .block {
-    float: left;
-    width: 97.85vw;
-    padding-bottom: 55.04063vw;
-    display: inline-block;
-    overflow: hidden;
-    margin: 0;
-    position: relative;
-    background-color: #eee; }
-    .wrapper .block .inblock {
-      position: absolute;
-      top: 10%;
-      left: 10%;
-      width: 80%;
-      height: 80%;
-      overflow: hidden; }
+
+.wrapper .block {
+  float: left;
+  width: 97.85vw;
+  padding-bottom: 55.04063vw;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  background-color: #eee;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  border-radius: 1rem; }
+
+.wrapper .block .inblock {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  overflow: hidden; }
 
 /* For devices larger than 550px */
-@media (min-width: 550px) {
+@media only screen and (min-width: 450px) {
   .wrapper {
     width: 85vw; }
-    .wrapper .block {
-      width: 42.3vw;
-      padding-bottom: 23.79375vw; } }
+
+  .wrapper .block {
+    width: 42.3vw;
+    padding-bottom: 23.79375vw; } }
+
 /* For devices larger than 750px */
-@media (min-width: 750px) {
+@media only screen and (min-width: 800px) {
   .wrapper {
     width: 80vw; }
-    .wrapper .block {
-      width: 26.48667vw;
-      padding-bottom: 14.89875vw; } }
+
+  .wrapper .block {
+    width: 26.48667vw;
+    padding-bottom: 14.89875vw; } }
 /* block background */
 /*
 #BNo1,#BNo2,#BNo3,#BNo4,#BNo5,#BNo6      { 
@@ -84,16 +94,19 @@ body {
 }
 */
 .block {
-  background: #9c000b;
-  /* For browsers that do not support gradients */
-  background: -webkit-radial-gradient(circle, #6C6968, #635F60, #4C494C);
+  background: #5C5E5B;
+  /* #9c000b For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, #5C5E5B, #6C6968, #5C5E5B);
   /* Safari */
-  background: -moz-radial-gradient(circle, #6C6968, #635F60, #4C494C);
+  background: -moz-radial-gradient(circle, #5C5E5B, #6C6968, #5C5E5B);
   /* Firefox 3.6 to 15 */
-  background: -o-radial-gradient(circle, #6C6968, #635F60, #4C494C);
+  background: -o-radial-gradient(circle, #5C5E5B, #6C6968, #5C5E5B);
   /* Opera 11.6 to 12.0 */
-  background: radial-gradient(circle, #6C6968, #635F60, #4C494C);
-  /* Standard syntax */ }
+  background: radial-gradient(circle, #5C5E5B, #6C6968, #5C5E5B);
+  /* Standard syntax */
+  border-bottom-style: double;
+  /* none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset */
+  border-bottom-color: #6C6968; }
 
 /*
 #BNo1{
