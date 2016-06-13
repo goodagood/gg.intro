@@ -1,0 +1,17 @@
+{
+  "name": "intro_2016_0613",
+  "version": "0.0.1",
+  "author": "andrew",
+  "license": "GPL",
+  "private": false,
+  "repository": "git@github.com:goodagood/gg.intro.git",
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "marked": "^0.3.2",
+    "material-design-icons": "^2.2.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1"
+  }
+}

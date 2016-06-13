@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport"    content="width=device-width, initial-scale=1">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<!--
+-->
+<link rel="stylesheet" href="./css/Skeleton-2.0.4/css/normalize.css">
+<link rel="stylesheet" href="./css/Skeleton-2.0.4/css/skeleton.css">
+
+
+<title> markdown renderring </title>
+
+
+<!--
+-->
+
+<style>
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <section class="header">
+    <h2 class="title">goodogood.me</h2>
+  </section>
+
+  <div id="no_display_plain_file_list" style="display:none">
+    ./general/byte-value.md
+    ./general/clean-claim.md
+    ./general/code-value.md
+    ./general/intro.md
+    ./general/negative.md
+    ./general/reasons.md
+    ./general/start.md
+    ./general/test24.md
+    ./general/value.md
+  </div>
+
+
+
+  <!-- =========== start of block markdown wrapper  -->
+  <div class="cf" id="markdown_wrapper"> 
+
+
+  </div>
+  <!-- ======== end of block markdown wrapper, ===== -->
+
+  <div class="row cf" id="footer">
+      goodogood.me, goodagood &copy; 2016-2018
+  </div>
+</div>
+
+<!--
+-->
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/marked/marked.min.js"></script>
+
+<script>
+const p = console.log.bind(console);
+const Plain_file_list_selector  = "#no_display_plain_file_list";
+const Markdown_wrapper_selector = "#markdown_wrapper";
+
+$(document).ready(function(){
+  //console.log('ready');
+  //p('p ready');
+  $("#no-display-
+  console.log(marked('# Marked in browser\n\nRendered by **marked**.'));
+});
+
+</script>
+
+</body>
+</html>
+<!-- vim: et ts=2 sw=2
+-->
