@@ -1,5 +1,4 @@
 
-<hr />
 
 # A file system as interface to internet
 
@@ -23,9 +22,11 @@ principles of other things beyond ourself.  But this time, I have to view it
 from my own requirements, it's meself, one of the stupid humankind, who want
 this project as:
 
+
     1, it's a file system
     2, it should work as interface between me and internet
     3, it should value all file in it.
+
 
 If you trust me, work with a good file system as the one I am trying to do
 will not only help to finish most of our file jobs, but also it can save us

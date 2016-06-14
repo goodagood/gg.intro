@@ -1,0 +1,20 @@
+
+    <!--
+    <script type="text/template" id="t-pa-zh">/*
+        <h6>
+          <i class="fa fa-laptop init-fa"></i> 
+            做为愚蠢的工程师 
+        </h6>
+
+        <p>
+        我在做
+        <b>愚蠢</b>的
+        <i>工程项目</i>.
+
+
+        就是一个文件系统，用做接口，在我和网络之间做为<b>“接口”</b>。 
+        <a href="goodogood.me">goodogood.me</a>
+        并且系统中每个文件都可以有<b>价值属性</b>。
+        </p>
+    */</script>
+    -->

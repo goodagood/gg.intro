@@ -7,9 +7,15 @@
 <meta name="keywords" content="" />
 
 <!--
+<link rel="stylesheet" href="node_modules/markdown-retro/css/retro.css">
 -->
-<link rel="stylesheet" href="./css/Skeleton-2.0.4/css/normalize.css">
-<link rel="stylesheet" href="./css/Skeleton-2.0.4/css/skeleton.css">
+<link rel="stylesheet" href="css/Skeleton-2.0.4/css/normalize.css">
+<link rel="stylesheet" href="css/Skeleton-2.0.4/css/skeleton.css">
+
+<link rel="stylesheet" href="css/octicons/octicons.css">
+
+<link rel="stylesheet" href="css/y6.june.14.css">
+
 
 
 <title> markdown renderring </title>
@@ -24,34 +30,42 @@
 </head>
 <body>
 
+<div id="no_display_plain_file_list" style="display:none">
+  ./general/intro.md
+  ./general/byte-value.md
+  ./general/clean-claim.md
+  ./general/code-value.md
+  ./general/negative.md
+  ./general/reasons.md
+  ./general/start.md
+  ./general/test24.md
+  ./general/value.md
+</div>
+
+
+<div class="row" id="header_div">
+  <div id="site_name">What is goodogood.me</div>
+  <div id="color_chooser"></div>
+  <div id="style_chooser"></div>
+</div><br class="cf">
+
 <div class="container">
-
-  <section class="header">
-    <h2 class="title">goodogood.me</h2>
-  </section>
-
-  <div id="no_display_plain_file_list" style="display:none">
-    ./general/byte-value.md
-    ./general/clean-claim.md
-    ./general/code-value.md
+  
+  <div class="row file_name">
     ./general/intro.md
-    ./general/negative.md
-    ./general/reasons.md
-    ./general/start.md
-    ./general/test24.md
-    ./general/value.md
   </div>
 
 
 
-  <!-- =========== start of block markdown wrapper  -->
-  <div class="cf" id="markdown_wrapper"> 
-
-
+  <!-- ======== start of block markdown wrapper  -->
+  <div class="row">
+    <div id="markdown_wrapper"></div>
   </div>
-  <!-- ======== end of block markdown wrapper, ===== -->
+  <!-- ======== end of block markdown wrapper,   -->
 
-  <div class="row cf" id="footer">
+
+  <div class="row" id="footer">
+    <hr>
       goodogood.me, goodagood &copy; 2016-2018
   </div>
 </div>
@@ -67,10 +81,45 @@ const p = console.log.bind(console);
 const Plain_file_list_selector  = "#no_display_plain_file_list";
 const Markdown_wrapper_selector = "#markdown_wrapper";
 
+function get_file_list($){
+  var file_list_text = $(Plain_file_list_selector).text()
+  //p('text: ', file_list_text);
+
+  var file_list = file_list_text.split(/\s+/);
+  file_list = file_list.filter(function(str){return str !== '';});
+  return file_list;
+}
+
 $(document).ready(function(){
-  //console.log('ready');
-  //p('p ready');
-  $("#no-display-
+  var url_ = 'general/intro.md';
+
+  var ajax_opt = {
+    url : url_,
+    // data from server:
+    dataType: 'text'
+  };
+
+  $.ajax(ajax_opt).done(function(md_text){
+    //p(md_text);
+    p(typeof md_text, md_text.length);
+
+    var md_html;
+    try{
+      md_html = marked(md_text);
+      //p(md_html);
+    }catch(e){
+      p('FAILED TO MARKED THE TEXT');
+      md_html = `<pre>md_text</pre>`;
+    }
+    $(Markdown_wrapper_selector).html(md_html);
+  });
+
+
+
+
+
+  //p(file_list);
+
   console.log(marked('# Marked in browser\n\nRendered by **marked**.'));
 });
 
