@@ -45,6 +45,7 @@
   </div>
 </div><br class="cf">
 
+
 <div class="row file_name_div">
   <i class="mdi mdi-arrow-right-bold-hexagon-outline"></i>
   <span class="file_name"> ./general/intro.md </span>
@@ -53,24 +54,41 @@
 <div class="container">
   
 
+  <!--
+  <img width="90%" height="18px" src="../img/Decorative-Header-3--Arvin61r58.svg" >
+  -->
 
 
   <!-- ======== start of block markdown wrapper  -->
   <div class="row">
     <div id="markdown_wrapper"></div>
+    <div id="site_map"></div>
   </div>
   <!-- ======== end of block markdown wrapper,   -->
 
 
   <div class="row" id="footer">
     <hr>
-      goodogood.me, goodagood &copy; 2016-2018
+      Andrew, goodogood.me, goodagood &copy; 2016-2018
+
+      <img width="90%" src="../img/decorativedivider-sword.svg" >
+      <!--
+      Image from: <a target="_blank" 
+      href="https://openclipart.org/detail/221190/decorative-divider-sword" >
+      openclipart: j4p4n</a>
+      -->
   </div>
 </div>
 
-<!--
--->
+<noscript><pre>
+  Javascript support is needed to get and render 'markdown' text.
+  # This 'message' should appear when Javascript not in place,
+  # so markdown renderring might has been failed.
+</pre></noscript>
 
+<!--
+  script.start
+-->
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/marked/marked.min.js"></script>
 
@@ -116,15 +134,21 @@ function gg_data($){
 
   // try to get site map and render it to html, no waiting.
 
+  return obj;
+}
+
+var site_map = ($, file_path) =>{
+  file_path =  file_path || './sitemap.md';
+
   var ajax_opt = {
-    url : d.file_path,
+    url : file_path,
     // data from server:
     dataType: 'text'
   };
 
   $.ajax(ajax_opt).done(function(md_text){
       //p(md_text);
-      p('in gg data ', typeof md_text, md_text.length);
+      p('in site map ', typeof md_text, md_text.length);
 
       var md_html;
       try{
@@ -134,11 +158,9 @@ function gg_data($){
         p('FAILED TO MARKED THE TEXT');
         md_html = `<pre>md_text</pre>`;
       }
-      d.html_sitemap = md_html;
+      $("#site_map").html(md_html);
+
   });
-
-
-  return obj;
 }
 
 
@@ -259,6 +281,7 @@ $(document).ready(function(){
     convert_relative_links_in_markdown($);
   });
 
+  site_map($);
 
   //console.log(marked('# Marked in browser\n\nRendered by **marked**.'));
   p('end of ready');

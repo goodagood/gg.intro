@@ -7,17 +7,21 @@
 <i class="mdi mdi-folder-multiple-outline"></i>
 
 User can upload *files*, organize it into **folders**, control it's accesses
-of reading writting and executing.  `Share` the files, the job and joys with
+of reading writting and executing.  `Share` the files, so the job and joys with
 friends, team and colleges.
 
 
 **File can Has Value**
 <i class="mdi mdi-square-inc-cash"></i>
 
-When it has attribute of *value*, the labor of doing with file gets *focus*,
-it improve efficiency.  Each and all file can has `value` and other
-attribute.  Even more, each and all user can value their contribution by
-using our system.
+When it has attribute of *value*, the labor of doing with files gets
+*focuses*, it improve efficiency.  Each and all file can has `value` and other
+attributes, but by default the value attribute is empty to keep compatible to
+the old way.  So as other attributes, and it can be multiple and powerful.
+
+In consequences, everyone can value their contribution by using or developing
+our system.  Then, every one can get more `positive values`, they can be users,
+programmers, managers, organizers, street runners, ..., the list keeps on and on.
 
 
 **Negative Value Exists**
@@ -26,20 +30,19 @@ using our system.
 If we collecting the
 <i class="mdi mdi-minus"></i>
 **negative** value with files.  We can find a way to
-clear it, the world may be cleaned.  Then, every one can get more positive values,
-user, programmer, manager, organizer, street runners, ..., on and on.
-
-
+clear it, the world may be cleaned.
 
 <i class="mdi mdi-sleep"></i>
 <i class="mdi mdi-sleep"></i>
-*OK*, A list of 3 items is enough, but it also can continue to become a quite long
-list.  And, this document has [Chinese version 中文版本](./be.simple.zh.md)
+*OK*, let's keep things short, or it can continue to become quite long.
+By the way, this document has [Chinese version 中文版本](./be.simple.zh.md)
+
+...
+
+
+# Call the Rest the Long Story
 
 ......
-
-
-# Call the Rest Parts of the Long Story
 
 ## I am a stupid engineer
 
@@ -50,7 +53,7 @@ stupid file system, it's online and gives all file a *value* attribute.
 [goodogood]: http://goodogood.me
 
 
-## Many can be implemented
+## It can be many things
 
 File system is one of
 <i class="mdi mdi-diamond"></i>

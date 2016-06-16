@@ -96,7 +96,22 @@ h6:after {
   font-size: 0.82em;
 }
 .file_name_div{
-    padding-left: 2em;
+  color: #aaa;
+  margin-left: 2.5em;
 }
 
 
+#site_map ul{
+    border: 1px green;
+}
+
+#site_map ul li{
+    padding: 0.1em 1em;
+    list-style-type: none;
+    float: left;
+}
+
+#footer{
+    text-align: center;
+    color: grey;
+}

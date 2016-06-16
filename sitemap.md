@@ -1,5 +1,8 @@
 
+-------------------
+
 <a name="site_map_anchor"></a>
+**Site map:**
 
 - [goodogood basics](./general/goodogood.md)
 - [goodogood basics Chinese](./general/goodogood.zh.md)
