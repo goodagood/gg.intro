@@ -15,8 +15,7 @@
 <link rel="stylesheet" href="css/octicons/octicons.css">
 <link rel="stylesheet" href="node_modules/mdi/css/materialdesignicons.css">
 
-<link rel="stylesheet" href="css/md.css">
-<link rel="stylesheet" href="css/y6.june.14.css" class="for_markdown_style">
+<link rel="stylesheet" href="css/y6.june.14.css">
 
 
 
@@ -32,17 +31,23 @@
 </head>
 <body>
 
+<div id="no_display_plain_file_list" style="display:none">
+  ./general/intro.md
+  ./general/byte-value.md
+  ./general/clean-claim.md
+  ./general/code-value.md
+  ./general/negative.md
+  ./general/reasons.md
+  ./general/start.md
+  ./general/test24.md
+  ./general/value.md
+</div>
 
 
 <div class="row" id="header_div">
-  <div id="site_name">goodogood.me ?</div>
-  <div id="color_chooser">
-      <i class="mdi mdi-code-less-than"></i>
-      <i class="mdi mdi-code-greater-than"></i>
-  </div>
-  <div id="style_chooser">
-      <i class="mdi mdi-dice-5"></i>
-  </div>
+  <div id="site_name">What is goodogood.me</div>
+  <div id="color_chooser"></div>
+  <div id="style_chooser"></div>
 </div><br class="cf">
 
 <div class="row file_name_div">
@@ -78,67 +83,19 @@
 
 <script>
 const p = console.log.bind(console);
+const Plain_file_list_selector  = "#no_display_plain_file_list";
 const Markdown_wrapper_selector = "#markdown_wrapper";
-const Starter_file = "./general/be.simple.md";
+const Starter_file = "./general/goodogood.md";
 
 window.Starter_file = Starter_file; //d
 
-function gg_data($){
-  var d = {
-    file_path : './sitemap.md',
-    pathes : [],
-    index: 0,
-    html_sitemap : ''
-  };
+function get_file_list($){
+  var file_list_text = $(Plain_file_list_selector).text()
+  //p('text: ', file_list_text);
 
-  var obj = {};
-
-
-  obj.add_file_path = (fpath) =>{
-      d.pathes.push(fpath);
-      // limit to 500 elements
-      if(d.pathes.length > 500){
-          uniqueArray = d.pathes.filter(function(item, pos) {
-              return d.pathes.indexOf(item) == pos;
-          });
-          uniqueArray.shift();
-          d.pathes = uniqueArray;
-      }
-  }
-
-  obj.get_file_path = (fpath) =>{
-    return d.pathes;
-  }
-
-  obj.get_html_sitemap = () =>{
-    return d.html_sitemap;
-  }
-
-  // try to get site map and render it to html, no waiting.
-
-  var ajax_opt = {
-    url : d.file_path,
-    // data from server:
-    dataType: 'text'
-  };
-
-  $.ajax(ajax_opt).done(function(md_text){
-      //p(md_text);
-      p('in gg data ', typeof md_text, md_text.length);
-
-      var md_html;
-      try{
-        md_html = marked(md_text);
-        //p(md_html);
-      }catch(e){
-        p('FAILED TO MARKED THE TEXT');
-        md_html = `<pre>md_text</pre>`;
-      }
-      d.html_sitemap = md_html;
-  });
-
-
-  return obj;
+  var file_list = file_list_text.split(/\s+/);
+  file_list = file_list.filter(function(str){return str !== '';});
+  return file_list;
 }
 
 
@@ -195,64 +152,6 @@ function convert_relative_links_in_markdown($, url_){
 }
 var cc = convert_relative_links_in_markdown;
 
-
-//--
-
-function shift_style($){
-  var chooser = $("#style_chooser");
-  
-  var csses = [
-    "./css/y6.june.14.css",
-    "./css/splendor.css",
-    "./css/modest.css",
-    "./css/air.css"
-  ];
-
-  var index = 0;
-
-  obj = {};
-
-  obj.shift_index = ()=>{
-    index ++;
-    if(index > csses.length) index = 0;
-    return index;
-  }
-
-  chooser.click(function(e){
-  });
-
-  obj.changeCss = (css_file_href) =>{
-      css_file_href = css_file_href || csses[obj.shift_index()];
-
-      $('link.for_markdown_style[rel=stylesheet]').remove();
-
-      // new link of css file:
-      // You need to set the href attr last
-      // and only after the link elem is appended to the head:
-
-      $('<link>')
-      .appendTo('head')
-      .attr({type : 'text/css', rel : 'stylesheet', class: 'for_markdown_style'})
-      .attr('href', css_file_href);
-  }
-
-  return obj;
-
-  // ref:
-  //// remove
-  //$('link[rel=stylesheet][href~="foo.com"]').remove();
-  //// or:
-  //sheet = document.getElementById(styleSheetId)
-  //sheet.parentNode.removeChild(sheet)
-
-  //// get
-  //$.getScript('ajax/test.js', function() {
-  //  alert('Load was performed.');
-  //  });
-}
-var ss = shift_style; //d
-
-
 $(document).ready(function(){
   var url_ = Starter_file;
   get_and_render_markdown($, url_, function(){
@@ -260,8 +159,13 @@ $(document).ready(function(){
   });
 
 
-  //console.log(marked('# Marked in browser\n\nRendered by **marked**.'));
-  p('end of ready');
+
+
+
+
+  //p(file_list);
+
+  console.log(marked('# Marked in browser\n\nRendered by **marked**.'));
 });
 
 </script>

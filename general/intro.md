@@ -13,7 +13,7 @@ proven testing.  [It works.](http://www.goodogood.me)
 
 But it could hardly be ready to get on production in short period, at
 least not enough as a few weekends, I re-think the [reasons for the file
-system I want to setting up.](./reason.md), it turns out the first reason
+system I want to setting up.](./reasons.md), it turns out the first reason
 should be because I am a stupid, the 2nd reason is I like to hack, to do
 developments to fullfil my desires of free spiritualities.
 

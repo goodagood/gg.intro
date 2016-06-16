@@ -1,32 +1,4 @@
 
-#header_div {
-    font-size: 2em;
-    width: 100%;
-    float: left;
-}
-
-#site_name{
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-
-
-/* tools */
-.cf:before, .cf:after {
-  content: "";
-  display: table; 
-}
-
-.cf:after {
-  clear: both;
-}
-
-.cf {
-  zoom: 1;
-}
-
-
 
 /* from markdown retro */
 
@@ -191,53 +163,4 @@ blockquote {
   }
 }
 
-
-
-/* headers, who can judge it h1-6 by size from 3.99 to 2.78 to ..?,
- * or let 4 time size grow out screen? */
-
-h1,
-h2,
-h3,
-h4
-{
-  margin: 1.414rem 0 .5rem;
-  font-weight: inherit;
-  line-height: 1.42;
-}
-
-h1{ font-size: 1.998rem; }
-h2{ font-size: 1.727rem; }
-h3{ font-size: 1.509rem; }
-h4{ font-size: 1.384rem; }
-h5{ font-size: 1.221rem; }
-h6{ font-size: 1.100rem; }
-
-h1:after {
-  content: " #";
-  clear: both;
-}
-
-h2:after {
-  content: " ##";
-  clear: both;
-}
-
-h3:after {
-  content: " ###";
-  clear: both;
-}
-
-h4:after {
-  content: " #4#";
-  clear: both;
-}
-h5:after {
-  content: " #5#";
-  clear: both;
-}
-h6:after {
-  content: " #6#";
-  clear: both;
-}
 
