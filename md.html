@@ -37,8 +37,7 @@
 <div class="row" id="header_div">
   <div id="site_name">goodogood.me ?</div>
   <div id="color_chooser">
-      <i class="mdi mdi-code-less-than"></i>
-      <i class="mdi mdi-code-greater-than"></i>
+      <span id="color_letter">clr.</span>
   </div>
   <div id="style_chooser">
       <i class="mdi mdi-dice-5"></i>
@@ -71,7 +70,7 @@
     <hr>
       Andrew, goodogood.me, goodagood &copy; 2016-2018
 
-      <img width="90%" src="../img/decorativedivider-sword.svg" >
+      <img width="90%" src="./img/decorativedivider-sword.svg" >
       <!--
       Image from: <a target="_blank" 
       href="https://openclipart.org/detail/221190/decorative-divider-sword" >
@@ -164,6 +163,33 @@ var site_map = ($, file_path) =>{
 }
 
 
+var get_and_render_to = ($, file_path, target_id) =>{
+  file_path =  file_path || './sitemap.md';
+
+  var ajax_opt = {
+    url : file_path,
+    // data from server:
+    dataType: 'text'
+  };
+
+  $.ajax(ajax_opt).done(function(md_text){
+      //p(md_text);
+      p('in site map ', typeof md_text, md_text.length);
+
+      var md_html;
+      try{
+        md_html = marked(md_text);
+        //p(md_html);
+      }catch(e){
+        p('FAILED TO MARKED THE TEXT');
+        md_html = `<pre>md_text</pre>`;
+      }
+      $(target_id).html(md_html);
+  });
+}
+
+
+
 function get_and_render_markdown($, file_path, callback){
     $(".file_name").html(`${file_path}`).data('file_path', file_path);
 
@@ -217,6 +243,52 @@ function convert_relative_links_in_markdown($, url_){
 }
 var cc = convert_relative_links_in_markdown;
 
+function color_click($){
+  var fore = 0x000000;
+  var back = 0xffffff;
+
+  function cutHex(h) {return (h.charAt(0)=="#") ? h.substring(1,7):h}
+  function hexToR(h) {return parseInt((cutHex(h)).substring(0,2),16)}
+  function hexToG(h) {return parseInt((cutHex(h)).substring(2,4),16)}
+  function hexToB(h) {return parseInt((cutHex(h)).substring(4,6),16)}
+
+  function luminanace(r, g, b) {
+      var a = [r,g,b].map(function(v) {
+          v /= 255;
+          return (v <= 0.03928) ?
+              v / 12.92 :
+              Math.pow( ((v+0.055)/1.055), 2.4 );
+          });
+      return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
+  }
+
+  function randomHex(){
+      hex = Math.floor((Math.random() * 0xffFFff)).toString(16);
+      while(hex.length < 6){ hex = '0' + hex; }
+      return hex;
+  }
+
+
+  $("#color_letter").click(function(e){
+    var contrast = 1;
+
+    while(contrast < 3){
+      fore = '#' + randomHex();
+      var flum = luminanace(hexToR(fore), hexToG(fore), hexToB(fore));
+
+      back = '#' + randomHex();
+      var blum = luminanace(hexToR(back), hexToG(back), hexToB(back));
+
+      contrast = (flum + 0.05)/(blum + 0.05);
+      if(contrast < 1) contrast = 1/contrast;
+      p('ratio: ', contrast, ' fore ground: ', fore, ' back: ', back);
+    }
+  
+    $('body').css('color', fore);
+    $('body').css('background-color', back);
+    $(this).html(contrast.toString().substr(0,4));
+  });
+}
 
 //--
 
@@ -282,6 +354,7 @@ $(document).ready(function(){
   });
 
   site_map($);
+  color_click($);
 
   //console.log(marked('# Marked in browser\n\nRendered by **marked**.'));
   p('end of ready');

@@ -1,0 +1,28 @@
+
+/*
+ AAA:  a3, which is good contrast to white background
+ AA:   aa, less
+ Fail: f, not easy to see on white background, f-lilia is nearly unsean.
+*/
+
+$a3-jet: #131516;
+$a3-raven: #373d3f;
+$aa-asher: #555f61;
+$aa-stone: #707c80;
+
+$f-gray: #8c979a;
+$f-sterling: #a7b0b2;
+$f-heather: #c1c7c9;
+$f-pearl: #dadedf;
+$f-lilia: #f2f3f4;
+
+
+
+$aa-lighter-indigo: #3c6478;
+$aa-darker-ruby: #ad2a1a;
+$aa-darkest-alice: #107896;
+$aa-ruby: #c02f1d;
+
+body{
+    color: $a3-jet;
+}
