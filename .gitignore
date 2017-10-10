@@ -7,3 +7,15 @@ node_modules/
 bower_components/
 venders/
 
+# jekyll
+_config.yml
+_includes/
+_layouts/
+_posts/
+_sass/
+_site/
+
+#
+py.pelican/
+ruby.jekyll/
+js.metalsmith/

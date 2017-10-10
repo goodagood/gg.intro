@@ -12,6 +12,7 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "browserify": "^13.0.1"
+    "browserify": "^13.0.1",
+    "metalsmith": "^2.3.0"
   }
 }

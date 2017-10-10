@@ -1,4 +1,8 @@
 
+Title: A file system as interface to internet
+Date: 2016-12-03 10:20
+Category: introduction
+
 <hr />
 
 # A file system as interface to internet
@@ -60,7 +64,7 @@ proven testing.  [It works.](http://www.goodogood.me)
 
 But it could hardly be ready to get on production in short period, at
 least not enough as a few weekends, I re-think the [reasons for the file
-system I want to setting up.](./reason.md), it turns out the first reason
+system I want to setting up.](./reason), it turns out the first reason
 should be because I am a stupid, the 2nd reason is I like to hack, to do
 developments to fullfil my desires of free spiritualities.
 
@@ -120,7 +124,7 @@ can find a way to split them then attack them one by one, it's to design from
 top and start from bottom.  The prototype can be finished by single brain, the
 production type need more smart guys, their jobs can be tangled in
 complexities.  [So I tried to set up value information sub-system to make
-things more reasonable](./byte-value.md), it might help to keep value
+things more reasonable](./byte-value), it might help to keep value
 informations for more small tasks.  In the same time, we need to be creative
 as long as we can be accumulative.  Really those high level designs and task
 splittings and managements should be respected if they can be implemented on
