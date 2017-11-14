@@ -1,9 +1,36 @@
+Title: intro
+Author: Andrew
+
 
 <hr />
 
-# A file system as interface to internet
+# Online file system
 
-I am trying to set up a file system as interface between myself and the
+In the future, we communicate by files and folders.
+
+It's not fancy because
+the traditional communication can be implemented as text, voice,
+picture and video files.
+
+The project of goodogood.com do it this way, everything would be files and
+folders. User would work together with it, design their own file and folder
+structures, and the way to share and communicate.
+
+This is open source implementation, start as file sharing system,
+more advanced features can be fullfilled when resources available.
+
+The system started to run for over a year, but crashed when I was 
+occupied by other things. It shows the project has overgrown the
+limit of single man project. There are many sub-systems such as: file
+types, representations of files, authenticathions, size quota, user code
+running and control, and more...
+One man is not enough for the project.
+
+
+
+# Interface to Internet
+
+The file system works as interface between myself and the
 internet.  Firstly, because working with file is easier for more kind of
 tasks.  Secondly, because web interface is still lacking flexiblities.  It
 should work in middle, all types of files from all devices can upload there,

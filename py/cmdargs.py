@@ -5,6 +5,9 @@ parser = argparse.ArgumentParser(description='prepare Static web site by Convert
 
 parser.add_argument('-s', '--source-dir', help="source directories")
 parser.add_argument('-t', '--target-dir', help="target directories")
+parser.add_argument('--conf', help="configure directories")
+parser.add_argument('-d', '--delete-dir',
+        help="delete target directorie before-hand if exists")
 parser.add_argument('-c', '--cwd',
         help="set working dir, current working dir")
 parser.add_argument('-e', '--extension', help="change file extension to ")

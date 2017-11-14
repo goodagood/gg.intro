@@ -1,157 +1,202 @@
 
-2016 01-01 12:26
+    Title: intro cn
+    Author: Andrew
 
-如果你在听，我们在说软件，是电脑软件。
-准确一点说是网络软件，是一个可以接口网络的文件系统。
 
-我做了一个文件系统，用来改变人类。
-或者谦虚一点地说，是用来改变我接触人类社会的方法。
 
-这个文件系统是做为我和外界的接口，
-可以用来收集文件、分享文件，
-可以记录数据，收集工作或者设计内容，
-还可以做为通讯工具，做为电话、语音、视频和会议
-也还可以做为关系组织工具、联系朋友、团队、群组， 等等。
+# 文件系统
 
-为什么文件系统可以做到这么多， 甚至更多？
+在未来，人与人沟通的方法是：文件和文件夹。
 
-因为文件，逻辑计算中的文件，本来就是一种天才的工程概念，
-它可以存储各种数据，然后进行处理。
-被技术史上的天才用来做各种疯狂的事情，并且漂亮的做到了，
-就是用文件做为一种工程概念。
-概念可以反映现实，对吗？
+这是进化的方向。原始人，大喊大叫和热烈拥抱，
+现代人在保留传统的同时，面对数字化的世界。
 
-然而，我这样尝试的更重要的原因，却是因为人体工学。
-因为有太多的手腕、肩膀和腰部已经劳损，成为附在许多人体上的痛苦源泉。
-这也是拜许多愚蠢的软件和网络输入界面之福，
-拜可耻的商业软件制作人的无知。
-这些软件工作界面、网络界面，不符合人体工程学。
-它们是毁坏你身体的原因之一。
+文字、声音、静态和动态的图像都可以做成文件，
+文件是数字化的内容，电脑可以处理这些数字，
+存储和交流的成本更低。可以支持更专业的团队，
+让工作的方式更自由。
+文件夹可以变成各种结构，
+内容可以更容易的组织和分享。
 
-让我们先看一下人类身体，
-优秀的人体，有足够的感觉、适当的力量和敏捷，
-请注意，这些都是为了适应人体自身的重量，结构和质量，
-或者说适应人体在地球重力场中的现实，请注意这是真实到每一秒的现实。
-人体是柔软固态，老天让你处于目前的身体中是为了让你充分地短暂地享受地球表面目前的生态环境。
-不是为了让你被网络输入表单或者其它愚蠢的界面长期固定在椅子、屏幕、键盘和鼠标之间。
+实际上，计算机早就使用文件系统做为基础，这不是新的想法，
+只是将一个软件系统的重心略为移动到靠近人性需要的地方。
 
-不要被其它所谓人体工学卖家诱惑，他们同你讲只要用什么好的坐姿，
-如何在电脑椅上挺直腰板，肩部自然下垂，肘部贴近身体等等。 
-等等。就好了，就好了吗？
+科学幻想常常是目前无法实现的，然而，
+这样的文件系统却完全有条件做出来，并且开始升级。
 
-他们一开始就错了， 更好的人体工学是尽快离开电脑，
-去做更多可以更好享受身体的活动。
-要这样，你需要更快离开枯燥的工作，也就是更快的完成工作，
-怎样做呢？ 从技术史的方向回顾一下给你答案，就是，
-使用更好的工具，哪里有更好的工具？
-软件历史上，更多好工具是为文件工作的。
+goodogood.com 正是这样一个系统，系统中一切都是文件。
+用户们将用文件系统一起工作，安排自己的文件结构，
+使用不同的文件类型，团队可以更好的分享和交流。
 
-因此最好的方法，或者最好的方法之一， 是开始使用文件系统，
-从而开始使用聪明的工程师的工具， 这些工具大多都使用文件。
-一切都可以是文件，包括电话、电视，会议、约会，衣食住行。 
-而优秀的工程师为文件做工具，你应该使用好的工具，
-让剩下的傻瓜去坚守表单输入吧。
+这是一个开源软件系统，技术公开、想法公开、源程序代码公开、
+版权公开，自由的参与和退出，贡献价值与回报当然也公开。
 
-这是我在用文件系统做项目的一个原因，
-另外一个原因是因为我认为文件应当有价值属性，
-或者至少可以有价值属性。
+理想的系统可以如同台阶一样一层层做好，
+像一个多层蛋糕。
+第一个台阶是文件共享系统。
+更多的功能可以逐步添加，如果有资源的话。
 
-当我们说价值， 这就是一个哲学问题，不仅仅是说市场价格。
-市场价格是人们完全有理由相信可以通过支付价格标示的现金来换取货物的数字。
-当我们说价值的时候就是在说：你无法超越的价值体系。 
-因此这是老天给我们的设定，可以尝试，却无法突破，除非变成非人。
-老天对人的设定，可以有，并且只能有非人可以超越。
+系统运行了一段时间，然后崩溃了，
+当我被其它事情占住的时候，就常常没有时间维护越来越复杂的系统。
+无可避免的，系统需要很多子系统，界面、服务器、数据库、
+用户权限等等。要写很多程序代码，设置机器和网络，
+技术细节可以构成混乱的现场，
+而一个人的时间是不够用的，这很明显。
 
-既然人类无法超越价值，而文件系统是更好的工作和沟通界面，
-那么，人的文件应该可以有价值属性。
+好像独自修建巴比伦高塔的人，结果总是被塌落的巨石压下。
+还活着，就全心全意的感谢上帝。竟然还让我活着，
+造物主的仁慈真是无边无际。
 
-价值存在于人的一切时间和行为中，
-包括打喷嚏和睡觉，都有一定价值。 
-老天为了让人类遵守价值，就让我们有饥饿有欲望有死亡。 
-女人要有生产的痛苦，男人要有备胎的折磨。
-因此人的每一个文件包括电话电视网络文件都是有一个变化的价值，或大或小，或快或慢。
-可是，你的所有文件都应该有价值，这是你整体价值的一个组成部分。
+我因此受到许多批评，虽然愿意认真的接受更多批评，然而，
+技术倾向总是把我的关注点转移到技术问题上去。
+做技术的人和做管理的人，确实是不同的性质。
 
-然而从反面来说，有人可以说我们已经有了记录价值的地方， 
-在银行的数据库里，每条记录都代表一个金额， 
-是一个人可以支取的现金。 
-然而让我告诉你，文件主人可以自己记录其价值变化，
-至少应该有这样的可能性。
+数字的世界为现实的世界形成一个印照，
+这个世界能不能完全数字化呢？
 
-不论怎样，工程师应该理解文件带有价值属性是多么自然，和多么不自然， 
-也应该理解这样会带来多少种可能性。
+也许上帝不是这样规划的。
 
-软件中的开源代码，也是一些文件，都开源了，却失去了价值，
-或者说失去了转换成为现金的大部分可能性。 
-是这样的吗？ 至少可能不是。
+金钱总是表示为数字，
+金钱本身就足够伟大了，
+但是仍然有金钱无法代表的内容。
+如果把整个世界化为一个金钱代表的数字，
+然后交给上帝，他会怎样无奈的接受这一大笔钱呢？
 
-如果你是工程师，为我们这个项目贡献了时间、精力，或者代码，
-或者哪怕只是想了一会儿，请在我们的系统中做一个价值申明，我顶你。 
-如果有时间就做一个价值申明吧，我为此做了一个文件夹，
-让你做价值申明，如果你有时间的话。
+从另一个方向来看，数字化的文件自然的可以标注价值。
+每一个文件都可以挂一个金钱的数字，这个数字可以表示价值。
+而价值的方向可能是上帝期待人们思考的方向，
+最终的方向当然是永恒的方向。
 
-我看了很多历史记录，也许你不相信有这样的事实，
-就是你必须申明自己的价值，
-历史证明，只有建立起价值，才有机会主动的保住你的生命，和他人的生命。
-你应该看看历史，了解一下普通人陷入悲惨命运，甚至失去生命的可能性有多大。 
-只有建立起价值，才能尊重生命价值，你的和他人的。
-尝试一下吧，价值是老天对人的设定，尝试建立价值，
-从每一块屏幕，每一块键盘做起。
-你可以想，可以做，可以讨论。我尽量让系统记录价值，
-开放的接收价值，各种价值的积累和创造。
+文件系统不是新的概念，而是计算机系统的传统技术了。
+在传统中，我们也许可以创造未来。从现在开始，
+人们很快会面对超过百亿的人口，这么多的同类，
+将让这个世界变得多么热闹，原始人无法想像这样的情况。
 
-如果你还不相信这样的文件系统可以改变世界的话，
-让我给你看一个文件价值的应用，一个小小的应用做为例子。
-你知道，我们生活在肮脏的街道，我们无法走到垃圾场外 ，i
-所谓的天价住宅区，仍然是垃圾场。 
-现代化的城市在建设的同时也在污染，
-人们随地吐痰，丢垃圾，做出各种令人难受的行为。 
-现在，请拍摄他们的行为， 做为文件上传到文件系统， 
-并且设定一个负价值， 是“负”的价值。 
-比如每张照片负100元， 每秒视频负100元，
-这个绝对值可能有点低， 但是请随意，没有限制。 
-这样的负价值将会最终为文件拥有者带来相应现金，
-可能需要一定时间发生作用，
-然而经济学原理将最终为其变现。
-负价值“报价”将转换为现金收益。 
-我说出这条原理的时候，人们可能没有注意，或者不相信；
-当人们听到的时候，它可能已经成为现实。
-如果要再简单一点的说这个应用案例， 就是说，
-去街上拍一些照片和视频，把你厌恶的人类行为拍摄下来，
-上传到我们的文件系统，就可以报一个大大的负价值，
-然后等着收钱。 
-很简单，等着收钱就可以了。
-你收到钱，世界变得更干净。
+通常人们以为伟大的工程需要伟大的人来完成，
+也许正好相反，大树是从小树苗开始成长，
+是成长的机会造就了伟大的工程和参与者的能力。
 
-你可能不相信一个文件系统会造成这样的结果。
+而伟大的人是否总是完成伟大的事业呢？
 
-然而如果我的一双手可以做到系统原型验证，那么，
-等你听到，或者开始怀疑，开始尝试着相信的时候，
-我，或者也许很有可能其它人已经成功将你送入这样的系统中。
-我可能失败，你却不可能避免被传送到这个系统中，
-不管你和你代表的组织有多么强大。
-系统已经开始净化这个世界，
-你无法阻止。
+这是完全没有必要的。
 
-因为足够简单，所以接近完美，让肮脏的世界无法阻止这样的系统的到来：
-就是一个文件系统，做为人的接口，并且文件带有价值属性。
+什么叫做伟大的事业？
+有什么伟大的事业能够比一滴鲜血更伟大？
+在每一滴鲜血中有过千万年的继承和进化，
+有什么事业能够存在超过千万年？
 
-如果最后再回想一下我开始这个项目的理由:
+因此，在哪怕一名乞丐面前，
+真正有理解的人也不会狂妄自大。
+确实有伟大的工程，有伟大的事业，但是，如此而已。
 
-    第一，我想了愚蠢的问题，做了愚蠢的项目。
-    第二，工作需要更好的工具。
-    第三，人体工程学的原因。
-    第四，我可以做到。
-    第五，老天要我这样做。
-    第六，这个世界太脏了。 
-    第七，任何人可以不关心，直到我们用一个系统把他束缚进来。
-    第八，人们需要价值。 
-    第九，我们要强迫人类遵守价值。
+当然，系统是很好的，希望有机会再次运行吧。
 
-就说到这里吧，谢谢。
+
+# 中文没有逐字逐句对应英文
+
+
+如果要问为什么一个人疯狂的想要修建巴比伦塔，也许是因为一个错误，
+真实的原因来自很久很久以前，可以讲一个很长很长的故事，
+如果你有时间的话，这个故事从可能的宇宙源头开始，
+[一沙一世界，天堂会降临](./tmp/b.cn.html)
+
+[更多的资料](./my.md/index.html)
+
+源代码在 [GITHUB-GOODAGOOD](github.com/goodagood/gg2)
+
+这样的系统总会出现的，究竟由谁来完成，也许不是重要的问题。
+人在天涯，更多想不明白的内容，就交给不可知。
+
+
+
+# Interface to Internet
+
+The file system works as interface between myself and the
+internet.  Firstly, because working with file is easier for more kind of
+tasks.  Secondly, because web interface is still lacking flexiblities.  It
+should work in middle, all types of files from all devices can upload there,
+and fetch from it.
+
+I wrote some programming codes and set up a prototype system, as concept
+proven testing.  [It works.](http://www.goodogood.me)
+
+But it could hardly be ready to get on production in short period, at
+least not enough as a few weekends, I re-think the [reasons for the file
+system I want to setting up.](./reason.md), it turns out the first reason
+should be because I am a stupid, the 2nd reason is I like to hack, to do
+developments to fullfil my desires of free spiritualities.
+
+As an engineer, commonly, we work on objective points of views.  We work on
+principles of other things beyond ourself.  But this time, I have to view it
+from my own requirements, it's meself, one of the stupid humankind, who want
+this project as:
+
+    1, it's a file system
+    2, it should work as interface between me and internet
+    3, it should value all file in it.
+
+If you trust me, work with a good file system as the one I am trying to do
+will not only help to finish most of our file jobs, but also it can save us
+from low back pain and other kind of bone and muscle fatigues.  Because to
+kill jobs fast we need tools, but more tools are working on files instead
+working on web.  If we use good tools to finish job then we can get time to
+play, so we are not going to be Jack.  Jack is a boy, "all work and no
+play make Jace a dull boy"?
+
+But we reached the 3td requirement in the list above.  It's to
+value files, give value attribute to all files, or at least those made by
+humankinds.  Because all human labors get value, high or low.  The value help
+optimise labors for our society.  So all files belong to human should be able
+to get the value attribute.
+
+As an engineer, we need to be get used to see the list expanding.  But a list
+containing three items should be ok, we need test it now.
+
+
+# Prototype and value adding
+
+I [tried it and set up a prototype](http://www.goodogood.me/), it works for
+most time,  I have been writing codes and checking and making it work.  So,
+concepts get proved.  [I put my codes to
+github](https://github.com/goodagood/gg.git), a few smart guys should be
+enough to push it to production level, and done the job, but who knows.
+
+Right now, my codes tends to become sort of spaghetti.  Spaghetti is kind of
+delicious food software engineers like to eat.  In china, we call it noodle.
+If you follow one piece of noodle, you get to nowhere but another noodle.
+
+For the problem, some programmers claim there is a silver bullet to kill the
+troubles in coding, it's not using 'goto' statements, to avoid tangling codes
+as noodle.  I didn't use 'goto', but still I chalenge any programmer who can
+claim that they never ever get lost in codes that hasn't even a single piece
+of 'goto' statement.
+
+One of my concerns is actually that softwares is hard enough.  To try the
+project with merely 3 requirements as ours, it require more creativities as
+well as accumulation of jobs to do it.  Maybe we can try to value all tasks
+such as coding, designs, testing, and those equally important tasks as
+organizing, management or even discussions.
+
+It might help to value all tasks going to get involved in the project, so we
+can find a way to split them then attack them one by one, it's to design from
+top and start from bottom.  The prototype can be finished by single brain, the
+production type need more smart guys, their jobs can be tangled in
+complexities.  [So I tried to set up value information sub-system to make
+things more reasonable](./byte-value.md), it might help to keep value
+informations for more small tasks.  In the same time, we need to be creative
+as long as we can be accumulative.  Really those high level designs and task
+splittings and managements should be respected if they can be implemented on
+ground level.
+
+At last, the simple project to set up a file system, work it as interface
+between our daily jobs and the internet, in the same time we want value files
+in it, value all jobs for the project itself.  The idea has get a prototype to
+prove it, but the simple 3 requirements is enough to give lots challenges for
+any one willing to try it, or take part in the challenges.  Any one, who you
+are, we want to keep your job's value.
 
 
 <!--
-  2016 0101 11:25am
-  vim: set ft=markdown tw=78:
+2015 1223 14:04pm
+vim: set ft=markdown tw=60:
 -->

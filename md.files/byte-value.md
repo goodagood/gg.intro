@@ -1,3 +1,7 @@
+Title: byte value
+Author: Andrew
+
+
 
 ![bread pieces](/gglocal/bread-a.jpg)
 

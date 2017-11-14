@@ -1,0 +1,16 @@
+
+# 2017-11-11 
+
+Transfer markdown to HTML with python, 
+make easy to adjust color, font size,
+make it less depend on server functions,
+js, css might be used in html pages.
+
+copy a lot from ../py
+
+## pystache/mustache template
+
+    use {{{ instead of {{, if not to escape html tage 
+
+
+
