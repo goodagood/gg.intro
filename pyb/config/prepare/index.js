@@ -4,17 +4,18 @@ const $ = require("jquery");
 //const pcolor = require("../mycolor.js");
 const pcolor = require("page.color/mycolor.js");
 
+const p = console.log;
 
-function w3topnavFun() {
-  var x = document.getElementById("w3topnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
+//// switch the topnav to small icon, not used
+//function w3topnavFun() {
+//  var x = document.getElementById("w3topnav");
+//  if (x.className === "topnav") {
+//    x.className += " responsive";
+//  } else {
+//    x.className = "topnav";
+//  }
+//}
 
-document.getElementById('w3topnavSwitch').onclick = w3topnavFun;
 document.getElementById('randomColor').onclick = function(e){
     e.preventDefault();
     pcolor.randomBodyColor();
@@ -114,3 +115,51 @@ $( document ).ready(function() {
     //console.log('here, 0308');
 
 });
+
+
+
+/*
+ * Do body font size
+ */
+function getBodyFontSize(){
+  var fs = document.body.style.fontSize;
+  if (fs && fs !== ""){
+    return fs;
+  }
+  return window.getComputedStyle(document.body).fontSize;
+}
+
+function increaseBodyFontSize(e){
+  e.preventDefault();
+  var size = getBodyFontSize();
+  intSize  = parseInt(size);
+  p(`size: ${size}, `);
+  big = intSize + 1;
+  p(`size + 1: ${big}, `);
+  document.body.style.fontSize = `${big}px`;
+}
+function decreaseBodyFontSize(e){
+  e.preventDefault();
+  var size = getBodyFontSize();
+  intSize  = parseInt(size);
+  p(`size: ${size}, `);
+  small = intSize - 1;
+  p(`size - 1: ${small}, `);
+  document.body.style.fontSize = `${small}px`;
+}
+
+
+var increaseEl = document.getElementById("increaseBodyFontSizeNavItem");
+if (increaseEl.addEventListener){
+    increaseEl.addEventListener("click", increaseBodyFontSize, false);
+}else if (increaseEl.attachEvent){
+    increaseEl.attachEvent('onclick', increaseBodyFontSize);
+}
+
+var decreaseEl = document.getElementById("decreaseBodyFontSizeNavItem");
+if (decreaseEl.addEventListener){
+    decreaseEl.addEventListener("click", decreaseBodyFontSize, false);
+}else if (decreaseEl.attachEvent){
+    decreaseEl.attachEvent('onclick', decreaseBodyFontSize);
+}
+

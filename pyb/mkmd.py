@@ -31,7 +31,7 @@ def mkmd(src, dst=None):
 # template things
 import pystache
 
-# check render a file
+# render a md file to html
 def render_html(src=None, dst=None):
 
     #if src == None:
@@ -42,7 +42,7 @@ def render_html(src=None, dst=None):
     #template ? path
     with open('./config/template.html', 'r') as t:
         temp = t.read()
-        r = pystache.render(temp, {'html4markdown': s, 'htmlRoot': ''});
+        r = pystache.render(temp, {'html4markdown': s, 'htmlRoot': '/md'});
 
     with open(dst, 'w') as f:
         f.write(r)
@@ -75,9 +75,9 @@ def readTemplate():
         return temp
 
 
-def process():
+def do_md_folder():
 
-    # source/target dir
+    # source/target dir get from command line parameter -s -t
     param = tool.check_parameter()
     if not param.source_dir:
         print('not source dir')
@@ -89,10 +89,10 @@ def process():
         shutil.rmtree(param.target_dir)
         print('rm target dir', param.target_dir)
 
-    ##ccopy(param.source_dir, param.target_dir)
+    # Copy the whole folder to target position
     tool.copyfolder(param.source_dir, param.target_dir)
 
-    # result folder
+    # result folder, it's content just been copied in.
     name = os.path.basename(param.source_dir)
     result_folder = os.path.join(param.target_dir, name)
     print('result dir', result_folder)
@@ -100,13 +100,26 @@ def process():
     # find markdown files and do it
     for mdpath in tool.find_md(result_folder):
         print(mdpath)
-        #md2html_same_folder(mdpath)
-        md2index_same_folder(mdpath)
+
+        # add .html to the markdown file name
+        md2html_same_folder(mdpath)
+
+        # make a folder and build markdown as folder/index.html
+        #md2index_same_folder(mdpath)
+
+
+def run():
+    pass
+
 
 
 if __name__ == "__main__":
     src = "/home/za/workspace/gg.intro/md.files"
     dst = "/home/za/workspace/gg.intro/py.pelican/content"
+
+    src = "/home/za/workspace/gg.intro/md.files"
+    dst = "/my/outside/md/"
+
 
     Path = '/home/za/workspace/gg.intro/md.files/intro.md'
     CNPath = '/home/za/workspace/gg.intro/md.files/cn/intro.md'
@@ -122,4 +135,4 @@ if __name__ == "__main__":
     #render_html('/tmp/b.md', '/tmp/tgt/t.html')
     #render_html('/tmp/i.md', '/tmp/tgt/i.html')
 
-    process()
+    do_md_folder()

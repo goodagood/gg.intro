@@ -125,6 +125,21 @@ def relative_to_abs_path(rpath):
 
 def mk_target_folder(mdsrc='.', tgt='/tmp/tgt'):
 
+
+    # doing
+    # source/target dir get from command line parameter -s -t
+    param = check_parameter()
+    if not param.source_dir:
+        print('not source dir')
+        return
+    print('>source dir', param.source_dir)
+    print('>target dir', param.target_dir)
+
+    if param.delete_dir:
+        shutil.rmtree(param.target_dir)
+        print('rm target dir', param.target_dir)
+
+
     #?
     script_path = None
     if __file__:
@@ -133,6 +148,9 @@ def mk_target_folder(mdsrc='.', tgt='/tmp/tgt'):
 
     if mdsrc == '.':
         pass
+
+
+
 
 
     cwd = os.getcwd()
@@ -148,12 +166,23 @@ def mk_target_folder(mdsrc='.', tgt='/tmp/tgt'):
     print(bundleJs, tBundleJs)
     shutil.copy(bundleJs, tBundleJs)
 
-    ## js 
-    #jsPath = os.path.join(cwd, 'config/js')
-    #tJsPath =  os.path.join(tgt, 'js')
-    #if os.path.isdir(tJsPath):
-    #    shutil.rmtree(tJsPath)
-    #ccopy(jsPath, tJsPath)
+    # styles
+    stylePath = os.path.join(cwd, 'config/styles')
+    copyfolder(stylePath, tgt)
+    pass
+
+
+def copy_js_css(cwd=None, tgt=None):
+    if cwd == None:
+        cwd = os.getcwd()
+    if tgt == None:
+        tgt = '/tmp/'
+
+    # copy the bundle js file from config folder
+    bundleJs = os.path.join(cwd, 'config/bundle.js')
+    tBundleJs = os.path.join(tgt, 'bundle.js')
+    print(bundleJs, tBundleJs)
+    shutil.copy(bundleJs, tBundleJs)
 
     # styles
     stylePath = os.path.join(cwd, 'config/styles')
@@ -162,10 +191,12 @@ def mk_target_folder(mdsrc='.', tgt='/tmp/tgt'):
 
 
 
-
 if __name__ == "__main__":
     ooo = '/tmp/ooo'
     tgt = '/tmp/tgt'
 
-    mk_target_folder()
+    #mk_target_folder()
     #copyfolder(ooo, tgt)
+
+    copy_js_css('/home/za/workspace/gg.intro/pyb/', '/my/outside/md')
+

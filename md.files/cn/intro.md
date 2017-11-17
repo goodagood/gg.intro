@@ -9,7 +9,7 @@
 在未来，人与人沟通的方法是：文件和文件夹。
 
 这是进化的方向。原始人，大喊大叫和热烈拥抱，
-现代人在保留传统的同时，面对数字化的世界。
+现代人须要面对数字化的世界。
 
 文字、声音、静态和动态的图像都可以做成文件，
 文件是数字化的内容，电脑可以处理这些数字，
@@ -106,6 +106,30 @@ goodogood.com 正是这样一个系统，系统中一切都是文件。
 
 这样的系统总会出现的，究竟由谁来完成，也许不是重要的问题。
 人在天涯，更多想不明白的内容，就交给不可知。
+
+
+# Chinese info.
+
+
+[over 10 billion years](/md/md.files/137.md.html)
+[introduction](/md/md.files/cn/intro.md.html)
+[To sea a World in a Grain of Sand](/md/md.files/cn/sand.markdown.html)
+
+
+# Background info.
+
+
+[Value for every byte 1](/md/md.files/byte-value.md.html)
+[Value for every byte 2](/md/md.files/clean-claim.md.html)
+[Value for every byte 3](/md/md.files/code-value.md.html)
+[Value for every byte 4](/md/md.files/intro.md.html)
+[Value for every byte 5](/md/md.files/negative.md.html)
+[Value for every byte 6](/md/md.files/reasons.md.html)
+[Value for every byte 7](/md/md.files/start.md.html)
+[Value for every byte 8](/md/md.files/test24.md.html)
+[Value for every byte 9](/md/md.files/value.md.html)
+
+
 
 
 
