@@ -8,7 +8,7 @@
 
 在未来，人与人沟通的方法是：文件和文件夹。
 
-这是进化的方向。原始人，大喊大叫和热烈拥抱，
+这是进化的方向。原始人大喊大叫热烈拥抱在一起的时候，
 现代人须要面对数字化的世界。
 
 文字、声音、静态和动态的图像都可以做成文件，
@@ -98,9 +98,9 @@ goodogood.com 正是这样一个系统，系统中一切都是文件。
 如果要问为什么一个人疯狂的想要修建巴比伦塔，也许是因为一个错误，
 真实的原因来自很久很久以前，可以讲一个很长很长的故事，
 如果你有时间的话，这个故事从可能的宇宙源头开始，
-[一沙一世界，天堂会降临](./tmp/b.cn.html)
+[一沙一世界，天堂会降临](/md/md.files/cn/sand.markdown.html)
 
-[更多的资料](./my.md/index.html)
+[关于猩猩的故事](https://github.com/goodagood/story/blob/master/chimpsland/001.txt)
 
 源代码在 [GITHUB-GOODAGOOD](github.com/goodagood/gg2)
 

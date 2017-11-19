@@ -3,7 +3,12 @@ Author: Andrew
 
 
 
-![bread pieces](/gglocal/bread-a.jpg)
+
+If we value software codes from anonymous contributors,
+should we value it in current currencies?
+
+How much we should value software codes we don't know well?
+
 
 # Value of your codes
 
@@ -21,7 +26,7 @@ to use it, it should has it's own value.
 Codes has value.  How to calculate the value?
 
 First, We need keep away from the concept of market prices, price in market
-means buyer is obliged to pay the amount in currency.  We value codes in
+means buyer is obliged to pay the amount in cash.  We value codes in
 senses of how much labor we put in, and how much benefits we get from it.
 When we think value this way, it remind us to respect those who contribute to
 make us get useful codes.
@@ -100,6 +105,18 @@ code's value, we need to know huge part of value come from those who are not
 programmer.  
 
 
+# The troubles
+
+
+It will cost a lot to setup procedures reviewing codes from the unknown
+sources.  After codes get reviewed, it's time to merge code branches and
+deploy to servers, this tends to be another trouble.  Company pay a lot to
+hire people who can do server administration, so it costs.
+
+If it costs high, the process tends to be slow. So, not only knowledge and
+labor costs, more people involved into the same team, higher the costs.
+
+
 # Conclusions
 
 We try to set up a simple approach to measure value of software codes, this
@@ -114,7 +131,6 @@ We tried to make it easy to claim value, at least in our system. But,
 there is no attempt to make the process accurate or make it close to
 marketplace exchangeable.
 
-![small bread](/gglocal/bread-300.jpg)
 
 # Links
 

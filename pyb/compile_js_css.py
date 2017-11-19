@@ -75,5 +75,5 @@ def compile_css():
 
 if __name__ == "__main__":
 
-    compile_js_css()
-    #compile_css()
+    #compile_js_css()
+    compile_css()

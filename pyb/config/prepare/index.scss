@@ -98,6 +98,7 @@ nav#fix-top div {
 
 @media screen and (max-width: 600px) {
     nav#fix-top{
+        // not necessarily repeating?
         position: fixed; /* Set the navbar to fixed position */
         top: 0; /* Position the navbar at the top of the page */
         width: 100%; /* Full width */
@@ -112,22 +113,15 @@ nav#fix-top div {
         display:none;
     }
 
-
-
-
 }
 
-
-div#markdown p,
-div#intro p {
-    line-height:150%;
-}
 
 
 a:hover {
     background-color: #ddd;
     color: black;
 }
+
 
 /*
  * old login.css
@@ -136,6 +130,7 @@ a:hover {
 
 
 .container { max-width: 800px; }
+//.container { max-width: 88rem; }
 
 div#wrapper {
   position: relative;
@@ -152,7 +147,6 @@ p, ul { margin: 0 0 1em; }
 
 
 
-.clr { clear:both; }
 
 
 form { margin: 1em 0.5em 1em; padding: 0 1em; }
@@ -432,15 +426,17 @@ footer {
 
 }
 
-div#intro p{
-    line-height: 1.5;
+
+div#markdown p,
+div#intro p {
+    line-height:140%;
 }
-div#markdown p{
-    line-height: 1.5;
-}
+
 
 
 /*tools*/
+
+.clr { clear:both; }
 
 /*shorter clearfix http://nicolasgallagher.com/micro-clearfix-hack/*/
 .cf:before,

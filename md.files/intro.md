@@ -1,5 +1,6 @@
-Title: intro
-Author: Andrew
+
+    Title: intro
+    Author: Andrew
 
 
 <hr />
@@ -8,46 +9,54 @@ Author: Andrew
 
 In the future, we communicate by files and folders.
 
-It's not fancy because
-the traditional communication can be implemented as text, voice,
-picture and video files.
+It's not fancy, files give freedom to represent text, voice,
+picture and video files. Above average level, professionals would prefer the
+capabilities files system can offer as communication media.
 
 The project of goodogood.com do it this way, everything would be files and
-folders. User would work together with it, design their own file and folder
-structures, and the way to share and communicate.
+folders. For users ok to work with files, they  can design their own file type
+and folder structures, then they can share it.
 
-This is open source implementation, start as file sharing system,
-more advanced features can be fullfilled when resources available.
+There are another name goodagood, the only difference is in the
+middle, it get 'a' instead of 'o' between the 2 'good'.
+goodogood is open source software, start as file sharing system, designed to implement layer after
+layer as steps, this would be simple system and easy to do.
+
+Open source developing might be slow and hard to find teaming financing,
+I wrote  software codes and start the prototype, but the project oversized single
+man's capacity.
+So, more advanced features can be fullfilled when resources available.
 
 The system started to run for over a year, but crashed when I was 
-occupied by other things. It shows the project has overgrown the
-limit of single man project. There are many sub-systems such as: file
+occupied by other things. There are many sub-systems such as: file
 types, representations of files, authenticathions, size quota, user code
 running and control, and more...
-One man is not enough for the project.
+It use Javascript and Python as scripting languages, Linux as server,
+MongoDB, Redis as data stores.
 
 
 # Background info.
 
 
-[Value for every byte 1](/md/md.files/byte-value.md.html)
-[Value for every byte 2](/md/md.files/clean-claim.md.html)
-[Value for every byte 3](/md/md.files/code-value.md.html)
-[Value for every byte 4](/md/md.files/intro.md.html)
-[Value for every byte 5](/md/md.files/negative.md.html)
-[Value for every byte 6](/md/md.files/reasons.md.html)
-[Value for every byte 7](/md/md.files/start.md.html)
-[Value for every byte 8](/md/md.files/test24.md.html)
-[Value for every byte 9](/md/md.files/value.md.html)
+- [Value for every byte 1](/md/md.files/byte-value.md.html)
+- [Value for every byte 3](/md/md.files/code-value.md.html)
+- [Value for every byte 4](/md/md.files/intro.md.html)
+- [Value for every byte 5](/md/md.files/negative.md.html)
+- [Value for every byte 6](/md/md.files/reasons.md.html)
+- [Value for every byte 7](/md/md.files/start.md.html)
+- [Value for every byte 8](/md/md.files/test24.md.html)
+- [How about negative value?](/md/md.files/clean-claim.md.html)
+- [Value for every byte 9](/md/md.files/value.md.html)
 
 
-# Chinese info.
+# 中文资料 Chinese info.
 
 
-[over 10 billion years](/md/md.files/137.md.html)
-[introduction](/md/md.files/cn/intro.md.html)
-[To sea a World in a Grain of Sand](/md/md.files/cn/sand.markdown.html)
+- [introduction](/md/md.files/cn/intro.md.html)
+- [To see a World in a Grain of Sand](/md/md.files/cn/sand.markdown.html)
+- [Chimp's land](/md/md.files/cn/chimp1.md.html)
 
+[关于猩猩的故事](https://github.com/goodagood/story/blob/master/chimpsland/001.txt)
 
 
 # Interface to Internet

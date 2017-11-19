@@ -4,6 +4,8 @@
 # Using mustache template python version pystache.
 # In the html template if there are un-satisfied variables,
 # it will raise exception.
+#
+# markdown, template, files are hardwired.
 
 
 import os
@@ -33,15 +35,12 @@ extra_tail = """
 
 """
 
-SRC = '/home/za/workspace/gg.intro/md.files/intro.md'
-DST = '/tmp/index.html'
-
-CNSRC = '/home/za/workspace/gg.intro/md.files/cn/intro.md'
-CNDST = '/tmp/index.cn.html'
 
 
 def replace(mdsrc=None, tplsrc=None, dst=None):
-    """
+    """do with string replacing
+
+    Change to using mustache/pystache template.
     """
 
     #src = '/home/za/workspace/gg.intro/md.files/intro.md'
@@ -100,6 +99,12 @@ if __name__ == "__main__":
     index = os.path.expanduser('~/workspace/gg2/srv/public/index.html')
     cnindex = os.path.expanduser('~/workspace/gg2/srv/public/index.cn.html')
 
+    SRC = '/home/za/workspace/gg.intro/md.files/intro.md'
+    DST = '/tmp/index.html'
+
+    CNSRC = '/home/za/workspace/gg.intro/md.files/cn/intro.md'
+    CNDST = '/tmp/index.cn.html'
+
     #tmp = replace(SRC, DST)
     #tmp = replace(CNSRC, CNDST)
 
@@ -110,4 +115,5 @@ if __name__ == "__main__":
     dotemplate(SRC, index_template, index, '/md', lang_tag=cn_lang_switch)
     dotemplate(mdsrc=CNSRC, tplsrc=index_template, dst=cnindex,
             htmlRoot='/md', lang_tag=en_lang_switch)
+
 
