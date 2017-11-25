@@ -17,11 +17,11 @@ const p = console.log;
 //}
 
 document.getElementById('randomColor').onclick = function(e){
-    e.preventDefault();
+    if(e) e.preventDefault();
     pcolor.randomBodyColor();
 };
 document.getElementById('textColor').onclick = function(e){
-    e.preventDefault();
+    if(e) e.preventDefault();
     pcolor.rollBodyForeground();
 };
 

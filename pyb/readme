@@ -13,4 +13,26 @@ copy a lot from ../py
     use {{{ instead of {{, if not to escape html tage 
 
 
+# files
+
+    mkmd.py : 
+        transfer markdown to html
+        need to run in command line offer: -s -t
+        source and target
+        make sure python env 'test' which has pystache
+
+    compile_js_css.py   
+        js and css compile
+
+    mkindex.py
+        make index.html and index.cn.html from
+        intro.md and cn/intro.md
+        
+    ...
+
+    c.py
+    c.tool.py
+    mdfile2folder.py
+    mis.py
+    tool.py
 

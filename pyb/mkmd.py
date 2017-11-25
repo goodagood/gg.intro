@@ -76,6 +76,8 @@ def readTemplate():
 
 
 def do_md_folder():
+    """Transfer markdown files to html, parameter get from command line.
+    """
 
     # source/target dir get from command line parameter -s -t
     param = tool.check_parameter()
@@ -92,7 +94,7 @@ def do_md_folder():
     # Copy the whole folder to target position
     tool.copyfolder(param.source_dir, param.target_dir)
 
-    # result folder, it's content just been copied in.
+    # get the path of the new folder, it's content just been copied in.
     name = os.path.basename(param.source_dir)
     result_folder = os.path.join(param.target_dir, name)
     print('result dir', result_folder)
@@ -108,8 +110,6 @@ def do_md_folder():
         #md2index_same_folder(mdpath)
 
 
-def run():
-    pass
 
 
 

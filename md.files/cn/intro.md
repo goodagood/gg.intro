@@ -99,35 +99,39 @@ goodogood.com 正是这样一个系统，系统中一切都是文件。
 真实的原因来自很久很久以前，可以讲一个很长很长的故事，
 如果你有时间的话，这个故事从可能的宇宙源头开始，
 [一沙一世界，天堂会降临](/md/md.files/cn/sand.markdown.html)
+，
+(
+<a href="https://github.com/goodagood/story/blob/master/y10m/b.markdown"
+target="_blank"> source</a>
+)
+。
 
-[关于猩猩的故事](https://github.com/goodagood/story/blob/master/chimpsland/001.txt)
 
 源代码在 [GITHUB-GOODAGOOD](github.com/goodagood/gg2)
 
 这样的系统总会出现的，究竟由谁来完成，也许不是重要的问题。
 人在天涯，更多想不明白的内容，就交给不可知。
 
+[关于猩猩的更多故事](/md/md.files/cn/chimp1.md.html)，（
+<a href="https://github.com/goodagood/story/blob/master/chimpsland/001.txt"
+target="_blank"> chimp source part one</a>
+<a href="https://github.com/goodagood/story/blob/master/chimpsland/002.txt"
+target="_blank"> chimp source part two</a>）
 
-# Chinese info.
-
-
-[over 10 billion years](/md/md.files/137.md.html)
-[introduction](/md/md.files/cn/intro.md.html)
-[To sea a World in a Grain of Sand](/md/md.files/cn/sand.markdown.html)
 
 
 # Background info.
 
 
-[Value for every byte 1](/md/md.files/byte-value.md.html)
-[Value for every byte 2](/md/md.files/clean-claim.md.html)
-[Value for every byte 3](/md/md.files/code-value.md.html)
-[Value for every byte 4](/md/md.files/intro.md.html)
-[Value for every byte 5](/md/md.files/negative.md.html)
-[Value for every byte 6](/md/md.files/reasons.md.html)
-[Value for every byte 7](/md/md.files/start.md.html)
-[Value for every byte 8](/md/md.files/test24.md.html)
-[Value for every byte 9](/md/md.files/value.md.html)
+- [Value for every byte 1](/md/md.files/byte-value.md.html)
+- [Value for every byte 3](/md/md.files/code-value.md.html)
+- [Value for every byte 4](/md/md.files/intro.md.html)
+- [Value for every byte 5](/md/md.files/negative.md.html)
+- [Value for every byte 6](/md/md.files/reasons.md.html)
+- [Value for every byte 7](/md/md.files/start.md.html)
+- [Value for every byte 8](/md/md.files/test24.md.html)
+- [How about negative value?](/md/md.files/clean-claim.md.html)
+- [Value for every byte 9](/md/md.files/value.md.html)
 
 
 
