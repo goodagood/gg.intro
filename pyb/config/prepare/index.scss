@@ -9,11 +9,8 @@ color: #333333;
 
 
 body {
-    /*
-    margin:0;
-    */
+    margin:1px;
 
-    background-color: white;
     color: $default-color;
     background-color: $default-background-color;
 
@@ -21,6 +18,10 @@ body {
 
     text-align: center;
     line-height: 1.5rem;
+}
+
+div.logo {
+    margin-right: 2rem;
 }
 
 nav#fix-top {
@@ -34,7 +35,7 @@ nav#fix-top {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
 
-    width: 100%; /* Full width */
+    width: 99%; /* Full width */
     z-index: 1;
 
     padding-left: 3px;
@@ -43,9 +44,6 @@ nav#fix-top {
     padding-bottom: 1px;
 
     div.topnav{
-        width:99%;
-
-        position:absolute;
         top:0.3rem;
     }
 
@@ -58,20 +56,24 @@ nav#fix-top {
         border-color: $default-background-color;
         border-radius: 3px;
 
-        float:right;
+        float:left;
 
         text-decoration: none;
         font-size: 1.3rem;
         font-weight: bold;
     }
+
     a.ggcom {
         border:None;
         float:left;
+        font-size: 1.5rem;
+        font-weight:bold;
     }
 }
 
 nav#fix-top div {
     height: 2.5rem;
+    display: inline-block;
     float: left;
 
     div {
@@ -91,12 +93,10 @@ nav#fix-top div {
     color: black;
 }
 
-.topnav .icon {
-    display: none;
-}
 
 
 @media screen and (max-width: 600px) {
+
     nav#fix-top{
         // not necessarily repeating?
         position: fixed; /* Set the navbar to fixed position */
@@ -112,6 +112,11 @@ nav#fix-top div {
     .opt{
         display:none;
     }
+
+    div.logo {
+        margin-right: 1rem;
+    }
+
 
 }
 

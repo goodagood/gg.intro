@@ -8,6 +8,20 @@ js, css might be used in html pages.
 
 copy a lot from ../py
 
+# install
+ 
+
+    # python, use env 'test' in this machine, source ~/py/test/bin/activate
+    pip install markdown pystache
+
+    # for local npm links
+    npm install
+    cd ~/workspace/page.color
+    npm link
+    cd ~/workspace/gg.intro/pyb/config
+    npm link page.color
+
+
 ## pystache/mustache template
 
     use {{{ instead of {{, if not to escape html tage 

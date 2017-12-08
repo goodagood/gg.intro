@@ -107,6 +107,6 @@ if __name__ == "__main__":
     #jscmd = compile_js()
     #js1a = jscmd[0].split()
 
-    #what = compile_css()
+    what = compile_css()
 
-    both()
+    #both()
