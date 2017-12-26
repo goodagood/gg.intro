@@ -105,8 +105,11 @@ def both():
 if __name__ == "__main__":
 
     #jscmd = compile_js()
+    #print(jscmd)
+
     #js1a = jscmd[0].split()
 
     what = compile_css()
+    print(what)
 
     #both()

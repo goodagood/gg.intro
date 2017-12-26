@@ -2,7 +2,10 @@
 const $ = require("jquery");
 
 //const pcolor = require("../mycolor.js");
-const pcolor = require("page.color/mycolor.js");
+//const pcolor = require("page.color/mycolor.js");
+const pcolor = require("./color.js");
+
+const coo = require("./cookie.js");
 
 const p = console.log;
 
@@ -28,6 +31,16 @@ document.getElementById('textColor').onclick = function(e){
 
 
 $( document ).ready(function() {
+
+    // retrieve color and set it
+
+    var color = coo.getCookie('color');
+    var bgcolor = coo.getCookie('bgcolor');
+    console.log('would we set it? ', color, bgcolor);
+    if(color || bgcolor) pcolor.bodyColor(color, bgcolor); 
+
+    // old things 1225 2017
+    //
     //console.log( (this == $ ? 'yes' : 'no') );
     //$.inspect(this, 'window');
 
