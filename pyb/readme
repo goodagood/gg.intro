@@ -32,8 +32,12 @@ copy a lot from ../py
     mkmd.py : 
         transfer markdown to html
         need to run in command line offer: -s -t
-        source and target
+        folder of source and target, as example when 'mkmd.py' is in cwd:
+
+            python mkmd.py  -t  /my/outside/md  -s ../md.files
+
         make sure python env 'test' which has pystache
+
 
     compile_js_css.py   
         js and css compile
@@ -49,4 +53,5 @@ copy a lot from ../py
     mdfile2folder.py
     mis.py
     tool.py
+
 

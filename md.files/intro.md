@@ -54,7 +54,7 @@ MongoDB, Redis as data stores.
 
 - [introduction](/md/md.files/cn/intro.md.html)
 - [To see a World in a Grain of Sand](/md/md.files/cn/sand.markdown.html)
-- [source](/md/md.files/cn/sand.markdown.html)
+- [source](https://github.com/goodagood/story/blob/master/y10m/b.markdown)
 - [Chimp's land](/md/md.files/cn/chimp1.md.html)
 
 [关于猩猩的更多故事](/md/md.files/cn/chimp1.md.html)，（

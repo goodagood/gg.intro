@@ -46,45 +46,53 @@ div.logo {
 }
 
 nav#fix-top {
-    height: 3rem;
+    //min-height: 3.5rem;
 
     // switch color:
     color: $default-background-color;
     background-color: $default-color;
 
+    display: block;
+
     /* fix top */
     position: fixed; /* Set the navbar to fixed position */
     top: 0px; /* Position the navbar at the top of the page */
-    left: 2px;
+    left: 0px;
 
-    width: 99%; /* Full width */
-    z-index: 200;
 
-    backface-visibility: hidden;
-    //-webkit-backface-visibility: hidden;
+    width: 99vw; /* view width */
+    z-index: 100;
 
-    padding-left: 3px;
-    padding-right: 3px;
-    padding-top: 1rem;
-    padding-bottom: 1px;
+    //backface-visibility: hidden;
+
+    //padding-left: 3px;
+    //padding-right: 3px;
+    //padding-top: 1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+
+    div {
+        float: right;
+    }
 
     div.topnav{
-        top:0.3rem;
+        float: left;
+        padding-left:1rem;
     }
 
     a {
         margin-right:0.9rem;
         min-width: 3rem;
         padding: 1px;
-        padding-top: 3px;
+        //padding-top: 3px;
 
         border-style: solid;
         border-width: 1px;
         //border-color: $default-background-color;
         border-color: #999;
-        border-radius: 3px;
+        border-radius: 4px;
 
-        float:left;
+        //float:left;
 
         text-decoration: none;
         font-size: 1.8rem;
@@ -100,7 +108,7 @@ nav#fix-top {
 }
 
 nav#fix-top div {
-    height: 2.5rem;
+    //height: 2.5rem;
     display: inline-block;
     float: left;
 
@@ -122,20 +130,21 @@ nav#fix-top div {
 }
 
 
-.opt{
+#fix-top .opt{
     display:none;
 }
 
-div.logo {
-    margin-right: 0.8rem;
-}
 
 
 
 @media screen and (min-width: 640px) {
 
     nav#fix-top{
-        .topnav{
+
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+
+        div.topnav{
             float:right;
         }
 
@@ -152,12 +161,14 @@ div.logo {
             font-weight:bold;
         }
 
+
+        .opt{
+            display:inline-block;
+        }
+
     }
 
 
-    .opt{
-        display:inline-block;
-    }
 
 
 
