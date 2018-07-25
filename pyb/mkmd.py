@@ -28,6 +28,8 @@ def mkmd(src, dst=None):
     return html
 
 
+
+
 # template things
 import pystache
 
@@ -42,7 +44,15 @@ def render_html(src=None, dst=None):
     #template ? path
     with open('./config/template.html', 'r') as t:
         temp = t.read()
+
         r = pystache.render(temp, {'html4markdown': s, 'htmlRoot': '/md'});
+        # htmlRoot is used in HTML page content, not refers to file folder
+
+        # r is unicode by pystache doc. This makes is explicit
+        r = r.encode('utf8')
+
+    if dst == None:
+        return r
 
     with open(dst, 'w') as f:
         f.write(r)
