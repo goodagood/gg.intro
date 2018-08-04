@@ -11,6 +11,7 @@ copy a lot from ../py
 # install
  
 
+    # default to python3
     # python, use env 'test' in this machine, source ~/py/test/bin/activate
     pip install markdown pystache
 

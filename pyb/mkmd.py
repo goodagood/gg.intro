@@ -33,6 +33,7 @@ def mkmd(src, dst=None):
 # template things
 import pystache
 
+
 # render a md file to html
 def render_html(src=None, dst=None):
 
@@ -50,6 +51,8 @@ def render_html(src=None, dst=None):
 
         # r is unicode by pystache doc. This makes is explicit
         r = r.encode('utf8')
+        #r = r.decode('utf8') # to string
+        r = str(r, 'utf8')
 
     if dst == None:
         return r
