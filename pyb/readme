@@ -47,6 +47,10 @@ copy a lot from ../py
         make index.html and index.cn.html from
         intro.md and cn/intro.md
         
+    fetch.138.py
+	clone story git, then get the story, b.markdown
+	2018 0805 1050am
+
     ...
 
     c.py
