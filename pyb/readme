@@ -8,6 +8,9 @@ js, css might be used in html pages.
 
 copy a lot from ../py
 
+We do folder path according to home folder, easy migration to server.
+
+
 # install
  
 

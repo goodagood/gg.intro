@@ -35,6 +35,76 @@ def compile_js():
     return [cmdj, cpj, cpjgg2]
 
 
+#  
+# Make it easy to set source and target, same as compile_js.
+# 2018 0806
+#
+
+def js_folders(src, tgt):
+
+    #jsinput = '~/workspace/gg.intro/pyb/config/prepare/index.js'
+    #jsinput = os.path.expanduser(jsinput)
+    #
+    # New location of the js index, 2018 0806
+    js_input = '~/workspace/gg.intro/pyb/template/js/src/index.browserify.js'
+
+
+    #js_target =  "~/workspace/gg.intro/pyb/config/bundle.js"
+    #js_target = os.path.expanduser(js_target)
+    #
+    # new location
+    js_target = '~/workspace/gg.intro/pyb/template/js/index.js'
+
+
+    print(js_input, js_target)
+    browserify_js(js_input, js_target)
+
+
+    ## The old targets
+    ##js_target = os.path.expanduser(js_target)
+    #one_default = """/my/outside/md/bundle.js """
+    #print(one)
+    #
+    #cp_target2 =  "~/workspace/gg2/srv/public/bundle.js"
+    #cp_target2 = os.path.expanduser(cp_target2)
+    #
+    ## copy back
+    #cpj = """cp  /my/outside/md/bundle.js  %s  """%js_target
+    ## copy to gg2/srv/public
+    #cpjgg2 = """cp  /my/outside/md/bundle.js %s """%js_gg2
+
+
+    #cmdj = """browserify %s --debug -o  /my/outside/md/bundle.js """%jsinput
+    #print(cmdj)
+
+
+def browserify_js(src, tgt):
+
+
+    """I have to write commands in one line and use subprocess.call
+    """
+
+
+    #redoing
+    cmdj = """browserify %s --debug -o  %s """%(src, tgt)
+    print(cmdj)
+    subprocess.call(cmdj, shell=True)
+
+    ## copy back
+    #cpj = """cp  /my/outside/md/bundle.js  %s  """%js_target
+    ## copy to gg2/srv/public
+    #cpjgg2 = """cp  /my/outside/md/bundle.js %s """%js_gg2
+
+
+    #subprocess.call(cmdj, shell=True)
+    #subprocess.call(cpj, shell=True)
+    #subprocess.call(cpjgg2, shell=True)
+
+    #return [cmdj, cpj, cpjgg2]
+
+
+
+
 
 def compile_css():
     """I have to write commands in one line and use subprocess.call
