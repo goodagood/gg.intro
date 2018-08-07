@@ -31,7 +31,6 @@ def copyfolder(src, dest):
 
 
 
-
 def mkdir_p(path):
     try:
         os.makedirs(path)

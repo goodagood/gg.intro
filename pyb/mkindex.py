@@ -72,7 +72,8 @@ def replace(mdsrc=None, tplsrc=None, dst=None):
 
 
 def dotemplate(mdsrc=None, tplsrc=None, dst=None, htmlRoot='', lang_tag=None):
-    print(mdsrc, tplsrc, dst, htmlRoot)
+    #print(mdsrc, tplsrc, dst, htmlRoot)
+
     s = mkmd.mkmd(src=mdsrc)
 
     with open(tplsrc, 'r') as t:
@@ -89,21 +90,26 @@ def dotemplate(mdsrc=None, tplsrc=None, dst=None, htmlRoot='', lang_tag=None):
     with open(dst, 'w') as f:
         f.write(result)
 
-    pass
 
 
 if __name__ == "__main__":
 
     index_template = os.path.expanduser(
             '~/workspace/gg2/srv/public/index.template.html')
-    index = os.path.expanduser('~/workspace/gg2/srv/public/index.html')
-    cnindex = os.path.expanduser('~/workspace/gg2/srv/public/index.cn.html')
+
+    index_dst = os.path.expanduser('~/workspace/gg2/srv/public/index.html')
+    cnindex_dst = os.path.expanduser('~/workspace/gg2/srv/public/index.cn.html')
 
     SRC = '/home/za/workspace/gg.intro/md.files/intro.md'
-    DST = '/tmp/index.html'
+    SRC = os.path.expanduser(SRC)
+    DST =   '/my/outside/md/index.html'
 
-    CNSRC = '/home/za/workspace/gg.intro/md.files/cn/intro.md'
-    CNDST = '/tmp/index.cn.html'
+    TMPDST =   '/tmp/index.html'
+    TMPCNDST = '/tmp/index.cn.html'
+    #CNDST = '/tmp/index.cn.html'
+
+    CNSRC = os.path.expanduser('~/workspace/gg.intro/md.files/cn/intro.md')
+    CNDST = '/my/outside/md/index.cn.html'
 
     #tmp = replace(SRC, DST)
     #tmp = replace(CNSRC, CNDST)
@@ -112,8 +118,23 @@ if __name__ == "__main__":
     cn_lang_switch = """<a href="./index.cn.html" id="index-cn-link"> 中文 </a>"""
     en_lang_switch = """<a href="./index.html" id="index-en-link"> English </a>"""
 
-    dotemplate(SRC, index_template, index, '/md', lang_tag=cn_lang_switch)
-    dotemplate(mdsrc=CNSRC, tplsrc=index_template, dst=cnindex,
+
+    print("""Do index
+    md src\t: %s,
+    template\t: %s,
+    destination\t: %s
+    \r\n"""%(
+        SRC, index_template, DST))
+
+    dotemplate(SRC, index_template, DST, '/md', lang_tag=cn_lang_switch)
+
+    print("""Do cn index
+    md src\t: %s,
+    template\t: %s,
+    destination\t: %s """%(
+        CNSRC, index_template, CNDST))
+
+    dotemplate(mdsrc=CNSRC, tplsrc=index_template, dst=CNDST,
             htmlRoot='/md', lang_tag=en_lang_switch)
 
 
