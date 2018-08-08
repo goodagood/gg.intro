@@ -190,6 +190,17 @@ def copy_js_css(cwd=None, tgt=None):
     pass
 
 
+#import sys, os
+def find_script_path():
+
+    print('sys.argv[0] =', sys.argv[0])             
+    pathname = os.path.dirname(sys.argv[0])        
+    print('path =', pathname)
+
+    full_path = os.path.abspath(pathname)
+    print('full path =', full_path) 
+    return full_path
+
 
 if __name__ == "__main__":
     ooo = '/tmp/ooo'
@@ -198,5 +209,7 @@ if __name__ == "__main__":
     #mk_target_folder()
     #copyfolder(ooo, tgt)
 
-    copy_js_css('/home/za/workspace/gg.intro/pyb/', '/my/outside/md')
+    #copy_js_css('/home/za/workspace/gg.intro/pyb/', '/my/outside/md')
+
+    find_script_path()
 
