@@ -21,7 +21,7 @@ MDSrc = os.path.expanduser("~/workspace/gg.intro/md.files")
 print(MDSrc, TargetRoot )
 
 
-compile_js_css.js_folders(1,2)
+compile_js_css.prepare_js(1,2)
 
 
 
