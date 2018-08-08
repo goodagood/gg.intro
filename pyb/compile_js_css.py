@@ -41,6 +41,8 @@ def compile_js():
 #
 
 def js_folders(src, tgt):
+    """js folders can be hard-coded, It happens only in template.
+    """
 
     #jsinput = '~/workspace/gg.intro/pyb/config/prepare/index.js'
     #jsinput = os.path.expanduser(jsinput)
