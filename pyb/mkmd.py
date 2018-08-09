@@ -61,6 +61,40 @@ def render_html(src=None, dst=None):
         f.write(r)
 
 
+def mkhtml(template=None, src=None, dst=None, opt={}):
+    """Start from render_html, add parameter of template file.
+    """
+
+    if not src:
+        print("no source file set, return.")
+        return ''
+
+    if not template:
+        template = './config/template.html'
+        print("no template set, default to :", template)
+
+    ## Finished parameter checking
+
+    s = mkmd(src=src)
+
+    with open(template, 'r') as t:
+        temp = t.read()
+
+        r = pystache.render(temp, {'html4markdown': s, 'htmlRoot': '/md'});
+        # htmlRoot is used in HTML page content, not refers to file folder
+
+        # r is unicode by pystache doc. This makes is explicit
+        r = r.encode('utf8')
+        #r = r.decode('utf8') # to string
+        r = str(r, 'utf8')
+
+    if dst == None:
+        return r
+
+    with open(dst, 'w') as f:
+        f.write(r)
+
+
 def md2html_same_folder(src):
     #name = os.path.basename(src)
     #result_folder = os.path.join(param.target_dir, name)
@@ -90,6 +124,43 @@ def readTemplate():
 
 def do_md_folder():
     """Transfer markdown files to html, parameter get from command line.
+    """
+
+    # source/target dir get from command line parameter -s -t
+    param = tool.check_parameter()
+    if not param.source_dir:
+        print('not source dir')
+        return
+    print('>source dir', param.source_dir)
+    print('>target dir', param.target_dir)
+
+    if param.delete_dir:
+        shutil.rmtree(param.target_dir)
+        print('rm target dir', param.target_dir)
+
+    # Copy the whole folder to target position
+    tool.copyfolder(param.source_dir, param.target_dir)
+
+    # get the path of the new folder, it's content just been copied in.
+    name = os.path.basename(param.source_dir)
+    result_folder = os.path.join(param.target_dir, name)
+    print('result dir', result_folder)
+
+    # find markdown files and do it
+    for mdpath in tool.find_md(result_folder):
+        print(mdpath)
+
+        # add .html to the markdown file name
+        md2html_same_folder(mdpath)
+
+        # make a folder and build markdown as folder/index.html
+        #md2index_same_folder(mdpath)
+
+
+def august():
+    """improve from do_md_folder, easy to set source and target
+
+    2018 0809
     """
 
     # source/target dir get from command line parameter -s -t
