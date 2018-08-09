@@ -1,0 +1,16 @@
+
+Give fast server to show webpages
+
+
+# express
+
+ 1, add a line to set the static folder in app.js
+ 2, npm start
+
+
+# python 
+
+ python -m SimpleHTTPServer
+
+
+
