@@ -6,6 +6,7 @@
   "private": false,
   "repository": "git@github.com:goodagood/gg.intro.git",
   "dependencies": {
+    "color": "^3.0.0",
     "jquery": "^3.0.0",
     "marked": "^0.3.2",
     "material-design-icons": "^2.2.3",

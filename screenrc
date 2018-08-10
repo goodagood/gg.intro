@@ -1,0 +1,22 @@
+bind w windowlist -b
+# F1, F2, F3 for windowlist, copy mode, add title
+bindkey -k k1 windowlist -b
+bindkey -k k2 copy
+bindkey -k k3 title
+# F5, F4 for next, prev screen window
+bindkey -k k5 next
+bindkey -k k4 prev
+
+startup_message off
+defscrollback 5000
+
+## status line:
+hardstatus on
+hardstatus alwayslastline
+#hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a %l "
+# 24hours:
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %c %l "
+# .rW --> .kW,  red to black
+#hardstatus string "%{.bW}%-w%{.kW}%n %t%{-}%+w %=%{..G} %H%` %{..Y} %m/%d %C%a %l "
+#hardstatus string "%{.bW}%-w%{.kW}%n %t%{-}%+w %=%{..G} %H%` %{..K} %m/%d %C%a %l "
+backtick 0 30 30 sh -c 'screen -ls | grep --color=no -o "$PPID[^[:space:]]*"'
