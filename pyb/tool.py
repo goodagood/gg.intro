@@ -31,6 +31,19 @@ def copyfolder(src, dest):
 
 
 
+def copytree(src, dest):
+    """Difference from copyfolder is src copy to dest, not as sub-folder
+
+    dest will be removed before-hand if exists
+    2018 0810
+    """
+
+    if os.path.isdir(dest):
+        shutil.rmtree(dest)
+
+    shutil.copytree(src, dest)
+
+
 def mkdir_p(path):
     try:
         os.makedirs(path)
@@ -192,12 +205,12 @@ def copy_js_css(cwd=None, tgt=None):
 #import sys, os
 def find_script_path():
 
-    print('sys.argv[0] =', sys.argv[0])             
+    #print('sys.argv[0] =', sys.argv[0])             
     pathname = os.path.dirname(sys.argv[0])        
-    print('path =', pathname)
+    #print('path =', pathname)
 
     full_path = os.path.abspath(pathname)
-    print('full path =', full_path) 
+    #print('full path =', full_path) 
     return full_path
 
 

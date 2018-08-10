@@ -40,13 +40,10 @@ def compile_js():
 # 2018 0806
 #
 
-<<<<<<< HEAD
-def js_folders(src, tgt):
+def prepare_js(src, tgt):
+#def js_folders(src, tgt):
     """js folders can be hard-coded, It happens only in template.
     """
-=======
-def prepare_js(src, tgt):
->>>>>>> origin/aqv
 
     #jsinput = '~/workspace/gg.intro/pyb/config/prepare/index.js'
     #jsinput = os.path.expanduser(jsinput)
@@ -181,15 +178,24 @@ def prepare_css(src, tgt):
     """edit from compile css, upgrade to seperate file name
     """
 
-    css_src = '~/workspace/gg.intro/pyb/config/prepare/index.scss'
-    css_src = os.path.expanduser(css_src)
+    scss_input = '~/workspace/gg.intro/pyb/template/style/src/index.scss'
 
-    css_target = '~/workspace/gg.intro/pyb/config/styles/index.css'
+
+    # new location
+    css_target = '~/workspace/gg.intro/pyb/template/style/index.css'
+
+
+    #css_src = '~/workspace/gg.intro/pyb/config/prepare/index.scss'
+    css_src = os.path.expanduser(scss_input)
+
+
+    #css_target = '~/workspace/gg.intro/pyb/config/styles/index.css'
     css_target = os.path.expanduser(css_target)
 
     css_map_target = '~/workspace/gg.intro/pyb/config/styles/'
     css_map_target = os.path.expanduser(css_map_target)
 
+    ## xx
     gg2css_target = '~/workspace/gg2/srv/public/stylesheets/index.css'
     gg2css_target = os.path.expanduser(gg2css_target)
 

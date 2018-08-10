@@ -1,4 +1,10 @@
 
+#
+# Copy from fetch.138.py, which is testing and file name not regular.
+# 2018 August 10
+#
+
+
 import subprocess
 import shlex
 #import requests as req
