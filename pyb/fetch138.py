@@ -62,7 +62,31 @@ def hard_coded_story_clone(target_file_name):
         print('cp failed ', cp_cmd)
 
 
+import requests
+def get_single_file(href, file_path="/tmp/aa"):
+    """Get the href as utf-8 string
+    """
+    if not href:
+        return ''
+
+    r = requests.get(href)
+    s = str(r.content, 'utf8')
+    #print (r.headers)
+
+    if file_path:
+        with open(file_path, 'w') as f:
+            f.write(s)
+            pass
+
+    return s
+
+
+
+raw_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markdown"
+story = get_single_file(raw_git, '/tmp/bb.md')
+
 
 if __name__ == "__main__":
-    hard_coded_story_clone('/tmp/mdhtml/b.md')
+    pass
+    #hard_coded_story_clone('/tmp/mdhtml/b.md')
 

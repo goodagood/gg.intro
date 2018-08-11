@@ -18,6 +18,7 @@ folder template need building, html, js and css
     # default to python3
     # python, use env 'test' in this machine, source ~/py/test/bin/activate
     pip install markdown pystache
+        # install requests
 
     # for local npm links
     npm install

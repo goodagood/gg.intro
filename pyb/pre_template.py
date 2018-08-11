@@ -49,7 +49,7 @@ import subprocess
 
 
 import glob
-def copy_template(script_path):
+def copy_template(script_path, tgt_folder):
     js_path = os.path.join(script_path, 'template/js')
     js_files = os.path.join(script_path, 'template/js/*.js')
     style_path = os.path.join(script_path, 'template/style')
