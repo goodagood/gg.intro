@@ -15,26 +15,26 @@ import tool
 
 
 
-template = './template/template.html'
-
-#src = "/tmp/story/y10m/b.markdown"
-#tgt = "/my/outside/tmp/tmp.html"
-
-script_path = tool.find_script_path()
-print("sp script path: ", script_path)
-
-template_path = os.path.join(script_path, template)
-template_abs = os.path.abspath(template_path)
-print("template abs p: ", os.path.abspath(template_abs))
-
-#mkmd.mkhtml(template=template_abs, src=src, dst=tgt)
-
-
-
-#src_folder = "/home/za/workspace/gg.intro/md.files"
-src_folder = "/tmp/md.files"
-tgt_folder = "/tmp/mdhtml"
-
+#template = './template/template.html'
+#
+##src = "/tmp/story/y10m/b.markdown"
+##tgt = "/my/outside/tmp/tmp.html"
+#
+#script_path = tool.find_script_path()
+#print("sp script path: ", script_path)
+#
+#template_path = os.path.join(script_path, template)
+#template_abs = os.path.abspath(template_path)
+#print("template abs p: ", os.path.abspath(template_abs))
+#
+##mkmd.mkhtml(template=template_abs, src=src, dst=tgt)
+#
+#
+#
+##src_folder = "/home/za/workspace/gg.intro/md.files"
+#src_folder = "/tmp/md.files"
+#tgt_folder = "/tmp/mdhtml"
+#
 
 # old way
 #result_folder = "/tmp/mdhtml/md.files"
@@ -43,13 +43,13 @@ tgt_folder = "/tmp/mdhtml"
 import shlex
 import subprocess
 
-tool.copytree(src_folder, tgt_folder)
+#tool.copytree(src_folder, tgt_folder)
 
 
 
 
 import glob
-def copy_template():
+def copy_template(script_path):
     js_path = os.path.join(script_path, 'template/js')
     js_files = os.path.join(script_path, 'template/js/*.js')
     style_path = os.path.join(script_path, 'template/style')
@@ -66,14 +66,15 @@ def copy_template():
         shutil.copy(f, tgt_folder)
 
 
-copy_template()
 
-
-for mdpath in tool.find_md(tgt_folder):
-    print(mdpath)
-
-    # add .html to the markdown file name
-    mkmd.md2html_same_folder(mdpath)
+#copy_template()
+#
+#
+#for mdpath in tool.find_md(tgt_folder):
+#    print(mdpath)
+#
+#    # add .html to the markdown file name
+#    mkmd.md2html_same_folder(mdpath)
 
 
 
