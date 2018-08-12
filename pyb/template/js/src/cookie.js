@@ -35,6 +35,21 @@ function checkCookie() {
 } 
 
 
+function restore_preset_cookies(){
+    var fgcolor = getCookie('fpcolor');
+    var bgcolor = getCookie('bgcolor');
+    var fglink  = getCookie('fplink');
+    var bglink  = getCookie('bglink');
+
+    var bodyFontSize  = getCookie('bodyFontSize');
+
+    if(fgcolor || bgcolor) Color.bodyColor(fgcolor, bgcolor); 
+    if(fglink  || bglink) Color.colorLinks(fglink, bglink); 
+
+    if(bodyFontSize) document.body.style.fontSize = bodyFontSize;
+}
+
+
 module.exports.getCookie = getCookie;
 module.exports.setCookie = setCookie;
 module.exports.checkCookie = checkCookie;

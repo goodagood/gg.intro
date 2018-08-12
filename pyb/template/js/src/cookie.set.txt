@@ -1,0 +1,8 @@
+
+fgcolor: fore ground color
+bgcolor: background color
+
+fglink: foreground link color, <a href='...'>link one </a>
+bglink: background color for links, <a href='...'>link one </a>
+
+fontsize: base font size, unit?

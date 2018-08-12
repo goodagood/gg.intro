@@ -20,66 +20,76 @@ import mkindex
 # copy file tree, clone online docs, prepare CSS JS, template,
 # build html
 
-raw_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markdown"
 
-def test_aug_10(src, tgt):
-    """
+def test_do_all(src, tgt, online_file, htmlRoot=None):
+    """ Do all buildings.
     
-    The local story is b.md, we get online
+    Compile template components, js, css
+    fetch online file, 
+    cp folder file tree
+    render to HTML
+    
     """
 
 
+    print("copy and set target : ", tgt)
     tool.copytree(src, tgt)
 
-    #fetch138.hard_coded_story_clone(Story_Path)
-    # Instead of clone the repo, we get the raw file from github
-    Story_Path = os.path.join(tgt, 'b.md')
+    # Instead of clone the repo, we get the single raw file from github
+    Story_Path = os.path.join(tgt, os.path.basename(online_file))
     print( "fetch page: %s  --> %s"%(raw_git, Story_Path))
     fetch138.get_single_file(raw_git, Story_Path)
 
+    compile_js_css.prepare_css()
+    compile_js_css.prepare_js()
     script_path = tool.find_script_path()
+
     print("copy template components ", script_path, tgt)
     pre_template.copy_template(script_path, tgt)
 
-
-    print("make HTML")
-    htmlize(TGT_Folder)
-    #for mdpath in tool.find_md(TGT_Folder):
-    #    print(mdpath)
-
-    #    # add .html to the markdown file name
-    #    #mkmd.md2html_same_folder(mdpath)
+    print("make HTML %s with root: %s"%(tgt, htmlRoot))
+    htmlize(tgt, htmlRoot)
 
 
 
 
-def htmlize(mdfolder):
+def htmlize(mdfolder, htmlRoot=None):
     for mdfile in tool.find_md(mdfolder):
-        print(mdfile)
-
         # add .html to the markdown file name
-        mkmd.md2html_same_folder(mdfile)
+        mkmd.md2html_same_folder(mdfile, htmlRoot)
 
 
+def template_components(tgt):
+    compile_js_css.prepare_css()
+    compile_js_css.prepare_js()
+    script_path = tool.find_script_path()
+
+    print("copy template components ", script_path, tgt)
+    pre_template.copy_template(script_path, tgt)
 
 
 
 if __name__ == "__main__":
 
-    MDSrc = os.path.expanduser("~/workspace/gg.intro/md.files")
-    #MDSrc = os.path.expanduser("/tmp/md.files")
+    MDFolder = os.path.expanduser("~/workspace/gg.intro/md.files")
+    #MDFolder = os.path.expanduser("/tmp/md.files")
 
 
-    #TGT_Folder = "/tmp/august10_1437pm"  # as temperory default
-    #TGT_Folder = "/tmp/aug11"  # as temperory default
-    TGT_Folder = "/my/outside/aug11"  # as temperory default
+    #HTMLFolder = "/tmp/august10_1437pm"  # as temperory default
+    #HTMLFolder = "/tmp/aug11"  # as temperory default
+
+    HTMLFolder = "/my/outside/aug12"  # as temperory default
+
+    raw_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markdown"
 
     # hard coded
-    Story_Path = os.path.join(TGT_Folder, 'b.md')
+    Story_Path = os.path.join(HTMLFolder, 'b.md')
 
 
+    #test_do_all(MDFolder, HTMLFolder, raw_git, '/aug12')
 
-    test_aug_10(MDSrc, TGT_Folder)
+    #htmlize(HTMLFolder, htmlRoot='/aug12')
 
+    template_components(HTMLFolder)
     pass
 

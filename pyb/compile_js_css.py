@@ -65,7 +65,7 @@ def prepare_js(src=None, tgt=None):
     js_target = os.path.expanduser(tgt)
 
 
-    print(js_input, js_target)
+    #print(js_input, js_target)
     browserify_js(js_input, js_target)
 
 

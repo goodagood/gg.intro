@@ -3,73 +3,45 @@ const $ = require("jquery");
 
 //const pcolor = require("../mycolor.js");
 //const pcolor = require("page.color/mycolor.js");
-const pcolor = require("./color.js");
+
+const Color = require("./color.js");
 
 const coo = require("./cookie.js");
 
 const p = console.log;
 
-//// switch the topnav to small icon, not used
-//function w3topnavFun() {
-//  var x = document.getElementById("w3topnav");
-//  if (x.className === "topnav") {
-//    x.className += " responsive";
-//  } else {
-//    x.className = "topnav";
-//  }
-//}
 
 document.getElementById('randomColor').onclick = function(e){
     if(e) e.preventDefault();
-    pcolor.randomBodyColor();
+    Color.randomBodyColor();
+    Color.rollLinkForeground();
 };
 document.getElementById('textColor').onclick = function(e){
     if(e) e.preventDefault();
-    pcolor.rollBodyForeground();
+    Color.rollBodyForeground();
 };
 
 
 
 $( document ).ready(function() {
 
-    // retrieve color and set it
+    // retrieve color and set it,
+    // retrieve cookies and do the settings
 
-    var color = coo.getCookie('color');
+    var fgcolor = coo.getCookie('fpcolor');
     var bgcolor = coo.getCookie('bgcolor');
-    console.log('would we set it? ', color, bgcolor);
-    if(color || bgcolor) pcolor.bodyColor(color, bgcolor); 
+    var fglink  = coo.getCookie('fplink');
+    var bglink  = coo.getCookie('bglink');
 
-    // old things 1225 2017
-    //
-    //console.log( (this == $ ? 'yes' : 'no') );
-    //$.inspect(this, 'window');
+    var bodyFontSize  = coo.getCookie('bodyFontSize');
+
+    if(fgcolor || bgcolor) Color.bodyColor(fgcolor, bgcolor); 
+    if(fglink  || bglink ) Color.colorLinks(fglink, bglink); 
+    if(bodyFontSize) document.body.style.fontSize = bodyFontSize;
+    console.log('did we set it? ', fgcolor, bgcolor, fglink, bglink, bodyFontSize);
 
     //var width = $(window).width();
     //console.log('width', width);
-
-    //$("#password").keypress(function(e) {
-    //  $("form span.hint")
-    //  .html(String.fromCharCode(e.which))
-    //  .stop()
-    //  .fadeIn(100, function(){
-    //    $(this).fadeOut(2000);        
-    //  });
-
-    //});
-
-    //$("#text-password").keypress(function(e) {
-    //  var value = $("#text-password").val();
-    //  // set the other password:
-    //  $("#password").val(value);
-
-    //  // testing:
-    //  //if( $("#password").val() !== $("#text-password") ) alert('not equal ' + value);
-    //});
-
-
-    //$("div#other-id a").click(function(e){
-    //  e.preventDefault();
-    //});
 
 
     // do my translate 
@@ -125,7 +97,6 @@ $( document ).ready(function() {
 
     //$(".ggtt").html(trans($(this).data("ggtt"), "zh"));
 
-    //console.log('here, 0308');
 
 });
 
@@ -148,17 +119,25 @@ function increaseBodyFontSize(e){
   intSize  = parseInt(size);
   p(`size: ${size}, `);
   big = intSize + 1;
-  p(`size + 1: ${big}, `);
-  document.body.style.fontSize = `${big}px`;
+  
+  value = `${big}px`;
+  p(`size + 1: ${value}, `);
+
+  document.body.style.fontSize = value;
+  coo.setCookie("bodyFontSize", value, 365);
 }
+
 function decreaseBodyFontSize(e){
   e.preventDefault();
   var size = getBodyFontSize();
   intSize  = parseInt(size);
   p(`size: ${size}, `);
   small = intSize - 1;
+  value = `${small}px`
   p(`size - 1: ${small}, `);
-  document.body.style.fontSize = `${small}px`;
+  //document.body.style.fontSize = `${small}px`;
+  document.body.style.fontSize = value;
+  coo.setCookie("bodyFontSize", value, 365);
 }
 
 
@@ -176,3 +155,13 @@ if (decreaseEl.addEventListener){
     decreaseEl.attachEvent('onclick', decreaseBodyFontSize);
 }
 
+
+//// switch the topnav to small icon, not used
+//function w3topnavFun() {
+//  var x = document.getElementById("w3topnav");
+//  if (x.className === "topnav") {
+//    x.className += " responsive";
+//  } else {
+//    x.className = "topnav";
+//  }
+//}

@@ -35,18 +35,15 @@ import pystache
 
 
 # render a md file to html
-def render_html(src=None, dst=None):
-
-    #if src == None:
-    #    src = '/tmp/b.md'
+def render_html(src=None, dst=None, htmlRoot='md'):
 
     s = mkmd(src=src)
 
     #template ? path
-    with open('./config/template.html', 'r') as t:
+    with open('./template/template.html', 'r') as t:
         temp = t.read()
 
-        r = pystache.render(temp, {'html4markdown': s, 'htmlRoot': ''});
+        r = pystache.render(temp, {'html4markdown': s, 'htmlRoot': htmlRoot});
         # htmlRoot is used in HTML page content, not refers to file folder
 
         # r is unicode by pystache doc. This makes is explicit
@@ -95,12 +92,13 @@ def mkhtml(template=None, src=None, dst=None, opt={}):
         f.write(r)
 
 
-def md2html_same_folder(src):
+def md2html_same_folder(src, htmlRoot):
     #name = os.path.basename(src)
     #result_folder = os.path.join(param.target_dir, name)
     tgt = src + '.html'
-    print('same dir', src, tgt)
-    render_html(src, tgt)
+    #print('same dir', src, tgt)
+    print('same dir', tgt)
+    render_html(src, tgt, htmlRoot)
 
 
 import mdfile2folder
