@@ -46,7 +46,7 @@ def render_html(src=None, dst=None):
     with open('./config/template.html', 'r') as t:
         temp = t.read()
 
-        r = pystache.render(temp, {'html4markdown': s, 'htmlRoot': '/md'});
+        r = pystache.render(temp, {'html4markdown': s, 'htmlRoot': ''});
         # htmlRoot is used in HTML page content, not refers to file folder
 
         # r is unicode by pystache doc. This makes is explicit

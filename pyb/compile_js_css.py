@@ -40,8 +40,8 @@ def compile_js():
 # 2018 0806
 #
 
-def prepare_js(src, tgt):
-#def js_folders(src, tgt):
+def prepare_js(src=None, tgt=None):
+    #def js_folders(src, tgt):
     """js folders can be hard-coded, It happens only in template.
     """
 
@@ -49,36 +49,25 @@ def prepare_js(src, tgt):
     #jsinput = os.path.expanduser(jsinput)
     #
     # New location of the js index, 2018 0806
-    js_input = '~/workspace/gg.intro/pyb/template/js/src/index.browserify.js'
+    if not src:
+        src = '~/workspace/gg.intro/pyb/template/js/src/index.browserify.js'
+        pass
+    js_input = os.path.expanduser(src)
 
 
     #js_target =  "~/workspace/gg.intro/pyb/config/bundle.js"
     #js_target = os.path.expanduser(js_target)
     #
     # new location
-    js_target = '~/workspace/gg.intro/pyb/template/js/index.js'
+    if not tgt:
+        tgt = '~/workspace/gg.intro/pyb/template/js/index.js'
+        pass
+    js_target = os.path.expanduser(tgt)
 
 
     print(js_input, js_target)
     browserify_js(js_input, js_target)
 
-
-    ## The old targets
-    ##js_target = os.path.expanduser(js_target)
-    #one_default = """/my/outside/md/bundle.js """
-    #print(one)
-    #
-    #cp_target2 =  "~/workspace/gg2/srv/public/bundle.js"
-    #cp_target2 = os.path.expanduser(cp_target2)
-    #
-    ## copy back
-    #cpj = """cp  /my/outside/md/bundle.js  %s  """%js_target
-    ## copy to gg2/srv/public
-    #cpjgg2 = """cp  /my/outside/md/bundle.js %s """%js_gg2
-
-
-    #cmdj = """browserify %s --debug -o  /my/outside/md/bundle.js """%jsinput
-    #print(cmdj)
 
 
 def browserify_js(src, tgt):
@@ -174,45 +163,26 @@ def compile_css():
 # start from compile_css, normalize it. 2018 0808
 #
 
-def prepare_css(src, tgt):
+def prepare_css(src=None, tgt=None):
     """edit from compile css, upgrade to seperate file name
     """
 
-    scss_input = '~/workspace/gg.intro/pyb/template/style/src/index.scss'
-
-
-    # new location
-    css_target = '~/workspace/gg.intro/pyb/template/style/index.css'
-
-
-    #css_src = '~/workspace/gg.intro/pyb/config/prepare/index.scss'
+    if not src:
+        scss_input = '~/workspace/gg.intro/pyb/template/style/src/index.scss'
     css_src = os.path.expanduser(scss_input)
 
-
-    #css_target = '~/workspace/gg.intro/pyb/config/styles/index.css'
+    # new location
+    if not tgt:
+        css_target = '~/workspace/gg.intro/pyb/template/style/index.css'
     css_target = os.path.expanduser(css_target)
 
-    css_map_target = '~/workspace/gg.intro/pyb/config/styles/'
-    css_map_target = os.path.expanduser(css_map_target)
-
-    ## xx
-    gg2css_target = '~/workspace/gg2/srv/public/stylesheets/index.css'
-    gg2css_target = os.path.expanduser(gg2css_target)
-
-    gg2css_map_target = '~/workspace/gg2/srv/public/stylesheets/'
-    gg2css_map_target = os.path.expanduser(gg2css_map_target)
-
-    cmdcss = """scss %s  /my/outside/md/styles/index.css   """%css_src
+    ##xx
+    #css_map_target = '~/workspace/gg.intro/pyb/template/styles/'
+    #css_map_target = os.path.expanduser(css_map_target)
 
 
-    # copy back
-    cpc = """cp  /my/outside/md/styles/index.css  %s """%css_target
-    cpcssmap = """cp /my/outside/md/styles/index.css.map   %s """%css_map_target
 
-    # copy to gg2/srv/public
-    cpc2gg2 = """cp  /my/outside/md/styles/index.css  %s """%gg2css_target
-    cpcssmap2gg2 = """cp  /my/outside/md/styles/index.css.map %s
-    """%gg2css_map_target
+    cmdcss = """sass %s  %s  """%(css_src, css_target)
 
 
 
@@ -221,25 +191,10 @@ def prepare_css(src, tgt):
     print (cmdcss)
     subprocess.call(cmdcss, shell=True)
 
-    print (cpc)
-    subprocess.call(cpc, shell=True)
-    print (cpcssmap)
-    subprocess.call(cpcssmap, shell=True)
-    print (cpc2gg2)
-    subprocess.call(cpc2gg2, shell=True)
-    print (cpcssmap2gg2)
-    subprocess.call(cpcssmap2gg2, shell=True)
 
     return {"css_src": css_src,
             "css_target": css_target,
-            "css_map_target": css_map_target,
-            "gg2css_target": css_target,
-            "gg2css_map_target": css_map_target,
             "cmdcss": cmdcss,
-            "cpc": cpc,
-            "cpcssmap": cpcssmap,
-            "cpc2gg2": cpc2gg2,
-            "cpcssmap2gg2": cpcssmap2gg2,
             }
 
     pass
@@ -252,12 +207,12 @@ def both():
 
 if __name__ == "__main__":
 
-    #jscmd = compile_js()
-    #print(jscmd)
+    #what = compile_css()
+    #print(what)
 
-    #js1a = jscmd[0].split()
-
-    what = compile_css()
-    print(what)
-
+    
     #both()
+
+    prepare_css()
+    prepare_js()
+    pass

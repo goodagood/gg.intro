@@ -2,6 +2,7 @@
 *~
 *.swp
 *.swo
+*.pyc
 # not necessary:
 node_modules/
 bower_components/

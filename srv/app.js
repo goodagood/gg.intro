@@ -20,6 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // add an static file path:
+app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static("/my/outside"));
 //app.use(express.static("/abs/path"));
 
