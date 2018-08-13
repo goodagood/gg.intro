@@ -168,19 +168,14 @@ def prepare_css(src=None, tgt=None):
     """
 
     if not src:
-        scss_input = '~/workspace/gg.intro/pyb/template/style/src/index.scss'
-    css_src = os.path.expanduser(scss_input)
+        # the file moved
+        src = '~/workspace/gg.intro/pyb/template/style/src/index.scss'
+    css_src = os.path.expanduser(src)
 
     # new location
     if not tgt:
-        css_target = '~/workspace/gg.intro/pyb/template/style/index.css'
-    css_target = os.path.expanduser(css_target)
-
-    ##xx
-    #css_map_target = '~/workspace/gg.intro/pyb/template/styles/'
-    #css_map_target = os.path.expanduser(css_map_target)
-
-
+        tgt = '~/workspace/gg.intro/pyb/template/style/index.css'
+    css_target = os.path.expanduser(tgt)
 
     cmdcss = """sass %s  %s  """%(css_src, css_target)
 

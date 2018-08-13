@@ -48,25 +48,6 @@ tool.copytree(src_folder, tgt_folder)
 
 
 
-import glob
-def copy_template(script_path=script_path):
-    js_path = os.path.join(script_path, 'template/js')
-    js_files = os.path.join(script_path, 'template/js/*.js')
-    style_path = os.path.join(script_path, 'template/style')
-    style_files = os.path.join(script_path, 'template/style/*.css')
-
-    #target
-
-    for f in glob.glob(js_files):
-        # copy is function copy f to target file or into the folder
-        shutil.copy(f, tgt_folder)
-
-    for f in glob.glob(style_files):
-        # copy is function copy f to target file or into the folder
-        shutil.copy(f, tgt_folder)
-
-
-copy_template()
 
 
 for mdpath in tool.find_md(tgt_folder):

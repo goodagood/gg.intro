@@ -96,8 +96,8 @@ def md2html_same_folder(src, htmlRoot):
     #name = os.path.basename(src)
     #result_folder = os.path.join(param.target_dir, name)
     tgt = src + '.html'
-    #print('same dir', src, tgt)
-    print('same dir', tgt)
+
+    #print('same dir', tgt)
     render_html(src, tgt, htmlRoot)
 
 

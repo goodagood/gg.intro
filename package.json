@@ -10,6 +10,7 @@
     "jquery": "^3.0.0",
     "marked": "^0.3.2",
     "material-design-icons": "^2.2.3",
+    "normalize.css": "^8.0.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {

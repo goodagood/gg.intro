@@ -10,6 +10,10 @@ import shlex
 #import requests as req
 
 
+
+#
+# This clone the whole story repo. It costs time and easy to fail in the middle.
+# 
 def hard_coded_story_clone(target_file_name):
 
     sand_story = 'https://github.com/goodagood/story/blob/master/y10m/b.markdown'
@@ -62,6 +66,7 @@ def hard_coded_story_clone(target_file_name):
         print('cp failed ', cp_cmd)
 
 
+
 import requests
 def get_single_file(href, file_path="/tmp/aa"):
     """Get the href as utf-8 string
@@ -82,8 +87,8 @@ def get_single_file(href, file_path="/tmp/aa"):
 
 
 
-raw_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markdown"
-story = get_single_file(raw_git, '/tmp/bb.md')
+#raw_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markdown"
+#story = get_single_file(raw_git, '/tmp/bb.md')
 
 
 if __name__ == "__main__":

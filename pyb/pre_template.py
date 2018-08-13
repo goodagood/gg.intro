@@ -49,35 +49,30 @@ import subprocess
 
 
 import glob
-def copy_template(script_path, tgt_folder):
-    js_path = os.path.join(script_path, 'template/js')
-    js_files = os.path.join(script_path, 'template/js/*.js')
-    style_path = os.path.join(script_path, 'template/style')
-    style_files = os.path.join(script_path, 'template/style/*.css')
+def copy_template_components(template_path, tgt_folder):
+    """ Copy js, css template components to tgt_folder, target folder.
+    """
+    print('copy template component ')
+    print('template_path, tgt_folder ', template_path, tgt_folder)
+    js_path     = os.path.join(template_path, 'js')
+    js_files    = os.path.join(js_path, '*.js')
+    style_path  = os.path.join(template_path, 'style')
+    style_files = os.path.join(style_path, '*.css')
 
+    print(js_path, js_files, "\r\n", style_path, style_files)
     #target
 
     for f in glob.glob(js_files):
         # copy is function copy f to target file or into the folder
+        print('copy js : ', f, tgt_folder)
         shutil.copy(f, tgt_folder)
 
     for f in glob.glob(style_files):
         # copy is function copy f to target file or into the folder
+        print('copy style: ', f, tgt_folder)
         shutil.copy(f, tgt_folder)
 
 
 
-#copy_template()
-#
-#
-#for mdpath in tool.find_md(tgt_folder):
-#    print(mdpath)
-#
-#    # add .html to the markdown file name
-#    mkmd.md2html_same_folder(mdpath)
-
-
-
-## re arranges, 2018 0810
 
 
