@@ -56,14 +56,7 @@ def htmlize(mdfolder, htmlRoot=None):
 
 
 def template_components(template_path, tgt, js_src=None, js_tgt=None, style_src=None, style_tgt=None):
-    ##compile_js_css.prepare_css()
-    #compile_js_css.prepare_js()
-    #script_path = tool.find_script_path()
-
     #print("copy template components ", script_path, tgt)
-    #pre_template.copy_template_components(script_path, tgt)
-
-    ####
 
     if not js_src:
         js_src = os.path.join(template_path, 'js/src/index.browserify.js')
@@ -80,6 +73,8 @@ def template_components(template_path, tgt, js_src=None, js_tgt=None, style_src=
         style_tgt  = os.path.join(template_path, 'style/index.css')
 
     compile_js_css.prepare_css(style_src, style_tgt)
+    #compile_js_css.single_css(single_style_tgt)
+    #mk_single_css();
 
     print("-- copy template components ", template_path, tgt)
     pre_template.copy_template_components(template_path, tgt)

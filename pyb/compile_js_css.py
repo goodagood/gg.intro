@@ -195,6 +195,18 @@ def prepare_css(src=None, tgt=None):
     pass
 
 
+
+def single_css(tgt):
+    """make a single CSS file.
+
+    Most names and path would be hard-wired.
+    It's node.js doing the job, tested, not ready
+    """
+    cmd_single_css = "node single_css"
+    subprocess.call(cmd_single_css, shell=True)
+    pass
+
+
 def both():
     compile_css()
     compile_js()
@@ -209,5 +221,5 @@ if __name__ == "__main__":
     #both()
 
     prepare_css()
-    prepare_js()
+    #prepare_js()
     pass
