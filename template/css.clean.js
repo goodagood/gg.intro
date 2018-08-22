@@ -1,6 +1,8 @@
 
 /*
  * Build single CSS file with clean-css
+ * input files need be hand write to cssFileHash in the below
+ * same as output file
  */
 
 var fs = require('fs');
@@ -25,6 +27,8 @@ var cssFileHash = {
 // give the Hash of css files, .minify() will concatenate them to single output.
 // 0820
 
+p(process.cwd());
+p(Object.keys(cssFileHash), "\r\n", outputFile);
 var m = new CleanCSS({
     inline:['all'],
     format:'beautify'
@@ -32,9 +36,11 @@ var m = new CleanCSS({
     if(err){return p('.minify err: ', err);}
 
     p('before write');
-    //p(minified);
+    ////p(minified);
     fs.writeFile(outputFile, minified.styles, 'utf8', (err)=>{
-        if(err) console.log('write err', err);
+        if(err) return console.log('write err', err);
+
+        return p(outputFile, ' should be written');
     });
 
 });

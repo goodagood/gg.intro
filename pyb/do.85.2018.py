@@ -23,13 +23,13 @@ import mkindex
 
 def test_do_all(mdsrc, template_path, tgt, online_file, htmlRoot=None):
     """ Do all buildings, we hardwired many path
-    
+
     Compile template components, js, css
-    fetch online file, 
+    fetch online file,
     cp folder file tree
     render to HTML
 
-    
+
     """
 
 
@@ -73,7 +73,7 @@ def template_components(template_path, tgt, js_src=None, js_tgt=None, style_src=
         style_tgt  = os.path.join(template_path, 'style/index.css')
 
     compile_js_css.prepare_css(style_src, style_tgt)
-    #compile_js_css.single_css(single_style_tgt)
+    compile_js_css.single_css(single_style_tgt)
     #mk_single_css();
 
     print("-- copy template components ", template_path, tgt)
@@ -87,24 +87,27 @@ if __name__ == "__main__":
     MDFolder = os.path.expanduser("~/workspace/gg.intro/md.files")
 
     TemplateFolder = os.path.expanduser("~/workspace/gg.intro/template")
+
     script_src = os.path.join(TemplateFolder, 'js/src/index.js')
     script_tgt = os.path.join(TemplateFolder, 'js/index.js')
+
     style_src  = os.path.join(TemplateFolder, 'style/src/index.scss')
     style_tgt  = os.path.join(TemplateFolder, 'style/index.css')
 
     #HTMLFolder = "/tmp/aug11"  # as temperory default
-
-    HTMLFolder = "/my/outside/aug12"  # as temperory default
+    HTMLFolder = "/my/outside/aug22"  # as temperory default
+    HTMLRoot   = "/aug22"
 
     raw_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markdown"
 
-    # hard coded
-    Story_Path = os.path.join(HTMLFolder, 'b.md')
+    # hard coded ?
+    #Story_Path = os.path.join(HTMLFolder, 'b.md')
 
 
-    test_do_all(MDFolder, TemplateFolder, HTMLFolder, online_file=raw_git, htmlRoot='/aug12')
+    test_do_all(MDFolder, TemplateFolder, HTMLFolder, online_file=raw_git,
+            htmlRoot=HTMLRoot)
 
-    #htmlize(HTMLFolder, htmlRoot='/aug12')
+    #htmlize(HTMLFolder, htmlRoot=HTMLRoot)
 
     #template_components(HTMLFolder)
 

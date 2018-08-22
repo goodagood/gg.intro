@@ -196,15 +196,21 @@ def prepare_css(src=None, tgt=None):
 
 
 
-def single_css(tgt):
+import shlex
+def single_css(tgt=None):
     """make a single CSS file.
 
     Most names and path would be hard-wired.
     It's node.js doing the job, tested, not ready
     """
-    cmd_single_css = "node single_css"
-    subprocess.call(cmd_single_css, shell=True)
-    pass
+    cmd_single_css = "node css.clean.js"
+    args_of_cmd = shlex.split(cmd_single_css)
+    wdir = os.path.abspath("../template")
+    #subprocess.call(cmd_single_css, shell=True)
+    print(wdir, args_of_cmd)
+    p = subprocess.Popen(args_of_cmd, cwd=wdir)
+    print('single css subprocess Popen return ', p)
+    return p
 
 
 def both():
@@ -217,9 +223,10 @@ if __name__ == "__main__":
     #what = compile_css()
     #print(what)
 
-    
+
     #both()
 
-    prepare_css()
+    #prepare_css()
     #prepare_js()
+    single_css()
     pass
