@@ -11,6 +11,7 @@ import compile_js_css
 import mkmd
 import mkindex
 
+import config_files
 
 
 #
@@ -46,6 +47,21 @@ def test_do_all(mdsrc, template_path, tgt, online_file, htmlRoot=None):
     print("make HTML %s with root: %s"%(tgt, htmlRoot))
     htmlize(tgt, htmlRoot)
 
+    # cn index
+    mkindex.dotemplate(
+            mdsrc   =config_files.MD_Src_Cn, 
+            tplsrc  =config_files.Index_template,
+            dst     =config_files.Cn_index_dst, 
+            htmlRoot=config_files.HTMLRoot,
+            lang_tag=config_files.En_lang_switch)  # en page get a cn switch, vice versa
+
+    # en index
+    mkindex.dotemplate(
+            mdsrc   =config_files.MD_Src, 
+            tplsrc  =config_files.Index_template,
+            dst     =config_files.En_index_dst, 
+            htmlRoot=config_files.HTMLRoot,
+            lang_tag=config_files.Cn_lang_switch)  # en page get a cn switch, vice versa
 
 
 
@@ -73,7 +89,7 @@ def template_components(template_path, tgt, js_src=None, js_tgt=None, style_src=
         style_tgt  = os.path.join(template_path, 'style/index.css')
 
     compile_js_css.prepare_css(style_src, style_tgt)
-    compile_js_css.single_css(single_style_tgt)
+    compile_js_css.single_css()
     #mk_single_css();
 
     print("-- copy template components ", template_path, tgt)
@@ -104,8 +120,13 @@ if __name__ == "__main__":
     #Story_Path = os.path.join(HTMLFolder, 'b.md')
 
 
-    test_do_all(MDFolder, TemplateFolder, HTMLFolder, online_file=raw_git,
-            htmlRoot=HTMLRoot)
+    #test_do_all(mdsrc, template_path, tgt, online_file, htmlRoot=None):
+    test_do_all(
+            mdsrc         =config_files.MDFolder,
+            template_path =config_files.Template_folder,
+            tgt           =config_files.HTMLFolder,
+            online_file   =config_files.Raw_git,
+            htmlRoot      =config_files.HTMLRoot)
 
     #htmlize(HTMLFolder, htmlRoot=HTMLRoot)
 

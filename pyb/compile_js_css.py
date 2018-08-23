@@ -203,7 +203,7 @@ def single_css(tgt=None):
     Most names and path would be hard-wired.
     It's node.js doing the job, tested, not ready
     """
-    cmd_single_css = "node css.clean.js"
+    cmd_single_css = "node clean.css.js"
     args_of_cmd = shlex.split(cmd_single_css)
     wdir = os.path.abspath("../template")
     #subprocess.call(cmd_single_css, shell=True)

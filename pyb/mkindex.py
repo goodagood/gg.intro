@@ -72,13 +72,15 @@ def replace(mdsrc=None, tplsrc=None, dst=None):
 
 
 def dotemplate(mdsrc=None, tplsrc=None, dst=None, htmlRoot='', lang_tag=None):
-    #print(mdsrc, tplsrc, dst, htmlRoot)
+    print(mdsrc, tplsrc, dst, htmlRoot)
 
     s = mkmd.mkmd(src=mdsrc)
 
     with open(tplsrc, 'r') as t:
         template = t.read()
         pass
+    if not template:
+        raise Exception('Template can not read. ' + tplsrc)
 
     #return template #indev
 
@@ -126,6 +128,7 @@ if __name__ == "__main__":
     \r\n"""%(
         SRC, index_template, DST))
 
+    # en index
     dotemplate(SRC, index_template, DST, '/md', lang_tag=cn_lang_switch)
 
     print("""Do cn index
@@ -134,6 +137,7 @@ if __name__ == "__main__":
     destination\t: %s """%(
         CNSRC, index_template, CNDST))
 
+    # cn index
     dotemplate(mdsrc=CNSRC, tplsrc=index_template, dst=CNDST,
             htmlRoot='/md', lang_tag=en_lang_switch)
 
