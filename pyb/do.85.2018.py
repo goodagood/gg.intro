@@ -49,15 +49,15 @@ def test_do_all(mdsrc, template_path, tgt, online_file, htmlRoot=None):
 
     # cn index
     mkindex.dotemplate(
-            mdsrc   =config_files.MD_Src_Cn, 
+            mdsrc   =config_files.Cn_index_md, 
             tplsrc  =config_files.Index_template,
             dst     =config_files.Cn_index_dst, 
             htmlRoot=config_files.HTMLRoot,
-            lang_tag=config_files.En_lang_switch)  # en page get a cn switch, vice versa
+            lang_tag=config_files.En_lang_switch)  # cn page get a en switch, vice versa
 
     # en index
     mkindex.dotemplate(
-            mdsrc   =config_files.MD_Src, 
+            mdsrc   =config_files.En_index_md, 
             tplsrc  =config_files.Index_template,
             dst     =config_files.En_index_dst, 
             htmlRoot=config_files.HTMLRoot,
