@@ -18,6 +18,8 @@ Script_src = os.path.join(Template_folder, 'js/src/index.js')
 Script_tgt = os.path.join(Template_folder, 'js/index.js')
 
 Style_src  = os.path.join(Template_folder, 'style/src/index.scss')
+# use more specific name:
+Style_scss  = os.path.join(Template_folder, 'style/src/index.scss')
 Style_tgt  = os.path.join(Template_folder, 'style/index.css')
 
 HTMLFolder = "/my/outside/aug23"  # as temperory default
@@ -31,7 +33,7 @@ Raw_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markd
 
 #--- index en/cn
 
-Index_template_tilde = '~/workspace/gg.intro/template/index.template.html'
+Index_template_tilde = os.path.join(Template_folder, 'index.template.html')
 Index_template       = os.path.expanduser(Index_template_tilde)
 
 En_index_dst = os.path.join(HTMLFolder, 'index.html')
@@ -40,6 +42,17 @@ Cn_index_dst = os.path.join(HTMLFolder, 'index.cn.html')
 
 
 # If we build Single CSS and JS
+
+JS_src_folder = "js/src"
+JS_file = "index.browserify.js"
+#JS_src = '~/workspace/gg.intro/template/js/src/index.browserify.js'
+JS_src = os.path.join(Template_folder, JS_src_folder, JS_file)
+
+# target is the target of template building phase
+JS_tgt = os.path.join(Template_folder, 'js/bundle.js')
+CSS_tgt = os.path.join(Template_folder, 'style/bundle.js')
+
+
 CSS = "bundle.css"
 JS  = "bundle.js"
 CSS_dst = os.path.join(HTMLFolder, CSS)
@@ -66,3 +79,5 @@ En_lang_switch = """<a href="./index.html" id="index-en-link"> English </a>"""
 
 
 
+if __name__ == "__main__":
+    print(JS_src, JS_dst)

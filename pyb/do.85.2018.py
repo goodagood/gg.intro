@@ -26,6 +26,7 @@ def test_do_all(mdsrc, template_path, tgt, online_file, htmlRoot=None):
     """ Do all buildings, we hardwired many path
 
     Compile template components, js, css
+        'template_path' is original path of template folder
     fetch online file,
     cp folder file tree
     render to HTML
@@ -33,20 +34,26 @@ def test_do_all(mdsrc, template_path, tgt, online_file, htmlRoot=None):
 
     """
 
+    prepare_template_components(template_path, tgt)
+    # prepare template components for index pages, or other categories
 
     print("copy and set target : ", tgt)
     tool.copytree(mdsrc, tgt)
+
+    # copy template folder, the components get used by html pages
+    # tool.copyfolder(template_folder, target_template_parent_folder)
+
 
     # Instead of clone the repo, we get the single raw file from github
     Story_Path = os.path.join(tgt, os.path.basename(online_file))
     print( "fetch page: %s  --> %s"%(raw_git, Story_Path))
     fetch138.get_single_file(raw_git, Story_Path)
 
-    template_components(template_path, tgt)
 
     print("make HTML %s with root: %s"%(tgt, htmlRoot))
     htmlize(tgt, htmlRoot)
 
+    # If we want to build index(.cn).html differently
     # cn index
     mkindex.dotemplate(
             mdsrc   =config_files.Cn_index_md, 
@@ -71,44 +78,42 @@ def htmlize(mdfolder, htmlRoot=None):
         mkmd.md2html_same_folder(mdfile, htmlRoot)
 
 
-def template_components(template_path, tgt, js_src=None, js_tgt=None, style_src=None, style_tgt=None):
-    #print("copy template components ", script_path, tgt)
+def prepare_template_components(template_folder, tgt, js_src=None, js_tgt=None, style_src=None, style_tgt=None):
 
     if not js_src:
-        js_src = os.path.join(template_path, 'js/src/index.browserify.js')
+        js_src = os.path.join(template_folder, 'js/src/index.browserify.js')
 
     if not js_tgt:
-        js_tgt = os.path.join(template_path, 'js/index.js')
+        js_tgt = os.path.join(template_folder, 'js/bundle.js')
 
+    #js
     compile_js_css.prepare_js(js_src, js_tgt)
 
     if not style_src:
-        style_src  = os.path.join(template_path, 'style/src/index.scss')
+        style_src  = os.path.join(template_folder, 'style/src/index.scss')
         pass
     if not style_tgt:
-        style_tgt  = os.path.join(template_path, 'style/index.css')
+        style_tgt  = os.path.join(template_folder, 'style/bundle.css')
 
+    #css
     compile_js_css.prepare_css(style_src, style_tgt)
     compile_js_css.single_css()
-    #mk_single_css();
 
-    print("-- copy template components ", template_path, tgt)
-    pre_template.copy_template_components(template_path, tgt)
+
 
 
 
 if __name__ == "__main__":
 
-    #MDFolder = os.path.expanduser("/tmp/md.files")
     MDFolder = os.path.expanduser("~/workspace/gg.intro/md.files")
 
-    TemplateFolder = os.path.expanduser("~/workspace/gg.intro/template")
+    Template_folder = os.path.expanduser("~/workspace/gg.intro/template")
 
-    script_src = os.path.join(TemplateFolder, 'js/src/index.js')
-    script_tgt = os.path.join(TemplateFolder, 'js/index.js')
+    script_src = os.path.join(Template_folder, 'js/src/index.js')
+    script_tgt = os.path.join(Template_folder, 'js/index.js')
 
-    style_src  = os.path.join(TemplateFolder, 'style/src/index.scss')
-    style_tgt  = os.path.join(TemplateFolder, 'style/index.css')
+    style_src  = os.path.join(Template_folder, 'style/src/index.scss')
+    style_tgt  = os.path.join(Template_folder, 'style/index.css')
 
     #HTMLFolder = "/tmp/aug11"  # as temperory default
     HTMLFolder = "/my/outside/aug22"  # as temperory default
@@ -120,19 +125,20 @@ if __name__ == "__main__":
     #Story_Path = os.path.join(HTMLFolder, 'b.md')
 
 
-    #test_do_all(mdsrc, template_path, tgt, online_file, htmlRoot=None):
-    test_do_all(
-            mdsrc         =config_files.MDFolder,
-            template_path =config_files.Template_folder,
-            tgt           =config_files.HTMLFolder,
-            online_file   =config_files.Raw_git,
-            htmlRoot      =config_files.HTMLRoot)
+    ##test_do_all(mdsrc, template_path, tgt, online_file, htmlRoot=None):
+    #test_do_all(
+    #        mdsrc         =config_files.MDFolder,
+    #        template_path =config_files.Template_folder,
+    #        tgt           =config_files.HTMLFolder,
+    #        online_file   =config_files.Raw_git,
+    #        htmlRoot      =config_files.HTMLRoot)
 
     #htmlize(HTMLFolder, htmlRoot=HTMLRoot)
 
-    #template_components(HTMLFolder)
+    prepare_template_components(config_files.Template_folder, HTMLFolder)
+    prepare_template_components(config_files.Template_folder, HTMLFolder)
 
-    #print(MDFolder, TemplateFolder, HTMLFolder, raw_git)
-    #pre_template.copy_template_components(TemplateFolder, HTMLFolder)
+    #print(MDFolder, Template_folder, HTMLFolder, raw_git)
+    #pre_template.copy_template_components(Template_folder, HTMLFolder)
     pass
 

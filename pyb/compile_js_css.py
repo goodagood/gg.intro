@@ -1,11 +1,13 @@
 
 import os
 import subprocess
+import shlex
 
-#import time
-#time.sleep(5)
+import config_files as Config
 
 
+
+#d
 def compile_js():
     """I have to write commands in one line and use subprocess.call
     """
@@ -41,64 +43,48 @@ def compile_js():
 #
 
 def prepare_js(src=None, tgt=None):
-    #def js_folders(src, tgt):
     """js folders can be hard-coded, It happens only in template.
     """
 
-    #jsinput = '~/workspace/gg.intro/pyb/config/prepare/index.js'
-    #jsinput = os.path.expanduser(jsinput)
-    #
     # New location of the js index, 2018 0806
     if not src:
-        src = '~/workspace/gg.intro/pyb/template/js/src/index.browserify.js'
+        #src = '~/workspace/gg.intro/template/js/src/index.browserify.js'
+        src = Config.JS_src
         pass
     js_input = os.path.expanduser(src)
 
 
-    #js_target =  "~/workspace/gg.intro/pyb/config/bundle.js"
-    #js_target = os.path.expanduser(js_target)
-    #
     # new location
     if not tgt:
-        tgt = '~/workspace/gg.intro/pyb/template/js/index.js'
+        #tgt = '~/workspace/gg.intro/template/js/bundle.js'
+        tgt = Config.JS_tgt
         pass
     js_target = os.path.expanduser(tgt)
 
-
     #print(js_input, js_target)
-    browserify_js(js_input, js_target)
+    return browserify_js(js_input, js_target)
 
 
 
-def browserify_js(src, tgt):
-
-
+def browserify_js(src, tgt, cwd=None):
     """I have to write commands in one line and use subprocess.call
+
+    Should return shell return code
     """
 
-
-    #redoing
     # cmdj = """browserify %s --debug -o  %s """%(src, tgt)
     cmdj = """npx browserify %s --debug -o  %s """%(src, tgt)
-    print(cmdj)
-    subprocess.call(cmdj, shell=True)
-
-    ## copy back
-    #cpj = """cp  /my/outside/md/bundle.js  %s  """%js_target
-    ## copy to gg2/srv/public
-    #cpjgg2 = """cp  /my/outside/md/bundle.js %s """%js_gg2
-
-
+    print("command line:> %s"%cmdj)
+    
     #subprocess.call(cmdj, shell=True)
-    #subprocess.call(cpj, shell=True)
-    #subprocess.call(cpjgg2, shell=True)
+    #return cmdj
 
-    #return [cmdj, cpj, cpjgg2]
-
-
-
+    cmd_args = shlex.split(cmdj)
+    #return subprocess.check_output(cmd_args) #can't set shell?: shell=True
+    return subprocess.Popen(cmd_args, cwd=JS_dir)
 
 
+#d
 def compile_css():
     """I have to write commands in one line and use subprocess.call
     """
@@ -159,22 +145,24 @@ def compile_css():
             }
 
 
-#
-# start from compile_css, normalize it. 2018 0808
-#
 
+#
+# redo from 'compile_css', normalize it. 2018 0808
+#
 def prepare_css(src=None, tgt=None):
     """edit from compile css, upgrade to seperate file name
     """
 
     if not src:
         # the file moved
-        src = '~/workspace/gg.intro/pyb/template/style/src/index.scss'
+        #src = '~/workspace/gg.intro/pyb/template/style/src/index.scss'
+        src = Config.Style_scss
     css_src = os.path.expanduser(src)
 
     # new location
     if not tgt:
-        tgt = '~/workspace/gg.intro/pyb/template/style/index.css'
+        #tgt = '~/workspace/gg.intro/pyb/template/style/index.css'
+        tgt = Config.Style_tgt
     css_target = os.path.expanduser(tgt)
 
     cmdcss = """sass %s  %s  """%(css_src, css_target)
@@ -196,7 +184,6 @@ def prepare_css(src=None, tgt=None):
 
 
 
-import shlex
 def single_css(tgt=None):
     """make a single CSS file.
 
@@ -218,6 +205,7 @@ def both():
     compile_js()
 
 
+
 if __name__ == "__main__":
 
     #what = compile_css()
@@ -227,6 +215,8 @@ if __name__ == "__main__":
     #both()
 
     #prepare_css()
-    #prepare_js()
-    single_css()
+    out = prepare_js()
+    print(out)
+
+    #single_css()
     pass

@@ -22,7 +22,8 @@ var cssFileHash = {
     '../node_modules/skeleton-css/css/skeleton.css': {
         'styles': fs.readFileSync('../node_modules/skeleton-css/css/skeleton.css', 'utf8')},
 
-    './style/src/old.index.css':        {'styles': fs.readFileSync('./style/index.css', 'utf8')}
+    './style/src/old.index.css': {
+        'styles': fs.readFileSync('./style/src/old.index.css', 'utf8')}
 };
 
 
