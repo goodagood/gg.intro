@@ -71,6 +71,8 @@ def browserify_js(src, tgt, cwd=None):
 
     Should return shell return code
     """
+    if not cwd:
+        cwd=os.path.expanduser(Config.Template_folder)
 
     # cmdj = """browserify %s --debug -o  %s """%(src, tgt)
     cmdj = """npx browserify %s --debug -o  %s """%(src, tgt)
@@ -81,7 +83,7 @@ def browserify_js(src, tgt, cwd=None):
 
     cmd_args = shlex.split(cmdj)
     #return subprocess.check_output(cmd_args) #can't set shell?: shell=True
-    return subprocess.Popen(cmd_args, cwd=JS_dir)
+    return subprocess.Popen(cmd_args, cwd=cwd)
 
 
 #d

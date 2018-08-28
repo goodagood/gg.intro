@@ -136,7 +136,6 @@ if __name__ == "__main__":
     #htmlize(HTMLFolder, htmlRoot=HTMLRoot)
 
     prepare_template_components(config_files.Template_folder, HTMLFolder)
-    prepare_template_components(config_files.Template_folder, HTMLFolder)
 
     #print(MDFolder, Template_folder, HTMLFolder, raw_git)
     #pre_template.copy_template_components(Template_folder, HTMLFolder)
