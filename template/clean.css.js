@@ -27,20 +27,22 @@ var cssFileHash = {
 // give the Hash of css files, .minify() will concatenate them to single output.
 // 0820
 
-p(process.cwd());
-p(Object.keys(cssFileHash), "\r\n", outputFile);
+//p(process.cwd());
+//p(Object.keys(cssFileHash), "\r\n", outputFile);
+
 var m = new CleanCSS({
     inline:['all'],
     format:'beautify'
 }).minify(cssFileHash, (err, minified)=>{
     if(err){return p('.minify err: ', err);}
 
-    p('before write');
+    //p('before write');
     ////p(minified);
+
     fs.writeFile(outputFile, minified.styles, 'utf8', (err)=>{
         if(err) return console.log('write err', err);
 
-        return p(outputFile, ' should be written');
+        //return p(outputFile, ' should be written');
     });
 
 });

@@ -71,7 +71,7 @@ def replace(mdsrc=None, tplsrc=None, dst=None):
     return all
 
 
-def dotemplate(mdsrc=None, tplsrc=None, dst=None, htmlRoot='', lang_tag=None):
+def index_get_template(mdsrc=None, tplsrc=None, dst=None, htmlRoot='', lang_tag=None):
     print(mdsrc, tplsrc, dst, htmlRoot)
 
     s = mkmd.mkmd(src=mdsrc)
@@ -129,7 +129,7 @@ if __name__ == "__main__":
         SRC, index_template, DST))
 
     # en index
-    dotemplate(SRC, index_template, DST, '/md', lang_tag=cn_lang_switch)
+    index_get_template(SRC, index_template, DST, '/md', lang_tag=cn_lang_switch)
 
     print("""Do cn index
     md src\t: %s,
@@ -138,7 +138,7 @@ if __name__ == "__main__":
         CNSRC, index_template, CNDST))
 
     # cn index
-    dotemplate(mdsrc=CNSRC, tplsrc=index_template, dst=CNDST,
+    index_get_template(mdsrc=CNSRC, tplsrc=index_template, dst=CNDST,
             htmlRoot='/md', lang_tag=en_lang_switch)
 
 

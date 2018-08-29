@@ -72,18 +72,20 @@ def browserify_js(src, tgt, cwd=None):
     Should return shell return code
     """
     if not cwd:
+        # To work in template folder
         cwd=os.path.expanduser(Config.Template_folder)
 
     # cmdj = """browserify %s --debug -o  %s """%(src, tgt)
     cmdj = """npx browserify %s --debug -o  %s """%(src, tgt)
-    print("command line:> %s"%cmdj)
+    #print("command line:> %s"%cmdj)
     
     #subprocess.call(cmdj, shell=True)
     #return cmdj
 
+    #print("subprocess -- {cmd}".format(cmd=cmdj))
     cmd_args = shlex.split(cmdj)
-    #return subprocess.check_output(cmd_args) #can't set shell?: shell=True
-    return subprocess.Popen(cmd_args, cwd=cwd)
+    p = subprocess.Popen(cmd_args, cwd=cwd)
+    return p.wait()
 
 
 #d
@@ -157,23 +159,18 @@ def prepare_css(src=None, tgt=None):
 
     if not src:
         # the file moved
-        #src = '~/workspace/gg.intro/pyb/template/style/src/index.scss'
         src = Config.Style_scss
     css_src = os.path.expanduser(src)
 
     # new location
     if not tgt:
-        #tgt = '~/workspace/gg.intro/pyb/template/style/index.css'
         tgt = Config.Style_tgt
     css_target = os.path.expanduser(tgt)
 
     cmdcss = """sass %s  %s  """%(css_src, css_target)
 
-
-
     # start to run commands
-
-    print (cmdcss)
+    #print (cmdcss)
     subprocess.call(cmdcss, shell=True)
 
 
@@ -182,7 +179,6 @@ def prepare_css(src=None, tgt=None):
             "cmdcss": cmdcss,
             }
 
-    pass
 
 
 
@@ -195,11 +191,13 @@ def single_css(tgt=None):
     cmd_single_css = "node clean.css.js"
     args_of_cmd = shlex.split(cmd_single_css)
     wdir = os.path.abspath("../template")
+
     #subprocess.call(cmd_single_css, shell=True)
-    print(wdir, args_of_cmd)
+    #print(wdir, args_of_cmd)
+
     p = subprocess.Popen(args_of_cmd, cwd=wdir)
-    print('single css subprocess Popen return ', p)
-    return p
+    #print('single css subprocess Popen return ', p)
+    return p.wait()
 
 
 def both():

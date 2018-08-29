@@ -26,6 +26,7 @@ HTMLFolder = "/my/outside/aug23"  # as temperory default
 HTMLRoot   = "/aug23"
 
 Raw_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markdown"
+Story_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markdown"
 
 #Story_Path = os.path.join(HTMLFolder, 'b.md')
 

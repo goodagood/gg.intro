@@ -9,6 +9,7 @@ import mdfile
 
 
 import tool
+import config_files as Config
 
 
 
@@ -35,12 +36,12 @@ import pystache
 
 
 # render a md file to html
-def render_html(src=None, dst=None, htmlRoot='md'):
+def render_html(src=None, dst=None, htmlRoot='/md'):
 
     s = mkmd(src=src)
 
-    #template ? path
-    with open('./template/template.html', 'r') as t:
+    #with open('./template/template.html', 'r') as t:
+    with open(Config.Template_file, 'r') as t:
         temp = t.read()
 
         r = pystache.render(temp, {'html4markdown': s, 'htmlRoot': htmlRoot});
@@ -93,8 +94,6 @@ def mkhtml(template=None, src=None, dst=None, opt={}):
 
 
 def md2html_same_folder(src, htmlRoot):
-    #name = os.path.basename(src)
-    #result_folder = os.path.join(param.target_dir, name)
     tgt = src + '.html'
 
     #print('same dir', tgt)
