@@ -173,7 +173,6 @@ def prepare_css(src=None, tgt=None):
     #print (cmdcss)
     subprocess.call(cmdcss, shell=True)
 
-
     return {"css_src": css_src,
             "css_target": css_target,
             "cmdcss": cmdcss,

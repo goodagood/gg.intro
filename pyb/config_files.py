@@ -22,8 +22,8 @@ Style_src  = os.path.join(Template_folder, 'style/src/index.scss')
 Style_scss  = os.path.join(Template_folder, 'style/src/index.scss')
 Style_tgt  = os.path.join(Template_folder, 'style/index.css')
 
-HTMLFolder = "/my/outside/aug23"  # as temperory default
-HTMLRoot   = "/aug23"
+HTMLFolder = "/my/outside/aug"  # as temperory default
+HTMLRoot   = "/aug"
 
 Raw_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markdown"
 Story_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markdown"
