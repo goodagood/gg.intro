@@ -37,7 +37,7 @@ body {
     .container  {
         line-height:140%;
 
-        max-width:78rem;
+        max-width:82rem;
 
         margin-left:auto;
         margin-right:auto;
@@ -138,6 +138,26 @@ nav#fix-top div {
 }
 
 
+@media only screen and (max-width: 480px) {
+  
+
+    /* line by line for small screen */
+    form label{
+        display: block;
+        clear: left;
+        float: left;
+
+        overflow: hidden;
+        padding: 0.5em;
+        text-align: left;
+    }
+    form input{
+        display: block;
+        float:left;
+    }
+
+}
+
 
 
 @media screen and (min-width: 640px) {
@@ -232,7 +252,7 @@ form div.igroup:after {
 
 
 
-/* easy in hand hold */
+/* easy in hand hold device */
 form div.igroup input{
   font-size: 1.4em;
   line-height: 1.6em;
@@ -315,21 +335,6 @@ header div#register {
     float:   right;
 }
  
-        /*shorter clearfix http://nicolasgallagher.com/micro-clearfix-hack/*/
-        header:before,
-        header:after {
-            content:" ";
-            display:table;
-        }
-         
-        header:after {
-            clear:both;
-        }
-         
-        /* For IE 6/7 (trigger hasLayout) */
-        header {
-            zoom:1;
-        }
 
 header h1 {
     width: 50%;
@@ -468,26 +473,6 @@ footer {
 }
 
 
-@media only screen and (max-width: 480px) {
-  
-
-    /* line by line for small screen */
-    form label{
-        display: block;
-        clear: left;
-        float: left;
-
-        overflow: hidden;
-        padding: 0.5em;
-        text-align: left;
-    }
-    form input{
-        display: block;
-        float:left;
-    }
-
-}
-
 // qr code images
 
 div.qrcode {
@@ -527,6 +512,22 @@ div#intro  {
  
 /* For IE 6/7 (trigger hasLayout) */
 .cf {
+    zoom:1;
+}
+
+/* Apply clearfix for header */
+header:before,
+header:after {
+    content:" ";
+    display:table;
+}
+ 
+header:after {
+    clear:both;
+}
+ 
+/* For IE 6/7 (trigger hasLayout) */
+header {
     zoom:1;
 }
 

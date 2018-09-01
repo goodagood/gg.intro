@@ -189,12 +189,12 @@ def single_css(tgt=None):
     """
     cmd_single_css = "node clean.css.js"
     args_of_cmd = shlex.split(cmd_single_css)
-    wdir = os.path.abspath("../template")
+    working_dir = os.path.abspath("../js")
 
     #subprocess.call(cmd_single_css, shell=True)
-    #print(wdir, args_of_cmd)
+    #print(working_dir, args_of_cmd)
 
-    p = subprocess.Popen(args_of_cmd, cwd=wdir)
+    p = subprocess.Popen(args_of_cmd, cwd=working_dir)
     #print('single css subprocess Popen return ', p)
     return p.wait()
 
