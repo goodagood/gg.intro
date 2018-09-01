@@ -159,7 +159,7 @@ body {
 body #wrapper,
 body .container {
   line-height: 140%;
-  max-width: 88rem;
+  max-width: 82rem;
   margin-left: auto;
   margin-right: auto
 }
@@ -342,17 +342,6 @@ header div#register {
   display: inline-block;
   float: right
 }
-header:after,
-header:before {
-  content: " ";
-  display: table
-}
-header:after {
-  clear: both
-}
-header {
-  zoom: 1
-}
 header h1 {
   width: 50%;
   display: inline-block
@@ -475,5 +464,16 @@ div#markdown {
   clear: both
 }
 .cf {
+  zoom: 1
+}
+header:after,
+header:before {
+  content: " ";
+  display: table
+}
+header:after {
+  clear: both
+}
+header {
   zoom: 1
 }

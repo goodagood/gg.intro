@@ -80,6 +80,19 @@ nav#fix-top div {
 #fix-top .opt {
   display: none; }
 
+@media only screen and (max-width: 480px) {
+  /* line by line for small screen */
+  form label {
+    display: block;
+    clear: left;
+    float: left;
+    overflow: hidden;
+    padding: 0.5em;
+    text-align: left; }
+
+  form input {
+    display: block;
+    float: left; } }
 @media screen and (min-width: 640px) {
   nav#fix-top {
     padding-top: 1rem;
@@ -135,7 +148,7 @@ form div.igroup:after {
   display: table;
   clear: both; }
 
-/* easy in hand hold */
+/* easy in hand hold device */
 form div.igroup input {
   font-size: 1.4em;
   line-height: 1.6em;
@@ -209,19 +222,6 @@ header a, header a:visited {
 header div#register {
   display: inline-block;
   float: right; }
-
-/*shorter clearfix http://nicolasgallagher.com/micro-clearfix-hack/*/
-header:before,
-header:after {
-  content: " ";
-  display: table; }
-
-header:after {
-  clear: both; }
-
-/* For IE 6/7 (trigger hasLayout) */
-header {
-  zoom: 1; }
 
 header h1 {
   width: 50%;
@@ -332,19 +332,6 @@ footer {
     max-width: 60%;
     font-family: Serif, "Times New Roman", Times;
     text-align: left; } }
-@media only screen and (max-width: 480px) {
-  /* line by line for small screen */
-  form label {
-    display: block;
-    clear: left;
-    float: left;
-    overflow: hidden;
-    padding: 0.5em;
-    text-align: left; }
-
-  form input {
-    display: block;
-    float: left; } }
 div.qrcode {
   text-align: center; }
   div.qrcode img {
@@ -372,6 +359,19 @@ div#intro {
 
 /* For IE 6/7 (trigger hasLayout) */
 .cf {
+  zoom: 1; }
+
+/* Apply clearfix for header */
+header:before,
+header:after {
+  content: " ";
+  display: table; }
+
+header:after {
+  clear: both; }
+
+/* For IE 6/7 (trigger hasLayout) */
+header {
   zoom: 1; }
 
 /*# sourceMappingURL=bundle.css.map */
