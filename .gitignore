@@ -8,6 +8,10 @@ node_modules/
 bower_components/
 venders/
 
+# cache
+__pycache__/
+.sass-cache/
+
 # jekyll
 _config.yml
 _includes/
