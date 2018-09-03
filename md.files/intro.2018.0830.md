@@ -4,7 +4,8 @@
     date: 2018 0830
 
 
-`goodogood` gets 2 `good` around the central letter `o`. 
+`goodogood` gets 2 `good` around the central letter `o`,
+and it happens has a dog in the center of the new word.
 
 `goodogood.com` is developing as an file sharing project,
 it's open source with codes repositories at `github.com/goodagood`.
