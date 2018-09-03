@@ -1,26 +1,47 @@
 
 # goodogood
 
+
+`goodogood` 是一个域名， 中间有一个`o`， 两边是两个 `good` 。 
+中间也是一条狗，有头有尾变成字典里不存在的单词。
+
+`goodogood.com` 目前用于测试文件共享系统。 
+系统代码开源，放在 `github.com/goodagood`下面。.
+`goodagood` 也是一个类似的名字， 之前用于系统升级时的测试。
+
+对一些人来说， 开发一个文件系统并不困难。
+然而任何有用的软件系统都可能变得冰冷坚硬，
+而所谓天才们决不乐意进入这样的系统从事维护工作。
+对于深入了解过计算机系统的专业人士来说，
+文件是计算机历史中底层的概念，这个概念可能连接太多协议，
+关联系统内核中各种进程，可以面对不同的接口，
+从而令简单的问题容易死锁在复杂的背景中。
+
+同时在独裁环境中开发自由的共享系统从政治上来说也是几乎不可能的。
+
+`goodogood` 是采用公有化版权协议的系统，有独特的建设成本。
+更广泛的来说，使用公有化知识的能力需要那些难以被公有化的独立的人来演示，
+从来如此，今后也不会改变。如果上帝要求每个人独自面对他，就会是这样。
+
+对能力的追求如同对财富的追求，
+上帝让我们在这个过程中得到顿悟的机会，
+每一次顿悟都是漫长血脉进化中的渐悟。
+
+
+# 一沙一世界
+
+
+这是一粒沙粒演化的世界，是一个很难找到主角的故事，
+尽力保持真实，保持简短，在一个瞬间观察永恒，
+为上述沙粒般微小的软件项目牵扯无穷的理由。
+
+
+    htmlized md: b.markdown.html
+    source: https://github.com/goodagood/story/blob/master/y10m/b.markdown
     date: 2018 0830
 
 
-`goodogood`  `good` around the letter `o`. 
 
-`goodogood.com` is developing as an file sharing project,
-it's open source with codes repositories at `github.com/goodagood`.
-
-`goodagood` is another name I used, it's an alternative, 
-it can give convenient URL during upgrading.
-
-For those who thinks file sharing system is not so hard to setup.
-Yes, it can be a piece of cake, 
-but any kind of useful software can also turn out to be very hard,
-and maintainance of such kind of software is kind of job genius not going to undertake by themself.
-Even more, if we can acknowledge that file is one of the basic concepts underlying the whole computer science,
-we know this kind of software can be complex cross linking to all kind of applictions and protocols.
-
-In the same time, a simple file system can grow up to be anything people can image.
-We just want it can be good.
 
 
 
