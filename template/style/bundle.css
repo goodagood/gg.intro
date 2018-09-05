@@ -17,15 +17,12 @@ body {
   line-height: 1.5rem;
   display: block;
   border-radius: 3px; }
-  body #wrapper,
-  body .container {
+  body #wrapper, body .container, body div {
+    text-align: left;
     line-height: 140%;
     max-width: 82rem;
     margin-left: auto;
     margin-right: auto; }
-
-div.logo {
-  margin-right: 2rem; }
 
 nav#fix-top {
   color: white;
@@ -50,10 +47,7 @@ nav#fix-top {
   nav#fix-top a {
     margin-right: 0.9rem;
     min-width: 3rem;
-    padding: 1px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #999;
+    padding: 2px;
     border-radius: 4px;
     text-decoration: none;
     font-size: 1.8rem;
@@ -62,7 +56,11 @@ nav#fix-top {
     border: None;
     float: left;
     font-size: 1.1rem;
-    font-weight: bold; }
+    font-weight: bold;
+    padding: 2px; }
+  nav#fix-top div#top_left_logo {
+    margin-right: 2rem;
+    padding: 2px; }
 
 nav#fix-top div {
   display: inline-block;
@@ -73,12 +71,27 @@ nav#fix-top div {
   nav#fix-top div a {
     height: 1.5rem; }
 
+#fix-top .opt {
+  display: none; }
+
 .topnav a:hover {
   background-color: #ddd;
   color: black; }
 
-#fix-top .opt {
-  display: none; }
+/* make it full width without respect parent */
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  height: 100px; }
+
+/* ? */
+div#markdown p {
+  line-height: 150%; }
 
 @media only screen and (max-width: 480px) {
   /* line by line for small screen */

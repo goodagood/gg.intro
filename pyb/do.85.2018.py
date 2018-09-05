@@ -54,6 +54,11 @@ def test_do_all(mdsrc, template_path, tgt, online_file, htmlRoot=None):
     print("test do all> make HTML %s with root: %s"%(tgt, htmlRoot))
     htmlize(tgt, htmlRoot)
 
+    do_index()
+    pass
+
+
+def do_index():
     # If we want to build index(.cn).html differently
     # cn index
     #c name
@@ -71,7 +76,6 @@ def test_do_all(mdsrc, template_path, tgt, online_file, htmlRoot=None):
             dst     =config_files.En_index_dst, 
             htmlRoot=config_files.HTMLRoot,
             lang_tag=config_files.Cn_lang_switch)  # en page get a cn switch, vice versa
-
 
 
 def htmlize(mdfolder, htmlRoot=None):
@@ -104,35 +108,57 @@ def prepare_template_components(template_folder, js_src=None, js_tgt=None, style
 
 
 
+def do_selected(opt, mdsrc, template_path, tgt, online_file, htmlRoot=None):
+    """ Do selected buildings, chose from opt, the rest same as "do all..."
+
+    """
+
+    if opt['copytree']:
+        print("do selected> copy and set target : ", tgt)
+        tool.copytree(mdsrc, tgt)
+
+    if opt['template']:
+        print("do selected> prepare_template_components(%s)"%template_path)
+        print()
+        prepare_template_components(template_path)
+
+        # copy template folder as sub-folder into target
+        # the components get used by html pages
+        print("do selected> copy template components, tool.copyfolder(template_path, tgt)")
+        print()
+        tool.copyfolder(template_path, tgt)
+
+
+    if opt['story']:
+        # Instead of clone the repo, we get the single raw file from github
+        Story_git = config_files.Story_git
+        Story_Path = os.path.join(tgt, os.path.basename(online_file))
+        print( "do selected> fetch page: %s  --> %s"%(Story_git, Story_Path))
+        print()
+        fetch138.get_single_file(Story_git, Story_Path)
+
+
+    if opt['html']:
+        print("do selected> make HTML %s with root: %s"%(tgt, htmlRoot))
+        print()
+        htmlize(tgt, htmlRoot)
+
+    if opt['index_files']:
+        do_index()
+
+    pass
+
+
+
+
 if __name__ == "__main__":
 
-    #MDFolder = os.path.expanduser("~/workspace/gg.intro/md.files")
-
-    #Template_folder = os.path.expanduser("~/workspace/gg.intro/template")
-
-    #script_src = os.path.join(Template_folder, 'js/src/index.js')
-    #script_tgt = os.path.join(Template_folder, 'js/index.js')
-
-    #style_src  = os.path.join(Template_folder, 'style/src/index.scss')
-    #style_tgt  = os.path.join(Template_folder, 'style/index.css')
-
-    ##HTMLFolder = "/tmp/aug11"  # as temperory default
-    #HTMLFolder = "/my/outside/aug22"  # as temperory default
-    #HTMLRoot   = "/aug22"
-
-    #raw_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markdown"
-
-    # hard coded ?
-    #Story_Path = os.path.join(HTMLFolder, 'b.md')
-
-
-    #test_do_all(mdsrc, template_path, tgt, online_file, htmlRoot=None):
-    test_do_all(
-            mdsrc         =config_files.MDFolder,
-            template_path =config_files.Template_folder,
-            tgt           =config_files.HTMLFolder,
-            online_file   =config_files.Raw_git,
-            htmlRoot      =config_files.HTMLRoot)
+    #test_do_all(
+    #        mdsrc         =config_files.MDFolder,
+    #        template_path =config_files.Template_folder,
+    #        tgt           =config_files.HTMLFolder,
+    #        online_file   =config_files.Raw_git,
+    #        htmlRoot      =config_files.HTMLRoot)
 
     #htmlize(config_files.HTMLFolder, htmlRoot=config_files.HTMLRoot)
 
@@ -140,5 +166,23 @@ if __name__ == "__main__":
 
     #print(MDFolder, Template_folder, HTMLFolder, raw_git)
     #pre_template.copy_template_components(Template_folder, HTMLFolder)
+
+
+    OPT = {
+            'copytree': False,
+            'template': True,
+            'story':    False,
+            'html':     True,
+            'index_files':False
+            }
+
+    do_selected(OPT,
+            mdsrc         =config_files.MDFolder,
+            template_path =config_files.Template_folder,
+            tgt           =config_files.HTMLFolder,
+            online_file   =config_files.Raw_git,
+            htmlRoot      =config_files.HTMLRoot)
+
     pass
+
 
