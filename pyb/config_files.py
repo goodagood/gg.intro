@@ -2,10 +2,18 @@
 # 
 # Make single place to set files and folders used.
 # 2018 0822
+# 
+# In building, we need target folder prepared first for md, html, template
+# components
+# 2018 0906
 #
 
 import os
 
+
+# This is target
+HTMLFolder = "/my/outside/aug"  # as temperory default
+HTMLRoot   = "/aug" # root for URLs
 
 # tilda means it's relative path to user HOME
 MDFolder_tilda = "~/workspace/gg.intro/md.files"
@@ -14,17 +22,23 @@ MDFolder       = os.path.expanduser(MDFolder_tilda)
 Template_folder = os.path.expanduser("~/workspace/gg.intro/template")
 Template_file   = os.path.join(Template_folder, 'template.html')
 
+### move compiled template components outside
+template_name = os.path.basename(Template_folder)
+Template_target = os.path.join(HTMLFolder, template_name)
+
+
 Script_src = os.path.join(Template_folder, 'js/src/index.js')
-Script_tgt = os.path.join(Template_folder, 'js/index.js')
+
+#Script_tgt = os.path.join(Template_folder, 'js/index.js')
+Script_tgt = os.path.join(Template_target, 'js/index.js')
 
 Style_src  = os.path.join(Template_folder, 'style/src/index.scss')
 # use more specific name:
 Style_scss  = os.path.join(Template_folder, 'style/src/index.scss')
-Style_tgt  = os.path.join(Template_folder, 'style/index.css')
 
-# This is target
-HTMLFolder = "/my/outside/aug"  # as temperory default
-HTMLRoot   = "/aug" # root for URLs
+#Style_tgt  = os.path.join(Template_folder, 'style/index.css')
+Style_tgt  = os.path.join(Template_target, 'style/index.css')
+
 
 Raw_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markdown"
 Story_git = "https://raw.githubusercontent.com/goodagood/story/master/y10m/b.markdown"
@@ -81,5 +95,10 @@ En_lang_switch = """<a href="./index.html" id="index-en-link"> English </a>"""
 
 
 
+
 if __name__ == "__main__":
-    print(JS_src, JS_dst)
+    #print(JS_src, JS_dst)
+    print(template_name)
+    print(Template_target)
+    print(Script_tgt)
+    print(Style_tgt)
