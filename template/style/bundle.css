@@ -40,8 +40,9 @@ nav#fix-top {
   padding-top: 0.8rem;
   padding-bottom: 0.8rem; }
   nav#fix-top div {
-    float: right; }
-  nav#fix-top div.topnav {
+    float: left;
+    display: inline-block; }
+  nav#fix-top div.top_button {
     float: left;
     padding-left: 1rem; }
   nav#fix-top a {
@@ -52,29 +53,26 @@ nav#fix-top {
     text-decoration: none;
     font-size: 1.8rem;
     font-weight: bold; }
-  nav#fix-top a.ggcom {
+  nav#fix-top a.gg_com_a {
     border: None;
     float: left;
     font-size: 1.1rem;
     font-weight: bold;
     padding: 2px; }
-  nav#fix-top div#top_left_logo {
+  nav#fix-top div#topLogo {
     margin-right: 2rem;
     padding: 2px; }
 
-nav#fix-top div {
-  display: inline-block;
-  float: left; }
-  nav#fix-top div div {
-    height: 1.5rem;
-    display: inline-block; }
-  nav#fix-top div a {
-    height: 1.5rem; }
+nav#fix-top div div {
+  height: 1.5rem;
+  display: inline-block; }
+nav#fix-top div a {
+  height: 1.5rem; }
 
 #fix-top .opt {
   display: none; }
 
-.topnav a:hover {
+.top_button a:hover {
   background-color: #ddd;
   color: black; }
 
@@ -110,12 +108,12 @@ div#markdown p {
   nav#fix-top {
     padding-top: 1rem;
     padding-bottom: 0.5rem; }
-    nav#fix-top div.topnav {
+    nav#fix-top div.top_button {
       float: right; }
     nav#fix-top a {
       margin-left: 1rem;
       min-width: 5rem; }
-    nav#fix-top a.ggcom {
+    nav#fix-top a.gg_com_a {
       float: left;
       border: None;
       margin-right: 2rem;

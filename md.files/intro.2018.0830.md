@@ -1,8 +1,6 @@
 
 # goodogood
 
-    date: 2018 0830
-
 
 `goodogood` gets 2 `good` around the central letter `o`,
 and it happens has a dog in the center of the new word.
@@ -51,16 +49,33 @@ it's not guaranteed to be all correct,
 it's a process to gather proved facts when all science is evolving.
 
 
+    date: 2018 0830
+
+
 # END
 
 
 ## The following is easy links to be scanned as QR codes
 
 
+### A grain of sand
 
-<img src="/pic/qr/qr.600.54.168.214.184.jpeg" />
-<img src="/pic/qr/qr.600.sand.story.github.jpeg" />
-<img src="/pic/qr/qr.goodogood.com.600.jpeg" />
-<img src="/pic/qr/qr.goodogood.me.600.jpeg" />
+https://github.com/goodagood/story/blob/master/y10m/b.markdown
 
+<img src="/pic/qr/qr.600.sand.story.github.jpeg" /> <br />
 
+### QR of goodogood.com
+
+goodogood.com
+
+<img src="/pic/qr/qr.goodogood.com.600.jpeg" /> <br />
+
+### QR of Current IP
+
+<img src="/pic/qr/qr.600.54.168.214.184.jpeg" /> <br />
+
+### QR of goodogood.me
+
+goodogood.me
+
+<img src="/pic/qr/qr.goodogood.me.600.jpeg" /> <br />

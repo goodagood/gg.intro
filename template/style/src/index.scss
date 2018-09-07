@@ -67,10 +67,12 @@ nav#fix-top {
     padding-bottom: 0.8rem;
 
     div {
-        float: right;
+        float: left;
+        //float: right;
+        display: inline-block;
     }
 
-    div.topnav{
+    div.top_button{
         float: left;
         padding-left:1rem;
     }
@@ -94,7 +96,7 @@ nav#fix-top {
         font-weight: bold;
     }
 
-    a.ggcom {
+    a.gg_com_a {
         border:None;
         float:left;
         font-size: 1.1rem;
@@ -102,7 +104,7 @@ nav#fix-top {
         padding:2px;
     }
 
-    div#top_left_logo {
+    div#topLogo {
         margin-right: 2rem;
         padding: 2px;
     }
@@ -110,8 +112,6 @@ nav#fix-top {
 
 nav#fix-top div {
     //height: 2.5rem;
-    display: inline-block;
-    float: left;
 
     div {
         height: 1.5rem;
@@ -129,7 +129,7 @@ nav#fix-top div {
 
 
 
-.topnav a:hover {
+.top_button a:hover {
     background-color: #ddd;
     color: black;
 }
@@ -183,7 +183,7 @@ div#markdown p {
         padding-top: 1rem;
         padding-bottom: 0.5rem;
 
-        div.topnav{
+        div.top_button{
             float:right;
         }
 
@@ -192,7 +192,7 @@ div#markdown p {
             min-width: 5rem;
         }
 
-        a.ggcom {
+        a.gg_com_a {
             float:left;
             border:None;
             margin-right: 2rem;
