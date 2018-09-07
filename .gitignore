@@ -10,7 +10,7 @@ venders/
 
 # cache
 __pycache__/
-.sass-cache/
+sass-cache/
 
 # jekyll
 _config.yml
