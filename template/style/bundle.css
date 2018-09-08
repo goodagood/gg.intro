@@ -14,12 +14,12 @@ body {
   background-color: white;
   font: 16px/1em 'PT Sans', sans-serif;
   text-align: center;
-  line-height: 1.5rem;
+  line-height: 1.5;
   display: block;
   border-radius: 3px; }
   body #wrapper, body .container, body div {
     text-align: left;
-    line-height: 140%;
+    line-height: 1.5;
     max-width: 82rem;
     margin-left: auto;
     margin-right: auto; }
@@ -37,13 +37,13 @@ nav#fix-top {
   width: 99vw;
   /* view width */
   z-index: 100;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem; }
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
   nav#fix-top div {
     float: left;
     display: inline-block; }
   nav#fix-top div.top_button {
-    float: left;
+    float: right;
     padding-left: 1rem; }
   nav#fix-top a {
     margin-right: 0.9rem;
@@ -51,23 +51,23 @@ nav#fix-top {
     padding: 2px;
     border-radius: 4px;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold; }
-  nav#fix-top a.gg_com_a {
-    border: None;
-    float: left;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 2px; }
   nav#fix-top div#topLogo {
-    margin-right: 2rem;
+    margin-right: 1.5rem;
     padding: 2px; }
 
+a#gg_com_a {
+  border: None;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 3px; }
+
 nav#fix-top div div {
-  height: 1.5rem;
+  height: 1.8rem;
   display: inline-block; }
 nav#fix-top div a {
-  height: 1.5rem; }
+  height: 1.6rem; }
 
 #fix-top .opt {
   display: none; }
@@ -89,7 +89,7 @@ nav#fix-top div a {
 
 /* ? */
 div#markdown p {
-  line-height: 150%; }
+  line-height: 1.5; }
 
 @media only screen and (max-width: 480px) {
   /* line by line for small screen */
@@ -113,12 +113,15 @@ div#markdown p {
     nav#fix-top a {
       margin-left: 1rem;
       min-width: 5rem; }
-    nav#fix-top a.gg_com_a {
+    nav#fix-top a#gg_com_a {
       float: left;
       border: None;
-      margin-right: 2rem;
-      font-size: 2rem;
-      font-weight: bold; }
+      margin-right: 1rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      padding: 2px;
+      padding-left: 1rem;
+      padding-right: 1rem; }
     nav#fix-top .opt {
       display: inline-block; } }
 a:hover {
@@ -162,7 +165,7 @@ form div.igroup:after {
 /* easy in hand hold device */
 form div.igroup input {
   font-size: 1.4em;
-  line-height: 1.6em;
+  line-height: 1.6;
   max-width: 85%; }
 
 /* in small media, use text input for password */
@@ -248,7 +251,7 @@ header h1 a:hover {
     /*
     #000f29;
     font-size: 1.2em;
-    line-height: 1.5em;
+    line-height: 1.5;
 
     */
   font-family: Helvetica, "Sans Serif", "Times New Roman", monospace;
@@ -278,7 +281,7 @@ footer {
   /* easy in hand hold */
   form div.igroup input {
     font-size: 1em;
-    line-height: 1.2em;
+    line-height: 1.2;
     max-width: 85%; }
 
   /* show normal passwd input, hide the other */
@@ -346,11 +349,13 @@ footer {
 div.qrcode {
   text-align: center; }
   div.qrcode img {
+    max-width: 85vw;
+    max-height: 85vh;
     margin: auto; }
 
 div#markdown,
 div#intro {
-  line-height: 140%;
+  line-height: 1.4;
   max-width: 88rem;
   margin-left: auto;
   margin-right: auto; }

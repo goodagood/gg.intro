@@ -62,20 +62,22 @@ it's a process to gather proved facts when all science is evolving.
 
 https://github.com/goodagood/story/blob/master/y10m/b.markdown
 
+<div class="qrcode">
 <img src="/pic/qr/qr.600.sand.story.github.jpeg" /> <br />
+</div>
 
 ### QR of goodogood.com
 
 goodogood.com
 
+<div class="qrcode">
 <img src="/pic/qr/qr.goodogood.com.600.jpeg" /> <br />
+</div>
 
 ### QR of Current IP
 
+<div class="qrcode">
 <img src="/pic/qr/qr.600.54.168.214.184.jpeg" /> <br />
+</div>
 
-### QR of goodogood.me
 
-goodogood.me
-
-<img src="/pic/qr/qr.goodogood.me.600.jpeg" /> <br />

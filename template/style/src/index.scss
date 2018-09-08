@@ -23,7 +23,7 @@ body {
     font: 16px/1em 'PT Sans', sans-serif;
 
     text-align: center;
-    line-height: 1.5rem;
+    line-height: 1.5;
 
     display: block;
 
@@ -33,7 +33,7 @@ body {
     // centralize
     #wrapper, .container, div  {
         text-align: left;
-        line-height:140%;
+        line-height:1.5;
 
         max-width:82rem;
 
@@ -45,7 +45,6 @@ body {
 
 
 nav#fix-top {
-    //min-height: 3.5rem;
 
     // switch color:
     color: $default-background-color;
@@ -63,8 +62,8 @@ nav#fix-top {
     z-index: 100;
 
 
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 
     div {
         float: left;
@@ -73,7 +72,8 @@ nav#fix-top {
     }
 
     div.top_button{
-        float: left;
+        //float: left;
+        float: right;
         padding-left:1rem;
     }
 
@@ -92,33 +92,34 @@ nav#fix-top {
         //float:left;
 
         text-decoration: none;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         font-weight: bold;
     }
 
-    a.gg_com_a {
-        border:None;
-        float:left;
-        font-size: 1.1rem;
-        font-weight:bold;
-        padding:2px;
-    }
 
     div#topLogo {
-        margin-right: 2rem;
+        margin-right: 1.5rem;
         padding: 2px;
     }
+}
+
+a#gg_com_a {
+    border:None;
+    //float:left;
+    font-size: 1.2rem;
+    font-weight:bold;
+    padding:3px; // least to have a gap in bottom of g..g
 }
 
 nav#fix-top div {
     //height: 2.5rem;
 
     div {
-        height: 1.5rem;
+        height: 1.8rem;
         display: inline-block;
     }
     a {
-        height: 1.5rem;
+        height: 1.6rem;
     }
 }
 
@@ -151,7 +152,7 @@ nav#fix-top div {
 
 /* ? */
 div#markdown p {
-  line-height: 150%;
+  line-height: 1.5;
 }
 
 @media only screen and (max-width: 480px) {
@@ -192,12 +193,16 @@ div#markdown p {
             min-width: 5rem;
         }
 
-        a.gg_com_a {
+        a#gg_com_a {
             float:left;
             border:None;
-            margin-right: 2rem;
-            font-size: 2rem;
+            margin-right: 1rem;
+            font-size: 1.4rem;
             font-weight:bold;
+
+            padding:2px;
+            padding-left:1rem;
+            padding-right:1rem;
         }
 
 
@@ -271,7 +276,7 @@ form div.igroup:after {
 /* easy in hand hold device */
 form div.igroup input{
   font-size: 1.4em;
-  line-height: 1.6em;
+  line-height: 1.6;
   max-width: 85%;
 }
 
@@ -368,7 +373,7 @@ header h1 a:hover  {
     /*
     #000f29;
     font-size: 1.2em;
-    line-height: 1.5em;
+    line-height: 1.5;
 
     */
     font-family: Helvetica, "Sans Serif", "Times New Roman", monospace;
@@ -408,7 +413,7 @@ footer {
   /* easy in hand hold */
   form div.igroup input{
       font-size: 1em;
-      line-height: 1.2em;
+      line-height: 1.2;
       max-width: 85%;
   }
 
@@ -494,13 +499,15 @@ footer {
 div.qrcode {
     text-align:center;
     img {
-        margin:auto;
+       max-width: 85vw; 
+       max-height: 85vh; 
+       margin:auto;
     }
 }
 
 div#markdown ,
 div#intro  {
-    line-height:140%;
+    line-height:1.4;
 
     max-width:88rem;
 

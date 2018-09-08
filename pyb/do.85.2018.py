@@ -42,7 +42,10 @@ def test_do_all(mdsrc, template_path, tgt, online_file, htmlRoot=None):
     # copy template folder as sub-folder into target
     # the components get used by html pages
     print("test do all> tool.copyfolder(template_path, tgt)")
-    tool.copyfolder(template_path, tgt)
+    #tool.copyfolder(template_path, tgt)
+    template_tgt = os.path.join(tgt, os.path.basename(template_path))
+    tool.copytree(template_path, template_tgt)
+
 
     # Instead of clone the repo, we get the single raw file from github
     Story_git = config_files.Story_git
@@ -122,11 +125,14 @@ def do_selected(opt, mdsrc, template_path, tgt, online_file, htmlRoot=None):
         print()
         prepare_template_components(template_path)
 
+        template_tgt = os.path.join(tgt, os.path.basename(template_path))
+        print('--template tgt ', template_tgt)
+
         # copy template folder as sub-folder into target
         # the components get used by html pages
         print("do selected> copy template components, tool.copyfolder(template_path, tgt)")
         print()
-        tool.copyfolder(template_path, tgt)
+        tool.copytree(template_path, template_tgt) # this use copy tree
 
 
     if opt['story']:
@@ -169,7 +175,7 @@ if __name__ == "__main__":
 
 
     OPT = {
-            'copytree': True,
+            'copytree': False,
             'template': True,
             'story':    False,
             'html':     True,
