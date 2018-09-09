@@ -20,9 +20,10 @@ body {
     color: $default-color;
     background-color: $default-background-color;
 
-    font: 16px/1em 'PT Sans', sans-serif;
-
     text-align: center;
+
+    font: 16px/19px sans-serif, monospace, serif, 
+
     line-height: 1.5;
 
     display: block;
@@ -106,7 +107,7 @@ nav#fix-top {
 a#gg_com_a {
     border:None;
     //float:left;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight:bold;
     padding:3px; // least to have a gap in bottom of g..g
 }
@@ -553,4 +554,9 @@ header:after {
 header {
     zoom:1;
 }
+
+.monofont {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
 
