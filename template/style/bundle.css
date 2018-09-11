@@ -12,14 +12,14 @@ body {
   margin-top: 2px;
   color: black;
   background-color: white;
-  font: 16px/1em 'PT Sans', sans-serif;
   text-align: center;
+  font: 16px/1.5  verdana, sans-serif, monospace;
   line-height: 1.5;
   display: block;
   border-radius: 3px; }
-  body #wrapper, body .container, body div {
+  body #wrapper, body .container {
     text-align: left;
-    line-height: 1.5;
+    font-family: "Times New Roman", "Palatino", serif;
     max-width: 82rem;
     margin-left: auto;
     margin-right: auto; }
@@ -27,6 +27,8 @@ body {
 nav#fix-top {
   color: white;
   background-color: black;
+  font-family: "Lucida Sans Typewriter", "Courier New", monospace;
+  line-height: 1.2;
   display: block;
   /* fix top */
   position: fixed;
@@ -54,12 +56,15 @@ nav#fix-top {
     font-size: 1.5rem;
     font-weight: bold; }
   nav#fix-top div#topLogo {
-    margin-right: 1.5rem;
     padding: 2px; }
+
+#topLogo {
+  font-family: Arial, Tahoma, sans-serif, monospace;
+  line-height: 1.1; }
 
 a#gg_com_a {
   border: None;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   padding: 3px; }
 
@@ -269,37 +274,25 @@ header h2 {
     background-color: #dcdee3;
  */
 footer {
-  color: #000;
+  color: white;
+  background-color: black;
   font-family: 'PT Serif', serif;
   font-style: italic;
   text-align: center;
   font-size: 14px;
   padding-top: 10px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  border-bottom: 5px;
+  margin-bottom: 15px; }
 
 @media only screen and (min-width: 768px) {
+  max-width: 80rem;
   /* easy in hand hold */
   form div.igroup input {
     font-size: 1em;
     line-height: 1.2;
     max-width: 85%; }
 
-  /* show normal passwd input, hide the other */
-  /*
-  form div#normal-password-div  {
-      display:block;
-  }
-  form div#text-password-div {
-      display:none;
-  }
-
-  form div#pass-wd label#show-pass {
-    display:none;
-  }
-  form div#pass-wd label#normal-pass {
-    display:block;
-  }
-  */
   span#hed-show,
   span#let-show {
     display: none; }
@@ -356,9 +349,8 @@ div.qrcode {
 div#markdown,
 div#intro {
   line-height: 1.4;
-  max-width: 88rem;
-  margin-left: auto;
-  margin-right: auto; }
+  max-width: 960px;
+  margin: auto; }
 
 /*tools*/
 .clr {
@@ -389,5 +381,8 @@ header:after {
 /* For IE 6/7 (trigger hasLayout) */
 header {
   zoom: 1; }
+
+.monofont {
+  font-family: "Lucida Console", "Courier New", monospace; }
 
 /*# sourceMappingURL=bundle.css.map */

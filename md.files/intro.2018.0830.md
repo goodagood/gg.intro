@@ -1,6 +1,5 @@
 
-# goodogood
-
+# The Name ( [中文版本](./cn/intro.2018.0830.md.html) )
 
 `goodogood` gets 2 `good` around the central letter `o`,
 and it happens has a dog in the center of the new word.
@@ -52,8 +51,11 @@ it's a process to gather proved facts when all science is evolving.
     date: 2018 0830
 
 
-# END
 
+
+# <END>
+
+<hr />
 
 ## The following is easy links to be scanned as QR codes
 

@@ -22,7 +22,8 @@ body {
 
     text-align: center;
 
-    font: 16px/19px sans-serif, monospace, serif, 
+    // fonts without corner decorations, no serif 
+    font: 16px/1.5  verdana, sans-serif, monospace; 
 
     line-height: 1.5;
 
@@ -32,9 +33,10 @@ body {
 
 
     // centralize
-    #wrapper, .container, div  {
+    #wrapper, .container  {
         text-align: left;
-        line-height:1.5;
+
+        font-family:"Times New Roman", "Palatino", serif;
 
         max-width:82rem;
 
@@ -50,6 +52,9 @@ nav#fix-top {
     // switch color:
     color: $default-background-color;
     background-color: $default-color;
+
+    font-family: "Lucida Sans Typewriter", "Courier New", monospace;
+    line-height:1.2;
 
     display: block;
 
@@ -99,9 +104,14 @@ nav#fix-top {
 
 
     div#topLogo {
-        margin-right: 1.5rem;
+        //margin-right: 1.5rem;
         padding: 2px;
     }
+}
+
+#topLogo {
+    font-family: Arial, Tahoma, sans-serif, monospace;
+    line-height:1.1; //?
 }
 
 a#gg_com_a {
@@ -396,7 +406,8 @@ header h2 {
  */
  
 footer {
-    color: #000;
+    color: $default-background-color;
+    background-color: $default-color;
     font-family: 'PT Serif', serif;
     font-style: italic;
     text-align: center;
@@ -405,11 +416,14 @@ footer {
     padding-top: 10px;
 
     border-radius: 5px;
+    border-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 
 @media only screen and (min-width: 768px) {
 
+    max-width: 80rem;
 
   /* easy in hand hold */
   form div.igroup input{
@@ -419,22 +433,6 @@ footer {
   }
 
 
-  /* show normal passwd input, hide the other */
-  /*
-  form div#normal-password-div  {
-      display:block;
-  }
-  form div#text-password-div {
-      display:none;
-  }
-
-  form div#pass-wd label#show-pass {
-    display:none;
-  }
-  form div#pass-wd label#normal-pass {
-    display:block;
-  }
-  */
 
   span#hed-show,
   span#let-show { 
@@ -510,10 +508,10 @@ div#markdown ,
 div#intro  {
     line-height:1.4;
 
-    max-width:88rem;
+    //max-width:88rem;
+    max-width:960px;
+    margin:auto;
 
-    margin-left:auto;
-    margin-right:auto;
 }
 
 

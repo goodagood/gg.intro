@@ -11,6 +11,7 @@ venders/
 # cache
 __pycache__/
 sass-cache/
+*.scssc
 
 # jekyll
 _config.yml

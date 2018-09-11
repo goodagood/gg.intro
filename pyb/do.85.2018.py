@@ -175,9 +175,9 @@ if __name__ == "__main__":
 
 
     OPT = {
-            'copytree': False,
+            'copytree': True,
             'template': True,
-            'story':    False,
+            'story':    True,
             'html':     True,
             'index_files':False
             }
