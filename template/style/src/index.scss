@@ -162,7 +162,7 @@ nav#fix-top div {
 }
 
 /* ? */
-div#markdown p {
+div.markdown p {
   line-height: 1.5;
 }
 
@@ -423,7 +423,8 @@ footer {
 
 @media only screen and (min-width: 768px) {
 
-    max-width: 80rem;
+  .markdown{  max-width: 80rem;
+  }
 
   /* easy in hand hold */
   form div.igroup input{
@@ -504,7 +505,7 @@ div.qrcode {
     }
 }
 
-div#markdown ,
+div.markdown ,
 div#intro  {
     line-height:1.4;
 
