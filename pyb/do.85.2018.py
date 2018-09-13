@@ -1,5 +1,6 @@
 
 import os
+import sys
 import subprocess
 
 
@@ -12,6 +13,7 @@ import mkmd
 import mkindex
 
 import config_files
+import cmdargs
 
 
 #
@@ -155,6 +157,41 @@ def do_selected(opt, mdsrc, template_path, tgt, online_file, htmlRoot=None):
     pass
 
 
+def do_list_from_arguments():
+    #print(cmdargs.get_args())
+    parsed = cmdargs.get_args()
+    print(1, parsed.wordlist)
+
+    if not parsed.wordlist:
+        print('no keywords given')
+        return
+
+    if len(parsed.wordlist) <1:
+        print('zero keywords given')
+        return
+
+    opt = {
+            'copytree':   False,
+            'template':   False,
+            'story':      False,
+            'html':       False,
+            'index_files':False
+            }
+    wlist = parsed.wordlist
+
+    for key in parsed.wordlist:
+        opt[key] = True
+
+    #print('opt is: ', opt)
+
+    do_selected(opt,
+            mdsrc         =config_files.MDFolder,
+            template_path =config_files.Template_folder,
+            tgt           =config_files.HTMLFolder,
+            online_file   =config_files.Raw_git,
+            htmlRoot      =config_files.HTMLRoot)
+
+
 
 
 if __name__ == "__main__":
@@ -174,21 +211,60 @@ if __name__ == "__main__":
     #pre_template.copy_template_components(Template_folder, HTMLFolder)
 
 
-    OPT = {
-            'copytree': True,
-            'template': True,
-            'story':    True,
-            'html':     True,
-            'index_files':False
-            }
+    #OPT = {
+    #        'copytree': True,
+    #        'template': True,
+    #        'story':    True,
+    #        'html':     True,
+    #        'index_files':False
+    #        }
 
-    do_selected(OPT,
-            mdsrc         =config_files.MDFolder,
-            template_path =config_files.Template_folder,
-            tgt           =config_files.HTMLFolder,
-            online_file   =config_files.Raw_git,
-            htmlRoot      =config_files.HTMLRoot)
+    #do_selected(OPT,
+    #        mdsrc         =config_files.MDFolder,
+    #        template_path =config_files.Template_folder,
+    #        tgt           =config_files.HTMLFolder,
+    #        online_file   =config_files.Raw_git,
+    #        htmlRoot      =config_files.HTMLRoot)
 
+
+
+    #import cmdargs
+    ##print(cmdargs.get_args())
+    #parsed = cmdargs.get_args()
+    #print(parsed.wordlist)
+
+    #if not parsed.wordlist:
+    #    print('no keywords given')
+    #    sys.exit()
+
+    #if parsed.wordlist:
+    #    print(len(parsed.wordlist))
+
+    #if len(parsed.wordlist) <1:
+    #    print('zero keywords given')
+    #    sys.exit()
+
+    #opt = {
+    #        'copytree':   False,
+    #        'template':   False,
+    #        'story':      False,
+    #        'html':       False,
+    #        'index_files':False
+    #        }
+    #wlist = parsed.wordlist
+
+    #for key in parsed.wordlist:
+    #    opt[key] = True
+
+    #print('opt is: ', opt)
+
+    #do_selected(opt,
+    #        mdsrc         =config_files.MDFolder,
+    #        template_path =config_files.Template_folder,
+    #        tgt           =config_files.HTMLFolder,
+    #        online_file   =config_files.Raw_git,
+    #        htmlRoot      =config_files.HTMLRoot)
+
+    do_list_from_arguments()
     pass
-
 
