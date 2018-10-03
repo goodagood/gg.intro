@@ -559,3 +559,19 @@ header {
 }
 
 
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  overflow:hidden;
+  height:100px;
+}
+
+#markdown p {
+  line-height: 1.5;
+}
+

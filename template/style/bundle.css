@@ -13,16 +13,18 @@ body {
   color: black;
   background-color: white;
   text-align: center;
-  font: 16px/1.5  verdana, sans-serif, monospace;
+  font: 16px/1.5 verdana, sans-serif, monospace;
   line-height: 1.5;
   display: block;
-  border-radius: 3px; }
-  body #wrapper, body .container {
-    text-align: left;
-    font-family: "Times New Roman", "Palatino", serif;
-    max-width: 82rem;
-    margin-left: auto;
-    margin-right: auto; }
+  border-radius: 3px;
+}
+body #wrapper, body .container {
+  text-align: left;
+  font-family: "Times New Roman", "Palatino", serif;
+  max-width: 82rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 nav#fix-top {
   color: white;
@@ -40,46 +42,57 @@ nav#fix-top {
   /* view width */
   z-index: 100;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
-  nav#fix-top div {
-    float: left;
-    display: inline-block; }
-  nav#fix-top div.top_button {
-    float: right;
-    padding-left: 1rem; }
-  nav#fix-top a {
-    margin-right: 0.9rem;
-    min-width: 3rem;
-    padding: 2px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold; }
-  nav#fix-top div#topLogo {
-    padding: 2px; }
+  padding-bottom: 0.5rem;
+}
+nav#fix-top div {
+  float: left;
+  display: inline-block;
+}
+nav#fix-top div.top_button {
+  float: right;
+  padding-left: 1rem;
+}
+nav#fix-top a {
+  margin-right: 0.9rem;
+  min-width: 3rem;
+  padding: 2px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+nav#fix-top div#topLogo {
+  padding: 2px;
+}
 
 #topLogo {
   font-family: Arial, Tahoma, sans-serif, monospace;
-  line-height: 1.1; }
+  line-height: 1.1;
+}
 
 a#gg_com_a {
   border: None;
   font-size: 1.3rem;
   font-weight: bold;
-  padding: 3px; }
+  padding: 3px;
+}
 
 nav#fix-top div div {
   height: 1.8rem;
-  display: inline-block; }
+  display: inline-block;
+}
 nav#fix-top div a {
-  height: 1.6rem; }
+  height: 1.6rem;
+}
 
 #fix-top .opt {
-  display: none; }
+  display: none;
+}
 
 .top_button a:hover {
   background-color: #ddd;
-  color: black; }
+  color: black;
+}
 
 /* make it full width without respect parent */
 .full-width {
@@ -90,11 +103,13 @@ nav#fix-top div a {
   margin-left: -50vw;
   margin-right: -50vw;
   overflow: hidden;
-  height: 100px; }
+  height: 100px;
+}
 
 /* ? */
 div.markdown p {
-  line-height: 1.5; }
+  line-height: 1.5;
+}
 
 @media only screen and (max-width: 480px) {
   /* line by line for small screen */
@@ -104,78 +119,96 @@ div.markdown p {
     float: left;
     overflow: hidden;
     padding: 0.5em;
-    text-align: left; }
+    text-align: left;
+  }
 
   form input {
     display: block;
-    float: left; } }
+    float: left;
+  }
+}
 @media screen and (min-width: 640px) {
   nav#fix-top {
     padding-top: 1rem;
-    padding-bottom: 0.5rem; }
-    nav#fix-top div.top_button {
-      float: right; }
-    nav#fix-top a {
-      margin-left: 1rem;
-      min-width: 5rem; }
-    nav#fix-top a#gg_com_a {
-      float: left;
-      border: None;
-      margin-right: 1rem;
-      font-size: 1.4rem;
-      font-weight: bold;
-      padding: 2px;
-      padding-left: 1rem;
-      padding-right: 1rem; }
-    nav#fix-top .opt {
-      display: inline-block; } }
+    padding-bottom: 0.5rem;
+  }
+  nav#fix-top div.top_button {
+    float: right;
+  }
+  nav#fix-top a {
+    margin-left: 1rem;
+    min-width: 5rem;
+  }
+  nav#fix-top a#gg_com_a {
+    float: left;
+    border: None;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 2px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  nav#fix-top .opt {
+    display: inline-block;
+  }
+}
 a:hover {
   background-color: #ddd;
-  color: black; }
+  color: black;
+}
 
 /*
  * old login.css
  */
 .container {
-  max-width: 1280px; }
+  max-width: 1280px;
+}
 
 div#wrapper {
   position: relative;
   /* for fix top? */
   margin-top: 4rem;
   width: 98%;
-  text-align: left; }
+  text-align: left;
+}
 
 p, ul {
-  margin: 0 0 1em; }
+  margin: 0 0 1em;
+}
 
 form {
   margin: 1em 0.5em 1em;
-  padding: 0 1em; }
+  padding: 0 1em;
+}
 
 form div.igroup {
   display: block;
   /*width: 90%;*/
   font-family: "Lucida Sans Typewriter", "Courier New", "Sans Serif";
   font-size: 1em;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 form div.igroup:before,
 form div.igroup:after {
   /* */
   content: "";
   display: table;
-  clear: both; }
+  clear: both;
+}
 
 /* easy in hand hold device */
 form div.igroup input {
   font-size: 1.4em;
   line-height: 1.6;
-  max-width: 85%; }
+  max-width: 85%;
+}
 
 /* in small media, use text input for password */
 form div#text-password-div {
-  display: block; }
+  display: block;
+}
 
 /*
 form div#normal-password-div {
@@ -191,18 +224,21 @@ form label {
   width: 33.3%;
   min-width: 180px;
   padding: 0.5em;
-  text-align: right; }
+  text-align: right;
+}
 
 form input {
   display: inline-block;
   float: left;
-  min-width: 260px; }
+  min-width: 260px;
+}
 
 /* other login methods */
 div#other-id {
   width: 90%;
   margin: 1em auto;
-  padding: 1em 1em; }
+  padding: 1em 1em;
+}
 
 #other-id .btn {
   background: grey;
@@ -217,7 +253,8 @@ div#other-id {
   font-size: 0.9em;
   margin: 1px;
   padding: 5px 10px 5px 10px;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 #other-id .btn:hover {
   background: #3cb0fd;
@@ -226,48 +263,56 @@ div#other-id {
   background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
   background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /*header*/
 header {
   background: #dcdee3;
   font-weight: bold;
   padding: 0 0.5em;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 header a, header a:visited {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 header div#register {
   display: inline-block;
-  float: right; }
+  float: right;
+}
 
 header h1 {
   width: 50%;
-  display: inline-block; }
+  display: inline-block;
+}
 
 header h1 a {
   text-decoration: none;
   color: #000f29;
-  font-family: "Courier New", "Arial Rounded MT Bold", Serif, monospace; }
+  font-family: "Courier New", "Arial Rounded MT Bold", Serif, monospace;
+}
 
 header h1 a:hover {
   color: #9fc;
-    /*
-    #000f29;
-    font-size: 1.2em;
-    line-height: 1.5;
+  /*
+  #000f29;
+  font-size: 1.2em;
+  line-height: 1.5;
 
-    */
+  */
   font-family: Helvetica, "Sans Serif", "Times New Roman", monospace;
   background-color: #6e798c;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 3px; }
+  border-radius: 3px;
+}
 
 header h2 {
   float: right;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /*footer
  *
@@ -276,49 +321,58 @@ header h2 {
 footer {
   color: white;
   background-color: black;
-  font-family: 'PT Serif', serif;
+  font-family: "PT Serif", serif;
   font-style: italic;
   text-align: center;
   font-size: 14px;
   padding-top: 10px;
   border-radius: 5px;
   border-bottom: 5px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+}
 
 @media only screen and (min-width: 768px) {
   .markdown {
-    max-width: 80rem; }
+    max-width: 80rem;
+  }
 
   /* easy in hand hold */
   form div.igroup input {
     font-size: 1em;
     line-height: 1.2;
-    max-width: 85%; }
+    max-width: 85%;
+  }
 
   span#hed-show,
-  span#let-show {
-    display: none; }
+span#let-show {
+    display: none;
+  }
 
   header {
-    padding: 1em 1em; }
+    padding: 1em 1em;
+  }
 
   a.to_nav {
-    display: none; }
+    display: none;
+  }
 
   .wrapper {
     position: relative;
     /*- width: 768px; -*/
     width: 960px;
-    margin: auto; }
+    margin: auto;
+  }
 
   #primary_nav {
     position: absolute;
     top: 5px;
     right: 10px;
-    background: none; }
+    background: none;
+  }
 
   #primary_nav li {
-    display: inline; }
+    display: inline;
+  }
 
   #primary_nav li a {
     float: left;
@@ -326,65 +380,96 @@ footer {
     padding: 0 10px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
-    border-radius: 2px; }
+    border-radius: 2px;
+  }
 
   #primary_nav li.top {
-    display: none; }
+    display: none;
+  }
 
   div#try-before-register {
     margin: 0.5em auto;
     min-width: 90%;
-    text-align: center; }
+    text-align: center;
+  }
 
   div#try-before-register p {
     margin: 0.5em auto;
     max-width: 60%;
     font-family: Serif, "Times New Roman", Times;
-    text-align: left; } }
+    text-align: left;
+  }
+}
 div.qrcode {
-  text-align: center; }
-  div.qrcode img {
-    max-width: 85vw;
-    max-height: 85vh;
-    margin: auto; }
+  text-align: center;
+}
+div.qrcode img {
+  max-width: 85vw;
+  max-height: 85vh;
+  margin: auto;
+}
 
 div.markdown,
 div#intro {
   line-height: 1.4;
   max-width: 960px;
-  margin: auto; }
+  margin: auto;
+}
 
 /*tools*/
 .clr {
-  clear: both; }
+  clear: both;
+}
 
 /*shorter clearfix http://nicolasgallagher.com/micro-clearfix-hack/*/
 .cf:before,
 .cf:after {
   content: " ";
-  display: table; }
+  display: table;
+}
 
 .cf:after {
-  clear: both; }
+  clear: both;
+}
 
 /* For IE 6/7 (trigger hasLayout) */
 .cf {
-  zoom: 1; }
+  zoom: 1;
+}
 
 /* Apply clearfix for header */
 header:before,
 header:after {
   content: " ";
-  display: table; }
+  display: table;
+}
 
 header:after {
-  clear: both; }
+  clear: both;
+}
 
 /* For IE 6/7 (trigger hasLayout) */
 header {
-  zoom: 1; }
+  zoom: 1;
+}
 
 .monofont {
-  font-family: "Lucida Console", "Courier New", monospace; }
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  height: 100px;
+}
+
+#markdown p {
+  line-height: 1.5;
+}
 
 /*# sourceMappingURL=bundle.css.map */

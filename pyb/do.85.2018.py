@@ -158,7 +158,18 @@ def do_selected(opt, mdsrc, template_path, tgt, online_file, htmlRoot=None):
 
 
 def do_list_from_arguments():
-    #print(cmdargs.get_args())
+    """python this-file-name.py word list choosing what to do
+
+    word list can be 1 or more of the following key words:
+            'copytree',   
+            'template',   
+            'story',      
+            'html',       
+            'index_files'
+
+    python should get modules: markdown pystache requests
+    use virtualenv or pipenv, now we use python3.6
+    """
     parsed = cmdargs.get_args()
     print(1, parsed.wordlist)
 
@@ -227,23 +238,6 @@ if __name__ == "__main__":
     #        htmlRoot      =config_files.HTMLRoot)
 
 
-
-    #import cmdargs
-    ##print(cmdargs.get_args())
-    #parsed = cmdargs.get_args()
-    #print(parsed.wordlist)
-
-    #if not parsed.wordlist:
-    #    print('no keywords given')
-    #    sys.exit()
-
-    #if parsed.wordlist:
-    #    print(len(parsed.wordlist))
-
-    #if len(parsed.wordlist) <1:
-    #    print('zero keywords given')
-    #    sys.exit()
-
     #opt = {
     #        'copytree':   False,
     #        'template':   False,
@@ -251,7 +245,6 @@ if __name__ == "__main__":
     #        'html':       False,
     #        'index_files':False
     #        }
-    #wlist = parsed.wordlist
 
     #for key in parsed.wordlist:
     #    opt[key] = True

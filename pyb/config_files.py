@@ -12,8 +12,8 @@ import os
 
 
 # This is target
-HTMLFolder = "/my/outside/aug"  # as temperory default
-HTMLRoot   = "/aug" # root for URLs
+HTMLFolder = "/my/outside/sept"  # as temperory default
+HTMLRoot   = "/sept" # root for URLs
 
 # tilda means it's relative path to user HOME
 MDFolder_tilda = "~/workspace/gg.intro/md.files"
