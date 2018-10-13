@@ -1,5 +1,6 @@
 
-# check things
+# build json data for jstree,
+# https://github.com/vakata/jstree
 
 import config_files
 import mkindex
@@ -9,24 +10,45 @@ import mkindex
 
 import os
 def showwalk(where="/my", saved=[], jstree=[]):
-    jstree.append({"text":where, "type":"dir", "children": []} )
     for root, dirs, files in os.walk(where):
         print("---  ", root, dirs, files)
-        #jstree[0]["children"].append({"text":where, "type":"dir"} )
+        jstree.append({"text":root, "id":root, "root":root,"type":"dir",
+            "parent": "#"} )
+        children = jstree[0]["children"]
         #jstree[0]["children"].append({"text":where, "type":"dir"} )
 
         for name in files:
             #print("files ")
             #print('file: ', os.path.join(root, name))
+            full_path = os.path.join(root, name)
             saved.append(os.path.join(root, name))
-            jstree.append({"text":where, "type":"dir"} )
+            children.append({"text":name, "parent":root, "id":full_path} )
         for name in dirs:
+            full_path = os.path.join(root, name)
             #print('dir: ', os.path.join(root, name))
             saved.append(os.path.join(root, name))
+            children.append({"text":name, "type":"dir"} )
+            children.append({"text":name, "parent":root, "id":full_path} )
 
             pass
         pass
     return saved
+
+
+def empty_array(a):
+    if type(a) != list:
+        return False
+    if len(a) = 0:
+        return True
+
+    return False
+
+
+def contain(pa, pb):
+    """if path pb is direct sub-element of path pa
+    """
+    pass
+
 
 
 if __name__ == "__main__":
