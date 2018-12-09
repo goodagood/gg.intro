@@ -1,157 +1,107 @@
 
-    Title: intro
-    Author: Andrew
-
 
 <hr />
 
-# Online file system
 
-In the future, we communicate by files and folders.
+# The Name 
+( [中文版本](./cn/intro.2018.0830.md.html) )
 
-It's not fancy, files give freedom to represent text, voice,
-picture and video files. Above average level, professionals would prefer the
-capabilities files system can offer as communication media.
+`goodogood` get `good` on left and right side of the letter `o`,
+it's a domain name and it happens has a dog comes into the middle of the name.
 
-The project of goodogood.com do it this way, everything would be files and
-folders. For users ok to work with files, they  can design their own file type
-and folder structures, then they can share it.
+`goodogood.com` is developing as an file sharing project,
+it's open source with codes repositories at `github.com/goodagood/gg2`.
+`goodagood` with 'a' connect 2 good is brother of goodogood.
 
-There are another name goodagood, the only difference is in the
-middle, it get 'a' instead of 'o' between the 2 'good'.
-goodogood is open source software, start as file sharing system, designed to implement layer after
-layer as steps, this would be simple system and easy to do.
+Software is a kind of engineering, it can be pleasure to enjoy,
+and it has good chance to turn into a lot hardworking and brain twisting.
 
-Open source developing might be slow and hard to find teaming financing,
-I wrote  software codes and start the prototype, but the project oversized single
-man's capacity.
-So, more advanced features can be fullfilled when resources available.
+`File` is one of the basic concepts underlying the whole computer science and engineering,
+it's such kind of software that it can be complex and
+cross linking to all of system processes, 
+using many protocols and talking to different interfaces. 
+It will definitely becomes hugh challenge when it designed to scale up on vast networks. 
 
-The system started to run for over a year, but crashed when I was 
-occupied by other things. There are many sub-systems such as: file
-types, representations of files, authenticathions, size quota, user code
-running and control, and more...
-It use Javascript and Python as scripting languages, Linux as server,
-MongoDB, Redis as data stores.
+Even more, if we let files be selled and bought, things going to crash on
+itself.
+
+There are tons of reasons why I like to do stupid things, I can go to details
+if we have more time.
 
 
-# Background info.
+# Why we do things in stupid ways
 
 
-- [Value for every byte 1](/md/md.files/byte-value.md.html)
-- [Value for every byte 3](/md/md.files/code-value.md.html)
-- [Value for every byte 4](/md/md.files/intro.md.html)
-- [Value for every byte 5](/md/md.files/negative.md.html)
-- [Value for every byte 6](/md/md.files/reasons.md.html)
-- [Value for every byte 7](/md/md.files/start.md.html)
-- [Value for every byte 8](/md/md.files/test24.md.html)
-- [How about negative value?](/md/md.files/clean-claim.md.html)
-- [Value for every byte 9](/md/md.files/value.md.html)
+We think it long time before, there is 
+a long story of history started from a grain of sand
 
 
-# 中文资料 Chinese info.
+    To see a World in a Grain of Sand
+    And a Heaven in a Wild Flower,
+    Hold Infinity in the palm of your hand 
+    And Eternity in an hour.
+
+	- William Blake
 
 
-- [introduction](/md/md.files/cn/intro.md.html)
-- [To see a World in a Grain of Sand](/md/md.files/cn/sand.markdown.html)
-- [source](https://github.com/goodagood/story/blob/master/y10m/b.markdown)
-- [Chimp's land](/md/md.files/cn/chimp1.md.html)
+It's not relevent to software specifically, but it tells who we are,
+why we come, and how we are going to do things.
 
-[关于猩猩的更多故事](/md/md.files/cn/chimp1.md.html)，（
-<a href="https://github.com/goodagood/story/blob/master/chimpsland/001.txt"
-target="_blank"> chimp source part one</a>
-<a href="https://github.com/goodagood/story/blob/master/chimpsland/002.txt"
-target="_blank"> chimp source part two</a>）
+The story not finished translating into English,
+it's not guaranteed to be all correct,
+it's a process to gather proved facts when all science is evolving.
 
 
-# Interface to Internet
-
-The file system works as interface between myself and the
-internet.  Firstly, because working with file is easier for more kind of
-tasks.  Secondly, because web interface is still lacking flexiblities.  It
-should work in middle, all types of files from all devices can upload there,
-and fetch from it.
-
-I wrote some programming codes and set up a prototype system, as concept
-proven testing.  [It works.](http://www.goodogood.me)
-
-But it could hardly be ready to get on production in short period, at
-least not enough as a few weekends, I re-think the [reasons for the file
-system I want to setting up.](./reason.md), it turns out the first reason
-should be because I am a stupid, the 2nd reason is I like to hack, to do
-developments to fullfil my desires of free spiritualities.
-
-As an engineer, commonly, we work on objective points of views.  We work on
-principles of other things beyond ourself.  But this time, I have to view it
-from my own requirements, it's meself, one of the stupid humankind, who want
-this project as:
-
-    1, it's a file system
-    2, it should work as interface between me and internet
-    3, it should value all file in it.
-
-If you trust me, work with a good file system as the one I am trying to do
-will not only help to finish most of our file jobs, but also it can save us
-from low back pain and other kind of bone and muscle fatigues.  Because to
-kill jobs fast we need tools, but more tools are working on files instead
-working on web.  If we use good tools to finish job then we can get time to
-play, so we are not going to be Jack.  Jack is a boy, "all work and no
-play make Jace a dull boy"?
-
-But we reached the 3td requirement in the list above.  It's to
-value files, give value attribute to all files, or at least those made by
-humankinds.  Because all human labors get value, high or low.  The value help
-optimise labors for our society.  So all files belong to human should be able
-to get the value attribute.
-
-As an engineer, we need to be get used to see the list expanding.  But a list
-containing three items should be ok, we need test it now.
+# Beside the file share-ing
 
 
-# Prototype and value adding
+Beside the goodogood file system and the story, there are a few things I
+also want to do:
 
-I [tried it and set up a prototype](http://www.goodogood.me/), it works for
-most time,  I have been writing codes and checking and making it work.  So,
-concepts get proved.  [I put my codes to
-github](https://github.com/goodagood/gg.git), a few smart guys should be
-enough to push it to production level, and done the job, but who knows.
+	1 wheel package system to save energy in outdoor trails.
+	2 wheel motorcycle with front wheel change to electric driven.
+	3 wheel with 2 front wheels to carry more solar panels
+	4 wheel solar RV or mortor-house like vehicle
 
-Right now, my codes tends to become sort of spaghetti.  Spaghetti is kind of
-delicious food software engineers like to eat.  In china, we call it noodle.
-If you follow one piece of noodle, you get to nowhere but another noodle.
-
-For the problem, some programmers claim there is a silver bullet to kill the
-troubles in coding, it's not using 'goto' statements, to avoid tangling codes
-as noodle.  I didn't use 'goto', but still I chalenge any programmer who can
-claim that they never ever get lost in codes that hasn't even a single piece
-of 'goto' statement.
-
-One of my concerns is actually that softwares is hard enough.  To try the
-project with merely 3 requirements as ours, it require more creativities as
-well as accumulation of jobs to do it.  Maybe we can try to value all tasks
-such as coding, designs, testing, and those equally important tasks as
-organizing, management or even discussions.
-
-It might help to value all tasks going to get involved in the project, so we
-can find a way to split them then attack them one by one, it's to design from
-top and start from bottom.  The prototype can be finished by single brain, the
-production type need more smart guys, their jobs can be tangled in
-complexities.  [So I tried to set up value information sub-system to make
-things more reasonable](./byte-value.md), it might help to keep value
-informations for more small tasks.  In the same time, we need to be creative
-as long as we can be accumulative.  Really those high level designs and task
-splittings and managements should be respected if they can be implemented on
-ground level.
-
-At last, the simple project to set up a file system, work it as interface
-between our daily jobs and the internet, in the same time we want value files
-in it, value all jobs for the project itself.  The idea has get a prototype to
-prove it, but the simple 3 requirements is enough to give lots challenges for
-any one willing to try it, or take part in the challenges.  Any one, who you
-are, we want to keep your job's value.
+Yes, I get no time/money to do many of the above, so all of them are open
+sourced project asking people to do it.
 
 
-<!--
-2015 1223 14:04pm
-vim: set ft=markdown tw=78:
--->
+
+    date: 2018 Aug 30, Nov 22
+
+
+
+
+# <END>
+
+<hr />
+
+## The following is easy links to be scanned as QR codes
+
+
+### Chinese story of A grain of sand
+
+[local file of ".../story/y10m/b.markdown"](https://github.com/goodagood/story/blob/master/y10m/b.markdown)
+
+<div class="qrcode">
+<img src="/pic/qr/qr.600.sand.story.github.jpeg" /> <br />
+</div>
+
+### QR of goodogood.com
+
+[goodogood.com](goodogood.com)
+
+<div class="qrcode">
+<img src="/pic/qr/qr.goodogood.com.600.jpeg" /> <br />
+</div>
+
+### QR of Current IP
+
+[dig goodogood.com to digital IP, 205.116](13.230.205.116)
+
+<div class="qrcode">
+<img src="/pic/qr/qr.600.54.168.214.184.jpeg" /> <br />
+</div>
+
+

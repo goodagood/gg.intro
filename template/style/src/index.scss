@@ -38,7 +38,9 @@ body {
 
         font-family:"Times New Roman", "Palatino", serif;
 
-        max-width:82rem;
+        //max-width:82rem;
+        //max-width:1024px;
+        max-width:800px;
 
         margin-left:auto;
         margin-right:auto;
@@ -417,13 +419,13 @@ footer {
 
     border-radius: 5px;
     border-bottom: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 150px;
 }
 
 
 @media only screen and (min-width: 768px) {
 
-  .markdown{  max-width: 80rem;
+  .markdown{  max-width: 80rem; //?
   }
 
   /* easy in hand hold */

@@ -1,11 +1,15 @@
 
+
+
+
+
 import os
 import sys
 import subprocess
 
 
 import tool
-import pre_template
+#import pre_template
 import fetch138
 
 import compile_js_css
@@ -120,6 +124,7 @@ def do_selected(opt, mdsrc, template_path, tgt, online_file, htmlRoot=None):
 
     if opt['copytree']:
         print("do selected> copy and set target : ", tgt)
+        print("do selected> copy tree: %s => %s : "%(mdsrc,tgt))
         tool.copytree(mdsrc, tgt)
 
     if opt['template']:

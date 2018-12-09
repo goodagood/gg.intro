@@ -8,8 +8,8 @@ and it happens has a dog in the center of the new word.
 it's open source with codes repositories at `github.com/goodagood`.
 `goodagood` is brother of goodogood.
 
-For some, file sharing system is as easy to develope as a piece of cake, 
-especially for those who never got trapped deep into any software project.
+For some, file sharing system is as easy to develope as a piece of cake.
+.
 Software can be hard enough by it's own, as hard as most kind of professional engineering chalenges.
 And the maintainances of such kind of software is sort of job that many genius not going to undertake by themself.
 

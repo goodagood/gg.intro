@@ -170,7 +170,7 @@ def prepare_css(src=None, tgt=None):
     cmdcss = """sass %s  %s  """%(css_src, css_target)
 
     # start to run commands
-    #print (cmdcss)
+    print ('prepare css cmd: ', cmdcss)
     subprocess.call(cmdcss, shell=True)
 
     return {"css_src": css_src,

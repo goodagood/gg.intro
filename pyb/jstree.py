@@ -14,21 +14,25 @@ def showwalk(where="/my", saved=[], jstree=[]):
         print("---  ", root, dirs, files)
         jstree.append({"text":root, "id":root, "root":root,"type":"dir",
             "parent": "#"} )
-        children = jstree[0]["children"]
-        #jstree[0]["children"].append({"text":where, "type":"dir"} )
 
         for name in files:
             #print("files ")
             #print('file: ', os.path.join(root, name))
-            full_path = os.path.join(root, name)
             saved.append(os.path.join(root, name))
-            children.append({"text":name, "parent":root, "id":full_path} )
+
+            full_path = os.path.join(root, name)
+            jstree.append({"text":name, "parent":root, "id":full_path} )
+
         for name in dirs:
             full_path = os.path.join(root, name)
             #print('dir: ', os.path.join(root, name))
             saved.append(os.path.join(root, name))
-            children.append({"text":name, "type":"dir"} )
-            children.append({"text":name, "parent":root, "id":full_path} )
+
+            jstree.append({"text":name, "type":"dir"} )
+            jstree.append({
+                "text":name, "parent":root, "id":full_path,
+                "type": "dir"
+                } )
 
             pass
         pass

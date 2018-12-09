@@ -21,7 +21,7 @@ body {
 body #wrapper, body .container {
   text-align: left;
   font-family: "Times New Roman", "Palatino", serif;
-  max-width: 82rem;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -328,7 +328,7 @@ footer {
   padding-top: 10px;
   border-radius: 5px;
   border-bottom: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 150px;
 }
 
 @media only screen and (min-width: 768px) {

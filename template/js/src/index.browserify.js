@@ -6,7 +6,7 @@ const $ = require("jquery");
 
 const Color = require("./color.js");
 
-const coo = require("./cookie.js");
+const cookie = require("./cookie.js");
 
 const p = console.log;
 
@@ -25,17 +25,14 @@ document.getElementById('textColor').onclick = function(e){
 
 $( document ).ready(function() {
 
-    coo.restorePresetCookies();
+	cookie.restorePresetCookies();
 
-    //var width = $(window).width();
-    //console.log('width', width);
+	//var width = $(window).width();
+	//console.log('width', width);
 
-
-    // do my translate 
-    //$(".ggtt").html(trans($(this).data("ggtt"), "zh"));
-    //$(".enzh").html(trans($(this).data("ggtt"), "zh"));
-
-
+	// do my translate 
+	//$(".ggtt").html(trans($(this).data("ggtt"), "zh"));
+	//$(".enzh").html(trans($(this).data("ggtt"), "zh"));
 });
 
 
@@ -44,62 +41,71 @@ $( document ).ready(function() {
  * Do body font size
  */
 function getBodyFontSize(){
-  var fs = document.body.style.fontSize;
-  if (fs && fs !== ""){
-    return fs;
-  }
-  return window.getComputedStyle(document.body).fontSize;
+	var fs = document.body.style.fontSize;
+	if (fs && fs !== ""){
+		return fs;
+	}
+	return window.getComputedStyle(document.body).fontSize;
 }
+
 
 function increaseBodyFontSize(e){
-  e.preventDefault();
-  var size = getBodyFontSize();
-  intSize  = parseInt(size);
-  p(`size: ${size}, `);
-  big = intSize + 1;
-  
-  value = `${big}px`;
-  p(`size + 1: ${value}, `);
+	e.preventDefault();
+	var size = getBodyFontSize();
+	intSize  = parseInt(size);
+	p(`size: ${size}, `);
+	big = intSize + 1;
 
-  document.body.style.fontSize = value;
-  coo.setCookie("bodyFontSize", value, 365);
+	value = `${big}px`;
+	p(`size + 1: ${value}, `);
+
+	document.body.style.fontSize = value;
+	cookie.setCookie("bodyFontSize", value, 365);
 }
 
+
 function decreaseBodyFontSize(e){
-  e.preventDefault();
-  var size = getBodyFontSize();
-  intSize  = parseInt(size);
-  p(`size: ${size}, `);
-  small = intSize - 1;
-  value = `${small}px`
-  p(`size - 1: ${small}, `);
-  //document.body.style.fontSize = `${small}px`;
-  document.body.style.fontSize = value;
-  coo.setCookie("bodyFontSize", value, 365);
+	e.preventDefault();
+	var size = getBodyFontSize();
+	intSize  = parseInt(size);
+	p(`size: ${size}, `);
+	small = intSize - 1;
+	value = `${small}px`
+	p(`size - 1: ${small}, `);
+	//document.body.style.fontSize = `${small}px`;
+	document.body.style.fontSize = value;
+	cookie.setCookie("bodyFontSize", value, 365);
+}
+
+
+function changeBodyFontSize(delta){
+	// delta is size in px to increase or decrease
+
+	var size = getBodyFontSize();
+	intSize  = parseInt(size);
+	p(`old font size: ${size}, `);
+
+	newSize = intSize + delta;
+	value = `${newSize}px`
+	p(`change font to: ${newSize}px`);
+
+	document.body.style.fontSize = value;
+	cookie.setCookie("bodyFontSize", value, 365);
 }
 
 
 var increaseEl = document.getElementById("increaseBodyFontSizeNavItem");
 if (increaseEl.addEventListener){
-    increaseEl.addEventListener("click", increaseBodyFontSize, false);
+	increaseEl.addEventListener("click", increaseBodyFontSize, false);
 }else if (increaseEl.attachEvent){
-    increaseEl.attachEvent('onclick', increaseBodyFontSize);
+	increaseEl.attachEvent('onclick', increaseBodyFontSize);
 }
 
 var decreaseEl = document.getElementById("decreaseBodyFontSizeNavItem");
 if (decreaseEl.addEventListener){
-    decreaseEl.addEventListener("click", decreaseBodyFontSize, false);
+	decreaseEl.addEventListener("click", decreaseBodyFontSize, false);
 }else if (decreaseEl.attachEvent){
-    decreaseEl.attachEvent('onclick', decreaseBodyFontSize);
+	decreaseEl.attachEvent('onclick', decreaseBodyFontSize);
 }
 
 
-//// switch the topnav to small icon, not used
-//function w3topnavFun() {
-//  var x = document.getElementById("w3topnav");
-//  if (x.className === "topnav") {
-//    x.className += " responsive";
-//  } else {
-//    x.className = "topnav";
-//  }
-//}
