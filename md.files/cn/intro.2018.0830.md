@@ -73,10 +73,30 @@ sourced projects.
 
 [一沙一世界](../b.markdown.html)，这是一个超过一百亿年的故事。
 对于曾经发生的故事和前因后果，作者也无法保证完全准确。
-但是因为作者找不到上帝了，因此就走了很长的时间。
+而且如果你不打算回到100亿年前的话，实在没有阅读的必要。
 
-也许讲故事会害死人的，作者也已经亡命天涯，了。
+在消失的故事中翻寻太长时间就会脱离现实，
+然而在现实中作者找不到上帝了，
+因此就走回去了很长的时间。
 
+这也是为了节约你的时间，我们可能是不同的动物，
+注定不会混迹在同一个群落中，提前知道了就不用再相见。
+然而衷心的祝福你得到安全与快乐，谢谢阅读。
+
+
+# 参考资料：
+
+    1, [My programming codes](github.com/goodagood/)
+
+       github.com/goodagood/
+
+    2, [Answered and asked questions](http://stackoverflow.com/users/451718/andrew-1510)
+
+       http://stackoverflow.com/users/451718/andrew-1510
+
+    3, [My Videos](youtube.com/user/ifoundalotgoodcast)
+
+       youtube.com/user/ifoundalotgoodcast
 
 
 
@@ -91,7 +111,7 @@ sourced projects.
 ## The following is easy links to be scanned as QR codes
 
 
-### Chinese story source of A grain of sand
+### Chinese story source file of A grain of sand
 
 [src file of ".../story/y10m/b.markdown"](https://github.com/goodagood/story/blob/master/y10m/b.markdown)
 

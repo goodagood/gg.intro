@@ -4,7 +4,7 @@
 
 
 # The Name 
-( [中文版本](./cn/intro.2018.0830.md.html) )
+( [中文版本](./cn/intro.md.html) )
 
 `goodogood` get `good` on left and right side of the letter `o`,
 it's a domain name and it happens has a dog comes into the middle of the name.
