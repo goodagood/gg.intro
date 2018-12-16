@@ -47,28 +47,28 @@
 
 # 一个、二个、三个... 轮子
 
-    1-wheel package system to save energy in outdoor trails.
+1-wheel package system to save energy in outdoor trails.
 
-        - 这并不是和户外背包抢市场，
-          Gregory, Osprey, 都已经做了很好的背包。
-        - 目的是把一个行李箱做成一个大轮子，
-          上山过河穿老林子，
-          同时还要方便的乘坐汽车火车公交车，
-          希望这个轮子不需要拖着拎着背着抱着，
-          而是可以自己跟着主人走。
+    - 这并不是和户外背包抢市场，
+      Gregory, Osprey, 都已经做了很好的背包。
+    - 目的是把一个行李箱做成一个大轮子，
+      上山过河穿老林子，
+      同时还要方便的乘坐汽车火车公交车，
+      希望这个轮子不需要拖着拎着背着抱着，
+      而是可以自己跟着主人走。
 
-    2-wheel motorcycle with front wheel change to electric driven.
+2-wheel motorcycle with front wheel change to electric driven.
 
-        - But big companies already concept design hybrid powered bikes,
-          they use DC motor, gas engine and power control system... 
-          but our purpose is to setup an tool with available materials
-          to escape Chimps who are running to kill us...
-          so we have to use those cheap bikes.
+    - But big companies already concept design hybrid powered bikes,
+      they use DC motor, gas engine and power control system... 
+      but our purpose is to setup an tool with available materials
+      to escape Chimps who are running to kill us...
+      so we have to use those cheap bikes.
 
-        - 并且在有加油站和没有加油站的地方逃跑，
-          在有电和没有电的地方藏身。
+    - 并且在有加油站和没有加油站的地方逃跑，
+      在有电和没有电的地方藏身。
 
-    3-wheel with 2 front wheels to carry more solar panels
+3-wheel with 2 front wheels to carry more solar panels
 
 
 Yes, I get no time/money to do many of the above, 
@@ -79,7 +79,8 @@ But why not just go 4 wheels?
 The answer is 4-wheel is wonderful,
 but I am stupid enough to get it,
 so you can call me stupid or brain-dead or many bad words...
-Then, just save youself valuable time and leave me alone.
+Actually 4-wheel is for normal people, 
+we can save time and wait others to do it.
 
 
 # 如果你没有时间的话，千万不要点开下面的故事
@@ -95,22 +96,23 @@ Then, just save youself valuable time and leave me alone.
 
 这个故事也是为了节约你的时间，我们可能是不同的动物，
 注定不会混迹在同一个群落中，提前知道了就不用再相见。
-然而衷心的祝福你得到安全与快乐，并且谢谢。
+
+在天涯海角，衷心的祝福你得到安全与快乐，并且谢谢。
 
 
 # 参考资料：
 
-    1, [My programming codes](github.com/goodagood/)
+1, [My programming codes](github.com/goodagood/)
 
-       github.com/goodagood/
+   github.com/goodagood/
 
-    2, [Answered and asked questions](http://stackoverflow.com/users/451718/andrew-1510)
+2, [Answered and asked questions](http://stackoverflow.com/users/451718/andrew-1510)
 
-       http://stackoverflow.com/users/451718/andrew-1510
+   http://stackoverflow.com/users/451718/andrew-1510
 
-    3, [My Videos](youtube.com/user/ifoundalotgoodcast)
+3, [My Videos](youtube.com/user/ifoundalotgoodcast)
 
-       youtube.com/user/ifoundalotgoodcast
+   youtube.com/user/ifoundalotgoodcast
 
 
 
