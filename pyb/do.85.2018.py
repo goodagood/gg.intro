@@ -179,7 +179,7 @@ def do_list_from_arguments():
     print(1, parsed.wordlist)
 
     if not parsed.wordlist:
-        print('no keywords given')
+        print('no keywords given during parsing')
         return
 
     if len(parsed.wordlist) <1:

@@ -4,8 +4,8 @@
 
 # 名字  
 
-`goodogood` 是一个域名， 中间有一个`o`， 两边是两个 `good` 。 
-这个单词的中间也是一条狗，有头有尾变成字典里不存在的单词。
+`goodogood` 是一个域名， 两边是两个 `good`， 中间有一个`o`  。 
+这个单词的中间也是一条狗, `dog`，有头有尾变成字典里不存在的单词。
 
 `goodogood.com` 目前用于测试文件共享系统。 
 系统代码开源，放在 `github.com/goodagood`下面。.
@@ -20,46 +20,50 @@
 
 同时在独裁环境中开发自由的共享系统从政治上来说也是相当困难的，危险就不说了。
 
-`goodogood` 是采用公有化版权协议的系统，有独特的建设成本。
-也许开源软件并没有降低书写代码的报酬，只是让工作从一开始就变得透明。
-在简化问题的同时，也将项目推到一个没有方向的轨道上，
-你无法知道前面是什么，你不认识你的合作者。
-
-然而，每一个人都得到了阅读代码、克隆和改写的权力。
-因为这是开源的，看起来像是免费的，可能也是强大的软件开发模式吧。
-然而，在软件工程中还没有找到灌银子弹一样的武器来解决所有问题，silver bullet，
-这是一种可以杀死最恐怖的吸血鬼的子弹。
-常常，我们以为金钱可以解决问题，然而举个例子来说，
-投入100万在10万元的项目上不算是工程学意义上的完美。
+代码放在 [github goodagood](https://github.com/goodagood/gg2)，
+这是开源的，开源软件并不意味着没有成本，
+每一个人都得到了阅读代码、克隆和改写的权力，
+原代码作者并没有更多可以提供的了。
 
 对能力的追求如同对财富的追求，
 上帝让我们在这个过程中得到顿悟的机会，
 每一次顿悟都是漫长血脉进化中的渐悟。
 
-问题是为什么我们常常做傻事？
 
-原因太漫长了，超过一万年。
+从软件开始讲莫名其妙的内容，有时候是迫不得已。
+一个被代码侵占的脑袋常常需要 DEBUG， 有时候人们说：硬件也开源来做好不好？
+那么你真得知道什么是：开源？请不要以自以为是的态度从嘴角带出一些嘲弄。
 
-
-# 原因是一粒沙子
-
-
-[这是一粒沙粒演化的世界](../b.markdown.html)，这是一个故事。
-我可能会因为这个真实的故事被宰杀，不管怎么样，
-尽力保持真实，保持简短，在一个瞬间观察永恒，
-为上述沙粒般微小的软件项目牵扯无穷的理由。
-
+说起硬件...
 
 # 还有一些更简单的项目
 
-	1 wheel package system to save energy in outdoor trails.
-	2 wheel motorcycle with front wheel change to electric driven.
-	3 wheel with 2 front wheels to carry more solar panels
-	4 wheel solar RV or mortor-house like vehicle
+    1-wheel package system to save energy in outdoor trails.
+
+        - 这并不是和户外背包抢市场，Gregory, Ospray, 都已经做了很好的包。
+        - 目的是把一个行李箱做成一个大轮子，上山过河穿老林子，
+          同时还要方便的乘坐汽车火车公交车，
+          希望这个轮子不需要拖着拎着背着抱着，而是可以自己跟着主人走。
+
+    2-wheel motorcycle with front wheel change to electric driven.
+
+        - But big companies already concept design hybrid powered bike,
+          they use ...
+
+    3-wheel with 2 front wheels to carry more solar panels
 
 
 Yes, I get no time/money to do many of the above, so all of them are open
 sourced project asking people to do it.
+
+
+# 如果你没有时间的话，千万不要点开下面的故事
+
+
+[一沙一世界](../b.markdown.html)，这是一个超过一百亿年的故事。
+对曾经发生的故事和前因后果，作者也无法保证完全准确。
+也许讲故事会害死人的，他已经亡命天涯。
+
 
 
 
