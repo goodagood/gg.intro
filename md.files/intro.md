@@ -11,7 +11,7 @@ it's a domain name and it happens has a dog comes into the middle of the name.
 
 `goodogood.com` is developing as an file sharing project,
 it's open source with codes repositories at `github.com/goodagood/gg2`.
-`goodagood` with 'a' connect 2 good is brother of goodogood.
+`goodagood` with 'a' instead of 'o' connect 2 good is brother of goodogood.
 
 Software is a kind of engineering, it can be pleasure to enjoy,
 and it has good chance to turn into a lot hardworking and brain twisting.
